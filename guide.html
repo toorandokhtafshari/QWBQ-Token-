@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Site Guide – QUAZENTHOR (QWBQ)</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Official guide to navigating the QUAZENTHOR website – a strictly educational and transparency-focused BEP-20 reference project on BNB Smart Chain. No financial features, no promotion.">
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+    html { scroll-behavior: smooth; transition: all 0.3s ease-in-out; }
+    body { transition: opacity 0.5s ease; }
+    .nav-btn {
+        transition: all 0.3s ease;
+        margin: 5px 4px;
+        padding: 10px 14px;
+        font-size: 0.95rem;
+        background: #2c3e50;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+    }
+    .nav-btn:hover {
+        background: #34495e;
+        transform: translateY(-2px);
+    }
+    .compliance-banner {
+        background: #0f1c2e;
+        color: #f1c40f;
+        padding: 14px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.05rem;
+    }
+    .download-btn {
+        display: inline-block;
+        margin: 12px 16px 12px 0;
+        padding: 12px 28px;
+        background: #1e8449;
+        color: white;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .download-btn:hover {
+        background: #27ae60;
+        transform: scale(1.05);
+    }
+    .transition-note {
+        text-align: center;
+        font-style: italic;
+        color: #aaa;
+        margin: 20px 0;
+        padding: 10px;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+    }
+    .gold-subtitle { color: red !important; text-align: center; animation: floatUpDown 4s infinite ease-in-out; }
+    h1.gold-title, h2.gold-subtitle { text-align: center; }
+
+    @keyframes tokenAnim {
+        0% { transform: translateY(0) scale(1); }
+        50% { transform: translateY(-10px) scale(1.05); }
+        100% { transform: translateY(0) scale(1); }
+    }
+    .gold-title { animation: tokenAnim 2s infinite ease-in-out; }
+
+    @keyframes marquee {
+        0% { transform: translateX(100%); }
+        100% { transform: translateX(-100%); }
+    }
+    .marquee-container {
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 20px 0;
+    }
+    .marquee-text {
+        display: inline-block;
+        animation: marquee 20s linear infinite;
+        padding-left: 100%;
+    }
+
+    @keyframes floatUpDown {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
+        100% { transform: translateY(0); }
+    }
+
+    /* Sky Blue Navigation Theme – Fixed and Cleaned */
+    .section-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding: 22px 0;
+        border-bottom: 1px solid rgba(135,206,235,0.25);
+    }
+    .section-nav details {
+        position: relative;
+    }
+    .section-nav summary {
+        background: rgba(135,206,235,0.15);
+        color: #eaf6ff;
+        padding: 12px 26px;
+        border-radius: 24px;
+        border: 1px solid rgba(135,206,235,0.45);
+        cursor: pointer;
+        font-size: 0.95rem;
+        list-style: none;
+        user-select: none;
+    }
+    .section-nav summary:hover {
+        background: rgba(135,206,235,0.3);
+    }
+    .section-nav details[open] summary {
+        background: rgba(135,206,235,0.35);
+    }
+    .section-nav .panel {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: #0b2a44;
+        border: 1px solid rgba(135,206,235,0.4);
+        border-radius: 0 0 12px 12px;
+        min-width: 260px;
+        padding: 14px;
+        z-index: 100;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.45);
+    }
+    .section-nav .panel a {
+        display: block;
+        padding: 9px 12px;
+        color: #87ceeb;
+        text-decoration: none;
+        border-radius: 6px;
+    }
+    .section-nav .panel a:hover {
+        background: rgba(135,206,235,0.18);
+        color: #ffffff;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="compliance-banner">
+EDUCATIONAL PROJECT ONLY • STRICTLY NON-FINANCIAL • NO TOKEN SALE • NO FUNDRAISING • NO INVESTMENT CLAIMS • NO PROMOTION
+</div>
+
+<header class="site-header">
+  <div class="wrap" style="text-align: center;">
+    <h1 class="gold-title">QUAZENTHOR (QWBQ)</h1>
+    <p class="muted">
+      Immutable • Fixed Supply • BEP-20 • Fully Verified on BscScan • Transparency & Education Focused
+    </p>
+  </div>
+</header>
+
+<div class="marquee-container">
+  <div class="marquee-text">
+    QUAZENTHOR: A Transparent Educational Demonstration of an Immutable BEP-20 Token on BNB Smart Chain – Serving as a Permanent Public On-Chain Reference for Learners and Developers to Study Contract Behavior in a Live Network Environment
+  </div>
+</div>
+
+<!-- ===== SECTION-BASED DROPDOWN NAVIGATION (Fixed & Complete) ===== -->
+<nav class="section-nav">
+  <!-- CORE -->
+  <details>
+    <summary>Core</summary>
+    <div class="panel">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+    </div>
+  </details>
+
+  <!-- TOKEN -->
+  <details>
+    <summary>Token</summary>
+    <div class="panel">
+      <a href="tokenomics.html">Tokenomics</a>
+      <a href="holders.html">Holders</a>
+      <a href="lifecycle.html">Lifecycle</a>
+    </div>
+  </details>
+
+  <!-- TEAM & IDENTITY -->
+  <details>
+    <summary>Team & Identity</summary>
+    <div class="panel">
+      <a href="team.html">Team</a>
+      <a href="owner.html">Owner</a>
+      <a href="founder-declaration.html">Founder Declaration</a>
+      <a href="identity.html">Identity</a>
+      <a href="links.html">Network Links & Team</a>
+    </div>
+  </details>
+
+  <!-- VERIFICATION -->
+  <details>
+    <summary>Verification</summary>
+    <div class="panel">
+      <a href="ownership-verification.html">Ownership Verification</a>
+      <a href="verification.html">Verification</a>
+      <a href="bscscan-clarification.html">BscScan Clarification</a>
+      <a href="bscscan-official-token-information.html">Official Token Info</a>
+    </div>
+  </details>
+
+  <!-- COMPLIANCE -->
+  <details>
+    <summary>Compliance</summary>
+    <div class="panel">
+      <a href="explorer-compliance.html">Explorer Compliance</a>
+      <a href="website-domain-clarification.html">Domain Clarification</a>
+      <a href="official-email-statement.html">Official Email</a>
+      <a href="social-proof.html">Social Proof</a>
+    </div>
+  </details>
+
+  <!-- COMMUNITY -->
+  <details>
+    <summary>Community</summary>
+    <div class="panel">
+      <a href="news.html">News & Updates</a>
+      <a href="blog.html">Blog</a>
+      <a href="community.html">Community</a>
+      <a href="social.html">Social & Links</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </details>
+
+  <!-- SECURITY -->
+  <details>
+    <summary>Security</summary>
+    <div class="panel">
+      <a href="security.html">Security</a>
+      <a href="audit.html">Audit</a>
+    </div>
+  </details>
+
+  <!-- DOCUMENTS -->
+  <details>
+    <summary>Documents</summary>
+    <div class="panel">
+      <a href="whitepaper.html">Whitepaper</a>
+      <a href="footer.html">Footer Info</a>
+      <a href="changelog.html">Changelog</a>
+    </div>
+  </details>
+
+  <!-- SCOPE -->
+  <details>
+    <summary>Scope</summary>
+    <div class="panel">
+      <a href="scope-declaration.html">Scope Declaration</a>
+    </div>
+  </details>
+
+  <!-- SITE GUIDE -->
+  <details>
+    <summary>Site Guide</summary>
+    <div class="panel">
+      <a href="guide.html">How to Use This Website</a>
+      <a href="site-guide-sections.html">Sections Overview</a>
+    </div>
+  </details>
+
+  <!-- LEGAL -->
+  <details>
+    <summary>Legal</summary>
+    <div class="panel">
+      <a href="legal.html">Legal Notice</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="license.html">License</a>
+    </div>
+  </details>
+</nav>
+
+<main class="wrap">
+
+    <!-- Purpose -->
+    <section>
+        <h2 class="gold-subtitle">Purpose of This Site Guide</h2>
+        <p>
+            This guide helps users, reviewers (including blockchain explorers such as BscScan), and interested parties understand the complete structure of the QUAZENTHOR website and easily locate all transparency, verification, identity disclosure, and educational content.
+        </p>
+        <p>
+            The entire website exists exclusively for documentation, public accountability, team identity disclosure, smart contract transparency, and educational reference. There are no financial features, promotional content, investment-related materials, token sales, or utility claims anywhere on the site.
+        </p>
+        <p>
+            QUAZENTHOR (QWBQ) is a fixed-supply, immutable BEP-20 token deployed solely as a permanent public on-chain reference example. It allows learners, developers, and researchers to observe and study standard BEP-20 contract behavior in a real, live network environment without any administrative controls, upgrades, or economic mechanisms.
+        </p>
+        <p>
+            The project is complete at deployment — there is no roadmap, no future development plans, no milestones, no updates to the smart contract, and no utility beyond serving as an educational demonstration.
+        </p>
+        <p>
+            All pages are designed to provide maximum clarity and verifiability. This documentation is published specifically for transparency and review purposes.
+        </p>
+    </section>
+
+    <!-- Guide Structure -->
+    <section>
+        <h2 class="gold-subtitle">Guide Structure & Main Categories</h2>
+        <ul style="line-height: 1.8;">
+            <li><strong>Core Documentation</strong> – Home, About, Whitepaper, Tokenomics, Holders, Lifecycle</li>
+            <li><strong>Team & Identity</strong> – Team disclosure, Owner details, Founder declaration, Professional profiles</li>
+            <li><strong>Verification & Compliance</strong> – Ownership signature, BscScan verification, Explorer compliance documents, Domain & email confirmation</li>
+            <li><strong>Community & Communication</strong> – News & changelog, Blog (educational only), Social channels, Contact (email only)</li>
+            <li><strong>Security & Legal</strong> – Security explanation, Self-audit notes, Legal notices, Privacy, Terms, License</li>
+            <li><strong>Additional Reference Pages</strong> – Scope declaration, Changelog, Footer info, Full site sections overview</li>
+        </ul>
+    </section>
+
+    <!-- Full List Link -->
+    <section>
+        <h2 class="gold-subtitle">Full Detailed List of All Site Sections</h2>
+        <p style="text-align: center; margin: 30px 0;">
+            <a href="site-guide-sections.html" class="download-btn">View Complete List of All Pages & Their Purposes</a>
+        </p>
+        <p style="text-align: center; font-size: 1.1rem; color: #aaa;">
+            (Includes exact purpose and content summary for every single page)
+        </p>
+    </section>
+
+    <div class="transition-note">
+        Navigate through our transparent project pages with ease. Use the buttons above to explore sections – all transitions are smooth for better user experience.
+        <br>
+        This website serves as the official and actively maintained information source for the QUAZENTHOR project. Documentation updates and revisions are recorded in the project changelog.
+    </div>
+
+</main>
+
+<footer class="site-footer">
+    <div class="wrap" style="text-align:center; padding:40px 20px;">
+        <p>© 2026 QUAZENTHOR – Educational & Transparency Project</p>
+        <p>Non-Financial • No Investment • No Sale • For Verification Purposes Only</p>
+    </div>
+</footer>
+
+</body>
+</html>

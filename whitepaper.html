@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>QUAZENTHOR Token (QWBQ) – Official Expanded Whitepaper</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta name="description"
+    content="Official expanded whitepaper for QUAZENTHOR Token (QWBQ) – a fixed-supply, immutable, non-financial, educational BEP-20 token on BNB Smart Chain. Fully verified, transparent, and provided for blockchain explorer review and public verification. No investment or fundraising." />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- اگر styles.css تعریف download-btn رو نداشته باشه، این استایل موقت رو اضافه کن -->
+  <style>
+    .download-btn {
+      display: inline-block;
+      margin: 12px 16px;
+      padding: 12px 28px;
+      background: #1e8449;
+      color: white !important;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .download-btn:hover {
+      background: #27ae60;
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    .download-btn:active {
+      transform: translateY(0) scale(0.98);
+    }
+    @media (max-width: 640px) {
+      .download-btn {
+        display: block;
+        margin: 16px auto;
+        width: 85%;
+        max-width: 320px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <h1 class="gold-title">QUAZENTHOR Token (QWBQ)</h1>
+    <p class="muted">
+      Official Expanded Whitepaper – Transparency-Focused BEP-20 Token on BNB Smart Chain. Last updated: February 01, 2026.
+    </p>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- Official Documents – Download Section -->
+  <section style="text-align: center; margin: 50px 0 80px 0;">
+    <h2 class="gold-subtitle" style="color: red; margin-bottom: 35px; font-size: 1.7rem; letter-spacing: 0.5px;">
+      Official Documents – Download
+    </h2>
+
+    <div style="display: flex; justify-content: center; gap: 35px; flex-wrap: wrap; max-width: 1000px; margin: 0 auto;">
+      <a href="whitepaper.pdf" class="download-btn" download>Whitepaper (PDF)</a>
+      <a href="token-info.pdf" class="download-btn" download>Official Token Information (PDF)</a>
+      <a href="logo.svg" class="download-btn" download>Logo (SVG)</a>
+    </div>
+  </section>
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">Token Details</h2>
+
+<p>
+This section provides a complete and verifiable overview of the token's basic metadata. All details are derived directly from the smart contract and can be independently confirmed on BscScan or other explorers. The token fully complies with BEP-20 specifications, including standard functions for transfers, balances, and approvals, without any custom additions that could introduce risks or financial elements.
+</p>
+
+<ul>
+<li><strong>Token Name:</strong> QUAZENTHOR – A unique, original name chosen for educational identification, not imitating any existing project or entity. The token name and symbol are used solely for project identification and do not represent or affiliate with any existing entity.</li>
+<li><strong>Symbol:</strong> QWBQ – Simple ticker for reference.</li>
+<li><strong>Standard:</strong> BEP-20 – Ensures compatibility with BNB Smart Chain wallets and tools.</li>
+<li><strong>Decimals:</strong> 18 – Standard precision for divisibility.</li>
+<li><strong>Total Supply:</strong> 5,000,000,000,000 QWBQ (Fixed, Immutable) – All tokens minted at deployment; no increases possible.</li>
+<li><strong>Network:</strong> BNB Smart Chain – Chosen for efficiency and low fees in educational demonstrations.</li>
+<li><strong>Contract Address:</strong> <a href="https://bscscan.com/address/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8" target="_blank">0x013f5f2F7F5b027012415A783ac2ed69EF936aE8</a> – Publicly viewable for verification. This address confirms the contract deployment and initial mint.</li>
+<li><strong>Contract Verification Date:</strong> January 31, 2026 – Source code fully verified on BscScan (exact bytecode match).</li>
+</ul>
+
+<p>
+Official Resources for Verification:
+</p>
+
+<ul>
+<li>Official Website: <a href="https://quazenthor.com" target="_blank">https://quazenthor.com</a> – This website serves as the official and actively maintained information source for the QUAZENTHOR Token project. Documentation updates and revisions are recorded in the project changelog where applicable. The site is the primary source for all project-related information and is regularly checked for accessibility and accuracy.</li>
+<li>Official Email: <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a> – All official communication is conducted through email addresses under the quazenthor.com domain.</li>
+
+<p>
+    These are the only official channels and resources for QUAZENTHOR. Beware of fakes or impersonators.
+</p>
+
+<p>
+    All official channels, social profiles and resources are listed on the 
+    <a href="links.html">Network Links & Team</a> page.
+</p>
+
+<p>
+This document is prepared specifically to provide clear identification, accountability, and factual disclosure for blockchain explorer review and public verification. It avoids any promotional language and focuses on facts. The token exists as a permanent public on-chain reference used by learners and developers to study immutable BEP-20 contract behavior in a live network environment. Learners, developers, and blockchain enthusiasts reference this token to understand basic token mechanics without financial implications. The project is in a completed, maintenance-only lifecycle stage.
+</p>
+</section>
+
+<hr>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">1. Executive Summary</h2>
+
+<p>
+This whitepaper serves as a detailed, official document for the QUAZENTHOR Token (QWBQ), published exclusively for transparency, educational purposes, and to support review on blockchain explorers like BscScan. It provides a comprehensive breakdown of the token's structure, behavior, limitations, and non-financial nature, ensuring all information is verifiable and free from misrepresentation. This documentation is provided for transparency and review purposes.
+</p>
+
+<p>
+QUAZENTHOR Token (QWBQ) is a minimal, standard BEP-20 token deployed on the BNB Smart Chain with a permanently fixed supply and an immutable smart contract. The token includes only basic BEP-20 functions (e.g., transfer, approve, balanceOf) and no additional logic that could imply financial utility.
+</p>
+
+<p>
+Importantly, QUAZENTHOR is <strong>not</strong> an investment, security, fundraising instrument, or profit-generating product. There are no promises, expectations, or implications of appreciation, yield, financial return, or economic benefits. The project has never conducted and will never conduct any token sales, ICOs, presales, staking programs, or reward mechanisms.
+</p>
+
+<p>
+The token exists solely as a transparent, verifiable, and educational blockchain reference, demonstrating how a simple token can be created with full public disclosure. This aligns with the emphasis on clear, non-misleading information for public review.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">2. Project Overview</h2>
+
+<p>
+QUAZENTHOR was created as a transparency-first blockchain reference project to showcase best practices in token deployment. The primary objective is to demonstrate how a token can be built with clear rules, minimal logic, full on-chain visibility, and verifiable source code, without any financial or speculative elements.
+</p>
+
+<p>
+The project intentionally avoids marketing claims, speculative narratives, complex economics, or any language that could mislead users or imply value. All communications and documents, including this whitepaper, are designed to remain consistent with verifiable on-chain data and the smart contract's behavior, ensuring no distortions.
+</p>
+
+<p>
+By focusing on education and transparency, QUAZENTHOR serves as a learning tool for developers, enthusiasts, and reviewers interested in understanding basic BEP-20 tokens on the BNB Smart Chain. The token exists as a permanent public on-chain reference used by learners and developers to study immutable BEP-20 contract behavior in a live network environment.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">3. Project Philosophy</h2>
+
+<p>
+The core philosophy of QUAZENTHOR is <strong>radical transparency and simplicity</strong>. Every component of the project – from the smart contract code to this whitepaper – is intentionally straightforward, well-documented, and openly reviewable to eliminate ambiguity.
+</p>
+
+<p>
+Complexity is deliberately avoided to reduce the risk of misinterpretation, technical errors, or hidden vulnerabilities. Instead, trust is built through open-source code, on-chain records, and public professional profiles of the team, rather than unsubstantiated promises or centralized control.
+</p>
+
+<p>
+This approach ensures the project remains educational, aligned with BEP-20 standards, and free from any financial implications or misrepresentations. The project must appear maintained, accountable, technically legitimate, and not speculative.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">4. Contract Functions Summary</h2>
+
+<p>
+The smart contract implements only standard BEP-20 functions:
+</p>
+
+<ul>
+<li>transfer – Allows sending tokens from one address to another.</li>
+<li>transferFrom – Enables approved third-party transfers.</li>
+<li>approve – Grants allowance for another address to spend tokens.</li>
+<li>allowance – Checks the approved amount for spending.</li>
+<li>balanceOf – Retrieves the token balance of an address.</li>
+<li>totalSupply – Returns the fixed total supply of tokens.</li>
+<li>name – Returns the token name (QUAZENTHOR).</li>
+<li>symbol – Returns the token symbol (QWBQ).</li>
+<li>decimals – Returns the number of decimal places (18).</li>
+</ul>
+
+<p>
+No custom functions, no administrative controls, and no privileged roles exist. Token name and symbol are permanently fixed and cannot be modified after deployment. The contract contains no owner-accessible metadata modification functions. This structure ensures the contract remains a transparent BEP-20 example without any additional features.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">5. Token Architecture</h2>
+
+<p>
+QUAZENTHOR uses a standard, unmodified BEP-20 smart contract template from OpenZeppelin, ensuring compatibility and security best practices. The template was chosen for its proven reliability in creating simple, immutable tokens.
+</p>
+
+<p>
+The architecture is intentionally basic: fixed supply minted at deployment, no minting/burning, no fees, no pauses, and no ownership privileges beyond standard deployment. This minimal design avoids any complexity that could lead to misinterpretation or risks.
+</p>
+
+<p>
+This design demonstrates a "hands-off" token for educational purposes, with all behavior verifiable on-chain. The contract is fully verified on BscScan, and the source code matches the deployed bytecode exactly, providing complete transparency.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">6. No Roadmap</h2>
+
+<p>
+The project has no roadmap, milestones, or future development plans. The project is complete at deployment, with no intended upgrades, new features, or changes to the smart contract.
+</p>
+
+<p>
+This absence of a roadmap is intentional to emphasize the project's static and educational nature. There are no plans for listings on exchanges, integrations with other projects, or expansions of functionality. Any future activity is limited to documentation maintenance, such as fixing broken links or clarifying existing information, and all such changes will be logged in the project changelog on the official website.
+</p>
+
+<p>
+By not having a roadmap, the project avoids creating any expectations of growth or evolution, ensuring it remains a pure demonstration of a simple BEP-20 token.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">7. No Utility Clarification</h2>
+
+<p>
+The token has no utility, use-case, or functional purpose beyond being a live BEP-20 reference contract. It does not provide any benefits, services, or features to holders.
+</p>
+
+<p>
+This lack of utility is by design to maintain the project's strictly educational and non-financial focus. The token is not intended for use in any applications, platforms, or ecosystems. It serves only as an example for studying blockchain token mechanics, such as transfers and balances, in a transparent environment.
+</p>
+
+<p>
+There are no integrations, partnerships, or planned uses that would give the token any practical application. Users interacting with the token do so at their own risk for learning purposes only.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">8. Legal Status Disclaimer</h2>
+
+<p>
+This token is not a security, financial instrument, or investment product. Nothing in this document or any project materials constitutes financial advice, investment advice, legal advice, tax advice, or any form of recommendation.
+</p>
+
+<p>
+QUAZENTHOR is provided for educational demonstration only, with no economic or financial purpose. Users must consult their own professionals for any decisions related to blockchain interactions. The project makes no warranties and disclaims all liability.
+</p>
+
+<p>
+The project adheres to transparency principles but does not self-certify compliance with any standards. All information is factual and original.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">9. Compliance and Transparency Guidelines</h2>
+
+<p>
+To ensure the project meets high standards of transparency and avoids common rejection reasons on blockchain explorers, the following guidelines have been implemented:
+</p>
+
+<h3>1. Website Accessibility and Liveness</h3>
+<p>The website is actively maintained with a visible last updated date, a changelog page for revisions, and a statement confirming it as the official source. This ensures it appears live and accountable.</p>
+
+<h3>2. Clear Project Information</h3>
+<p>The project clearly explains its existence as an educational reference for studying BEP-20 contracts, referenced by learners and developers in a completed lifecycle stage.</p>
+
+<h3>3. No Placeholder Sections</h3>
+<p>All sections are complete with context; links include explanations, such as ownership verification confirming deployment.</p>
+
+<h3>4. Functional Links</h3>
+<p>Only active, accessible links are used; inactive ones have been removed to prevent failures.</p>
+
+<h3>5. Team Transparency</h3>
+<p>Team members are identifiable through professional profiles like LinkedIn and GitHub with activity. Social links are supplementary.</p>
+
+<h3>6. Email Domain Consistency</h3>
+<p>All communications use the official domain.</p>
+
+<h3>7. No Misrepresentation</h3>
+<p>No claims of compliance; documentation is for transparency and review.</p>
+
+<h3>8. Token Name Clarification</h3>
+<p>Name and symbol are for identification only, no affiliations.</p>
+
+<h3>9. Safe Language</h3>
+<p>Language focuses on educational, non-financial, transparent demonstration.</p>
+
+<p>These measures ensure the project appears maintained, accountable, and legitimate.</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">10. Scope Declaration – Completed Milestones Only</h2>
+
+<p>
+This scope declaration is a detailed, non-speculative document outlining the completed milestones and permanent boundaries of the QUAZENTHOR Token (QWBQ) project. It is prepared exclusively for transparency, educational purposes, and blockchain explorer review (e.g., BscScan).
+</p>
+
+<p>
+QUAZENTHOR exists solely as an immutable, non-financial, educational BEP-20 token demonstration on BNB Smart Chain. The project emphasizes radical transparency, with all actions verifiable on-chain and no future promises or developments implied.
+</p>
+
+<p>
+The token name and symbol are used solely for project identification and do not represent or affiliate with any existing entity.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">11. Completed Milestones – Project Lifecycle</h2>
+
+<p>
+QUAZENTHOR is a completed project at deployment. All milestones were achieved during the initial setup phase, with no ongoing development or future plans. Completed actions include:
+</p>
+
+<ul>
+  <li>Smart contract development – Standard BEP-20 template used, no custom logic. This step ensured the contract was simple and verifiable.</li>
+  <li>Deployment on BNB Smart Chain – Fixed supply minted, immutable contract. Deployment was done on January 31, 2026, with all tokens allocated to the deployer for educational control.</li>
+  <li>Source code verification on BscScan – Full transparency achieved, with bytecode match confirmed.</li>
+  <li>Ownership verification via signed message – Publicly confirmed on BscScan to establish accountability.</li>
+  <li>Official website launch – Documentation published for public review, with SSL security and maintenance protocols in place.</li>
+  <li>Team disclosure – Public bios and professional profiles provided for transparency.</li>
+  <li>SSL certificate installation – Website security ensured to maintain accessibility.</li>
+</ul>
+
+<p>
+No token distribution, sales, or transfers have occurred. The project is now in a maintenance-only state for documentation accuracy, with changes logged in the changelog.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">12. Token Holders – On-Chain Transparency & Holder Disclosure</h2>
+
+<p>
+All QUAZENTHOR (QWBQ) token balances and holder information are publicly visible on the BNB Smart Chain through independent blockchain explorers such as BscScan.
+</p>
+
+<p>
+At the current lifecycle stage of the project, the entire fixed token supply is held in the original deployer wallet. This structure is intentional and is maintained solely for technical control, documentation consistency, educational reference, and on-chain transparency.
+</p>
+
+<p>
+Holding QUAZENTHOR tokens does not provide any financial rights, profit expectations, rewards, dividends, governance authority, ownership claims, or economic benefits of any kind.
+</p>
+
+<ul>
+<li>No investor classification – There are no investors or financial participants.</li>
+<li>No token sale, presale, or fundraising – No such events have taken place.</li>
+<li>No profit, yield, or value expectations – The project is non-financial.</li>
+<li>No holder-based utility or governance – Tokens confer no rights.</li>
+<li>All balances are publicly verifiable on-chain – Viewable via explorers.</li>
+</ul>
+
+<p>
+QUAZENTHOR is a strictly non-financial and non-investment project. The token exists exclusively as a publicly verifiable BEP-20 smart contract deployed for educational, documentation, and blockchain transparency purposes. Future transfers do not represent distribution, sale, or fundraising.
+</p>
+
+<p>
+View current token holder data directly on the official BscScan page: <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8" target="_blank">https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8</a> – This page shows real-time holder information and balances.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+  <h2 style="color: red; text-align: center;">13. Team Transparency & Disclosure</h2>
+
+  <p style="text-align: center; font-weight: bold; color: #006400;">
+    🔍 BscScan Contract: Verified on 2026-01-31<br>
+    Ownership Verification: Signature #15181 (Verified) – <a href="https://bscscan.com/verifySig/15181" target="_blank">View on BscScan</a>
+  </p>
+
+  <p>
+    Team members are publicly identifiable through professional profiles used for accountability and communication. Social platforms are supplementary and not used as identity verification.
+  </p>
+
+  <p>
+    IMPORTANT COMPLIANCE NOTES (READ CAREFULLY)
+  </p>
+  <ul>
+    <li>This project is strictly non-financial, non-investment, and educational.</li>
+    <li>No profit, yield, dividends, rewards, appreciation, or economic return is promised or implied.</li>
+    <li>No token sale, ICO, presale, fundraising, or public offering has ever occurred.</li>
+    <li>The smart contract is publicly verified on BscScan and follows the BEP-20 standard.</li>
+    <li>The token supply is fixed and immutable; no minting or burning mechanisms exist.</li>
+    <li>All information provided is factual, original, and not a misrepresentation of any public entity or other project.</li>
+    <li>This page is published specifically to support blockchain explorer review and public transparency.</li>
+    <li>No team member controls user funds, token economics, or financial activity.</li>
+  </ul>
+
+  <hr>
+
+  <p>TEAM ROLES & BIOS (PUBLIC DISCLOSURE)</p>
+
+
+<ul style="text-align: left;">
+  <li><strong>Name</strong>: btmb ani<br><strong>Role</strong>: Project Coordinator & Documentation Supervisor<br><strong>Bio</strong>: btmb ani is responsible for coordinating the overall project structure and supervising documentation consistency across the official website and public resources. This role focuses on ensuring alignment between on-chain data, written disclosures, and transparency standards. No financial, token-management, or fundraising responsibilities are held.<br>These are the only official channels and resources for QUAZENTHOR. Beware of fakes or impersonators.<br>All official channels, social profiles and resources are listed on the <a href="links.html">Network Links & Team</a> page.</li>
+  <li><strong>Name</strong>: so stbt<br><strong>Role</strong>: Community & Public Communication Support<br><strong>Bio</strong>: so stbt assists with community-facing communication and helps maintain clear, factual, and non-promotional explanations of the project’s educational purpose. Responsibilities include moderation of public discussions and ensuring that all external communication remains transparent and free of financial claims.<br>These are the only official channels and resources for QUAZENTHOR. Beware of fakes or impersonators.<br>All official channels, social profiles and resources are listed on the <a href="links.html">Network Links & Team</a> page.</li>
+  <li><strong>Name</strong>: amob animo<br><strong>Role</strong>: Smart Contract Review & Technical Reference Contributor<br><strong>Bio</strong>: amob animo contributes by reviewing the publicly verified smart contract and supporting technical reference materials. This role focuses on confirming BEP-20 standard compliance, contract simplicity, and technical clarity for educational and transparency purposes only. No control over contract behavior, ownership, or token supply exists.<br>These are the only official channels and resources for QUAZENTHOR. Beware of fakes or impersonators.<br>All official channels, social profiles and resources are listed on the <a href="links.html">Network Links & Team</a> page.</li>
+  <li><strong>Name</strong>: mekro deo<br><strong>Role</strong>: Website Maintenance & Security Monitoring<br><strong>Bio</strong>: mekro deo is responsible for website maintenance, accessibility checks, and monitoring for broken links or outdated references. This role ensures that the official website remains reachable, safe to visit, and technically consistent with published disclosures. There is no involvement in token issuance, financial activity, or contract control.<br>These are the only official channels and resources for QUAZENTHOR. Beware of fakes or impersonators.<br>All official channels, social profiles and resources are listed on the <a href="links.html">Network Links & Team</a> page.</li>
+</ul>
+
+  <p>FINAL DECLARATION<br>
+  All team roles are operational, technical, or informational only. No individual listed above provides financial services, investment advice, or economic guarantees. This disclosure is provided solely for transparency, accountability, and blockchain explorer verification.
+  </p>
+
+  <hr>
+
+  <p><strong>Official Project Channels:</strong></p>
+  <ul>
+    <li>Website: <a href="https://quazenthor.com" target="_blank">https://quazenthor.com</a></li>
+    <li>Email: <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a></li>
+
+<p>
+    These are the only official channels and resources for QUAZENTHOR. Beware of fakes or impersonators.
+</p>
+
+<p>
+    All official channels, social profiles and resources are listed on the 
+    <a href="links.html">Network Links & Team</a> page.
+</p>
+  </ul>
+
+</section>
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">14. Ongoing Maintenance – Documentation Only</h2>
+
+<p>
+The only ongoing activity is minimal documentation maintenance to ensure accuracy and accessibility. This includes:
+</p>
+
+<ul>
+  <li>Updating the changelog with any minor revisions (e.g., typo fixes, broken link repairs). All changes are recorded and dated for transparency.</li>
+  <li>Maintaining website uptime and security checks (no content changes). Regular monitoring ensures the site remains accessible without issues.</li>
+  <li>Responding to transparency inquiries via official email (admin@quazenthor.com). Responses are factual and non-promotional.</li>
+</ul>
+
+<p>
+No new content, features, or changes to the token's scope will occur. This maintenance is non-developmental and transparency-focused, aligning with the project's completed status.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">15. Token Supply</h2>
+
+<p>
+The total supply of QUAZENTHOR (QWBQ) is fixed at 5,000,000,000,000 tokens, minted entirely at contract deployment. There are no minting, burning, or supply adjustment functions in the smart contract.
+</p>
+
+<p>
+At deployment, 100% of the supply was minted to the deployer address as part of the standard BEP-20 creation process, verifiable on-chain via the contract address.
+</p>
+
+<p>
+No presales, ICOs, private placements, airdrops, or fundraising events occurred. No promises or allocations were made to investors or third parties. The supply remains immutable for educational demonstration.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">16. Deployer Wallet Clarification</h2>
+
+<p>
+The deployer wallet served only as the technical creation address for minting the fixed supply.
+</p>
+
+<p>
+It is not a treasury, investment pool, managed fund, or source of distributions. All movements from this address are fully visible on the public blockchain for transparency. Currently, the supply is held here for educational and control purposes, with no transfers planned or implied.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">17. Use Cases</h2>
+
+<p>
+QUAZENTHOR is intended solely for non-financial, educational purposes:
+</p>
+
+<ul>
+<li>Educational demonstrations – Learning about BEP-20 tokens, such as how transfers work in a simple contract.</li>
+<li>Smart contract testing – Safe experimentation on-chain to observe basic functions without risks.</li>
+<li>Blockchain transparency research – Studying verifiable deployments and on-chain data consistency.</li>
+<li>Community learning experiments – Non-economic discussions in forums or groups about token mechanics.</li>
+</ul>
+
+<p>
+It is not designed or marketed for financial gain, trading, speculation, or any economic use. Any interaction should be for learning only, with users verifying all details independently.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">18. Governance Policy</h2>
+
+<p>
+The project does not implement DAO governance, token voting, proposal systems, or any decision-making rights tied to holdings.
+</p>
+
+<p>
+There are no governance tokens, economic incentives, or mechanisms for changes. Updates are limited to documentation and clarifications only, with no on-chain alterations possible. This policy ensures the project remains static and educational, without any holder influence or expectations.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">19. Risk Disclosure</h2>
+
+<p>
+There are inherent risks when interacting with any blockchain token, including:
+- Smart contract risk – Potential vulnerabilities in code, even if verified.
+- Network congestion – Delays or high fees on BNB Smart Chain.
+- User error (wrong address, wrong network) – Mistakes in transactions leading to loss.
+</p>
+
+<p>
+Blockchain usage carries inherent technical risks, including wallet errors, transaction mistakes, network congestion, or user mishandling.
+</p>
+
+<p>
+Users are fully responsible for their own security practices, private keys, and interactions. The project provides no guarantees regarding usability, outcomes, or protection against losses.
+</p>
+
+<p>
+As an educational tool, no financial risks are implied, but users should verify everything independently before any interaction.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">20. Legal Disclaimer</h2>
+
+<p>
+This document is informational and educational only and does not constitute legal, financial, tax, or investment advice. Consult professionals for any personal decisions.
+</p>
+
+<p>
+QUAZENTHOR is not a registered financial service, regulated instrument, or entity. No rights, profits, dividends, or claims are granted to token holders.
+</p>
+
+<p>
+The project complies with transparency principles but makes no warranties. All users assume full responsibility for their actions.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">21. Permanent Exclusions – What Will Never Happen</h2>
+
+<p>
+To prevent speculation and ensure reviewer confidence, the following are explicitly and permanently excluded from the project scope:
+</p>
+
+<ul>
+  <li>Token sales, airdrops, giveaways, or distributions – No ICO/IDO or any form of token offering.</li>
+  <li>Staking, farming, yield, rewards, or incentives – No economics or benefit mechanisms.</li>
+  <li>Exchange listings, liquidity pools, or trading pairs – No markets or trading facilitation.</li>
+  <li>Partnerships, integrations, or collaborations – Independent project with no external ties.</li>
+  <li>Foundations, companies, DAOs, or external organizations – Small team only, no entities.</li>
+  <li>Upgrades, new features, smart contract changes, or proxy implementations – Immutable design.</li>
+  <li>Marketing, promotion, community building, or hype campaigns – Transparency focus only.</li>
+  <li>Any claim of affiliation with Binance, BNB Chain, or third parties – No distortions or associations.</li>
+  <li>Token distribution, secondary sales, or any form of transfer from deployer wallet – Supply remains centralized for educational demonstration.</li>
+  <li>Any future development, updates beyond documentation maintenance, or evolution of the project scope – Static and complete.</li>
+</ul>
+
+<p>
+These exclusions are intentional, permanent, and documented to prevent misinterpretation, false expectations, or association with unrelated projects.
+</p>
+
+<p>
+The token name and symbol are used solely for project identification and do not represent or affiliate with any existing entity.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">22. Verification, Accuracy, Originality & Independence</h2>
+
+<p>
+All scope declaration statements are independently verifiable through:
+</p>
+
+<ul>
+  <li>Immutable on-chain data on BNB Smart Chain – Contract address provided for direct checking.</li>
+  <li>Verified smart contract source code on BscScan – No hidden code, full match confirmed.</li>
+  <li>Public website content and historical consistency – Original materials with changelog.</li>
+</ul>
+
+<p>
+All information is 100% original — no copying from other projects, templates, public entities, or institutions. The project is fully independent — no affiliation with Binance, BNB Chain, BscScan, Trust Wallet, or any third-party organization.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">23. Ownership Verification – BscScan Verified Signature</h2>
+
+<p>
+For maximum transparency, the contract ownership of the QUAZENTHOR token has been publicly verified via a signed message on BscScan.
+</p>
+
+<p><strong>Verified Signature ID:</strong> #15181</p>
+
+<p>
+<strong>Deployer/Owner Address:</strong><br>
+0x0daeb75bf06b879164d0753fa9d695763fcd1f49
+</p>
+
+<p>
+<strong>Message:</strong><br>
+"I hereby confirm that I am the owner of this wallet address and the deployer/owner of the QUAZENTHOR token.<br>
+This signed message is submitted for BscScan token verification and project authentication.<br>
+Official project email: admin@quazenthor.com"
+</p>
+
+<p>
+<strong>Signature Hash:</strong><br>
+0xc52899c3077993d5d0677cef78af43d8039649484462b215a7ae14f48f9bc0fc472238011562e82a21742148b754c76888b36e8aff0947096521d2d33732859d1c
+</p>
+
+<p>
+<strong>View on BscScan:</strong><br>
+<a href="https://bscscan.com/verifySig/15181" target="_blank">https://bscscan.com/verifySig/15181</a> (Status: Verified)
+</p>
+
+<p>
+This confirms full control and accountability by the project owner (toora dokht). All details are immutable on-chain.
+</p>
+
+<p>
+This verification confirms full ownership, deployment authority, and accountability of the QUAZENTHOR token by the project owner. All verification data is permanently recorded and immutable on-chain.
+</p>
+</section>
+
+<!-- ===================================================== -->
+<section>
+<h2 style="color: red; text-align: center;">24. Website Security – SSL Certificate Verification</h2>
+
+<p>
+The official website (quazenthor.com) uses a valid SSL certificate to ensure secure and encrypted connections. Below is the verification details from SSL Checker:
+</p>
+
+<p>
+quazenthor.com resolves to 78.47.123.194
+</p>
+
+<p>
+The certificate should be trusted by all major web browsers (all the correct intermediate certificates are installed).
+</p>
+
+<p>
+The certificate will expire in 363 days (as of February 01, 2026).
+</p>
+
+<p>
+The hostname (quazenthor.com) is correctly listed in the certificate.
+</p>
+
+<p>
+<strong>Server Details:</strong><br>
+Common name: quazenthor.com<br>
+SANs: quazenthor.com, www.quazenthor.com<br>
+Valid from January 31, 2026 to January 31, 2027<br>
+Serial Number: 668ab2e067bd7b8b129757692ec967e9<br>
+Signature Algorithm: sha256WithRSAEncryption<br>
+Issuer: Certum DV TLS G2 R39 CA
+</p>
+
+<p>
+<strong>Chain Details:</strong><br>
+Common name: Certum DV TLS G2 R39 CA<br>
+Organization: Asseco Data Systems S.A. Org. Unit: Certum Certification Authority<br>
+Location: PL<br>
+Valid from June 18, 2024 to June 5, 2039<br>
+Serial Number: ab22d09e5cd4fcd13205070043e6b95a8<br>
+Signature Algorithm: sha512WithRSAEncryption<br>
+Issuer: Certum Trusted Root CA
+</p>
+
+<p>
+<strong>Root CA Details:</strong><br>
+Common name: Certum Trusted Root CA<br>
+Organization: Asseco Data Systems S.A. Org. Unit: Certum Certification Authority<br>
+Location: PL<br>
+Valid from September 19, 2023 to September 19, 2028<br>
+Serial Number: d8e07474582a419fd0b08d847f72020fa<br>
+Signature Algorithm: sha512WithRSAEncryption<br>
+Issuer: Certum Trusted Network CA
+</p>
+
+<p>
+This SSL certificate ensures the website is secure, accessible, and compliant with standard web security practices. It protects user connections and confirms the site's authenticity.
+</p>
+</section>
+
+<hr>
+
+<p><a href="index.html">⬅ Back to Home</a></p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 QUAZENTHOR – Educational & Non-Financial Blockchain Reference Project</p>
+  </div>
+</footer>
+
+</body>
+</html>

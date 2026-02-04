@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Audit & Security Report – QUAZENTHOR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Official audit and security report for QUAZENTHOR (QWBQ) – internal review of the BEP-20 smart contract, verified on BscScan. Non-financial, educational project with open-source code for community verification." />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    html { scroll-behavior: smooth; transition: all 0.3s ease-in-out; }
+    body { transition: opacity 0.5s ease; }
+    .gold-title, .gold-subtitle {
+      color: red !important;
+      text-align: center;
+    }
+    h1.gold-title {
+      animation: tokenAnim 2s infinite ease-in-out;
+    }
+    @keyframes tokenAnim {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-10px) scale(1.05); }
+      100% { transform: translateY(0) scale(1); }
+    }
+    @keyframes floatUpDown {
+      0%   { transform: translateY(0); }
+      50%  { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+    .gold-subtitle {
+      animation: floatUpDown 4s infinite ease-in-out;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="compliance-banner">
+EDUCATIONAL PROJECT ONLY • STRICTLY NON-FINANCIAL • NO TOKEN SALE • NO FUNDRAISING • NO INVESTMENT CLAIMS • NO PROMOTION
+</div>
+
+<header class="site-header">
+  <div class="wrap" style="text-align: center;">
+    <h1 class="gold-title">Audit & Security Report</h1>
+    <p class="muted">QUAZENTHOR (QWBQ) • BscScan-Verified & Transparent. Last updated: February 01, 2026.</p>
+  </div>
+</header>
+
+<div class="marquee-container">
+  <div class="marquee-text">
+    QUAZENTHOR: A Transparent Educational Demonstration of an Immutable BEP-20 Token on BNB Smart Chain – Serving as a Permanent Public On-Chain Reference for Learners and Developers to Study Contract Behavior in a Live Network Environment
+  </div>
+</div>
+
+<!-- ===== SECTION-BASED DROPDOWN NAVIGATION ===== -->
+<nav class="section-nav">
+<!-- CORE -->
+<details>
+<summary>Core</summary>
+<div class="panel">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+</div>
+</details>
+
+<!-- TOKEN -->
+<details>
+<summary>Token</summary>
+<div class="panel">
+<a href="tokenomics.html">Tokenomics</a>
+<a href="holders.html">Holders</a>
+<a href="lifecycle.html">Lifecycle</a>
+</div>
+</details>
+
+<!-- TEAM & IDENTITY -->
+<details>
+<summary>Team & Identity</summary>
+<div class="panel">
+<a href="team.html">Team</a>
+<a href="owner.html">Owner</a>
+<a href="founder-declaration.html">Founder Declaration</a>
+<a href="identity.html">Identity</a>
+<a href="links.html">Network Links & Team</a>
+</div>
+</details>
+
+<!-- VERIFICATION -->
+<details>
+<summary>Verification</summary>
+<div class="panel">
+<a href="ownership-verification.html">Ownership Verification</a>
+<a href="verification.html">Verification</a>
+<a href="bscscan-clarification.html">BscScan Clarification</a>
+<a href="bscscan-official-token-information.html">Official Token Info</a>
+</div>
+</details>
+
+<!-- COMPLIANCE -->
+<details>
+<summary>Compliance</summary>
+<div class="panel">
+<a href="explorer-compliance.html">Explorer Compliance</a>
+<a href="website-domain-clarification.html">Domain Clarification</a>
+<a href="official-email-statement.html">Official Email</a>
+<a href="social-proof.html">Social Proof</a>
+</div>
+</details>
+
+<!-- COMMUNITY -->
+<details>
+<summary>Community</summary>
+<div class="panel">
+<a href="news.html">News & Updates</a>
+<a href="blog.html">Blog</a>
+<a href="community.html">Community</a>
+<a href="social.html">Social & Links</a>
+<a href="contact.html">Contact</a>
+</div>
+</details>
+
+<!-- SECURITY -->
+<details>
+<summary>Security</summary>
+<div class="panel">
+<a href="security.html">Security</a>
+<a href="audit.html">Audit</a>
+</div>
+</details>
+
+<!-- DOCUMENTS -->
+<details>
+<summary>Documents</summary>
+<div class="panel">
+<a href="whitepaper.html">Whitepaper</a>
+<a href="footer.html">Footer Info</a>
+<a href="changelog.html">Changelog</a>
+</div>
+</details>
+
+<!-- SCOPE -->
+<details>
+<summary>Scope</summary>
+<div class="panel">
+<a href="scope-declaration.html">Scope Declaration</a>
+</div>
+</details>
+
+<!-- SITE GUIDE -->
+<details>
+<summary>Site Guide</summary>
+<div class="panel">
+<a href="guide.html">How to Use This Website</a>
+<a href="guide.html#sections">Sections Overview</a>
+</div>
+</details>
+
+<!-- LEGAL -->
+<details>
+<summary>Legal</summary>
+<div class="panel">
+<a href="legal.html">Legal Notice</a>
+<a href="privacy.html">Privacy</a>
+<a href="terms.html">Terms</a>
+<a href="license.html">License</a>
+</div>
+</details>
+</nav>
+
+<!-- ===== BNB NETWORK SYMBOL ===== -->
+<div class="bnb-network" style="text-align:center; margin:20px 0;">
+  <img src="bnb.png" alt="BNB Smart Chain Logo" style="width:80px; height:auto;">
+  <p>BNB Smart Chain (BEP-20 Network)</p>
+</div>
+
+<main class="wrap">
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">1. Introduction & Purpose</h2>
+
+    <p style="text-align: left;">
+      This page provides a detailed internal review and security assessment for the QUAZENTHOR (QWBQ) smart contract. As a strictly educational, non-financial BEP-20 token on the BNB Smart Chain, the contract is minimal, immutable, and contains only standard functionality.
+    </p>
+
+    <p style="text-align: left;">
+      The sole purpose of this review is to confirm the contract's simplicity, lack of custom logic or privileged controls, and full transparency through public verification on BscScan.
+    </p>
+
+    <p style="text-align: left;">
+      <strong>Rationale for Existence:</strong> The token exists as a permanent public on-chain reference used by learners and developers to study immutable BEP-20 contract behavior in a live network environment.
+    </p>
+
+    <p style="text-align: left;">
+      This website serves as the official and actively maintained information source for the QUAZENTHOR project. Documentation updates and revisions are recorded in the project changelog (if applicable).
+    </p>
+
+    <p style="text-align: left;">
+      The token exists as a permanent public on-chain reference used by learners and developers to study immutable BEP-20 contract behavior in a live network environment.
+    </p>
+  </section>
+
+  <hr>
+  
+  <div class="marquee-container">
+  <div class="marquee-text">
+    QUAZENTHOR: A Transparent Educational Demonstration of an Immutable BEP-20 Token on BNB Smart Chain – Serving as a Permanent Public On-Chain Reference for Learners and Developers to Study Contract Behavior in a Live Network Environment
+  </div>
+</div>
+
+<style>
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 0;
+  background: #bbdefb;
+  padding: 12px 0;
+}
+.marquee-text {
+  display: inline-block;
+  animation: marquee 18s linear infinite;
+  padding-left: 85%;
+}
+</style>
+
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">2. Audit Scope & Methodology</h2>
+
+    <p style="text-align: left;">
+      The review covers the entire smart contract code, focusing on:
+    </p>
+
+    <ul style="text-align: left;">
+      <li>Standard BEP-20 implementation – Only expected functions are present.</li>
+      <li>Absence of custom logic, fees, taxes, minting, burning, or administrative controls after deployment.</li>
+      <li>Immutability – Confirmed no upgrade, proxy, or modifiable mechanisms.</li>
+      <li>Security basics – Checked for common vulnerabilities like reentrancy, overflow, access control issues, and arithmetic errors.</li>
+      <li>Code simplicity – Verified minimal lines of code with no unnecessary complexity.</li>
+      <li>On-chain consistency – Matched deployed bytecode to verified source code.</li>
+    </ul>
+
+    <p style="text-align: left;">
+      Methodology: Manual code review by team contributors, cross-referenced with BscScan verification tools. No external auditors were used due to the contract's minimal nature, but the code is open-source for community audits.
+    </p>
+
+    <p style="text-align: left;">
+      Verified Source Code: <a href="https://bscscan.com/address/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code" target="_blank">View on BscScan</a>
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">3. Key Findings & Security Assessment</h2>
+
+    <p style="text-align: left;">
+      No critical or medium issues were identified. The contract is considered low-risk due to its minimal and standard design:
+    </p>
+
+    <ul style="text-align: left;">
+      <li><strong>Fixed Supply:</strong> Total supply is permanently fixed at 5,000,000,000,000 (5.00T) QWBQ with 18 decimals. No mint or burn functions can be called after deployment.</li>
+      <li><strong>No Fees or Taxes:</strong> All transfers are direct with no deductions or custom logic.</li>
+      <li><strong>No Administrative Controls:</strong> No owner privileges exist to pause transfers, modify balances, change metadata, or perform any sensitive actions post-deployment.</li>
+      <li><strong>Immutable Code:</strong> The contract cannot be upgraded or modified.</li>
+      <li><strong>Standard Functions Only:</strong> Implements only the following BEP-20 functions: totalSupply, balanceOf, transfer, transferFrom, approve, allowance, name, symbol, decimals.</li>
+    </ul>
+
+    <p style="text-align: left;">
+      Overall Risk Level: Low. The absence of custom logic and privileged roles eliminates most common attack vectors. All claims are directly verifiable via the public source code on BscScan.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">4. Recommendations</h2>
+
+    <p style="text-align: left;">
+      - Always verify the contract address before any interaction.<br>
+      - Rely exclusively on the verified source code on BscScan as the single source of truth.<br>
+      - Interacting with any blockchain token carries inherent risks including smart contract risk, network issues, and user error. The project assumes no responsibility for user actions.
+    </p>
+
+    <p style="text-align: left;">
+      The token has no utility, use-case, or functional purpose beyond being a live BEP-20 reference contract.
+    </p>
+  </section>
+
+  <hr>
+
+<div class="marquee-container">
+  <div class="marquee-text">
+    QUAZENTHOR: A Transparent Educational Demonstration of an Immutable BEP-20 Token on BNB Smart Chain – Serving as a Permanent Public On-Chain Reference for Learners and Developers to Study Contract Behavior in a Live Network Environment
+  </div>
+</div>
+
+<style>
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 0;
+  background: #bbdefb;
+  padding: 12px 0;
+}
+.marquee-text {
+  display: inline-block;
+  animation: marquee 18s linear infinite;
+  padding-left: 85%;
+}
+</style>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">5. Non-Financial Declaration</h2>
+
+    <p style="text-align: left;">
+      This review confirms the token's strictly non-financial and educational nature. No mechanisms for yield, staking, rewards, profits, or any economic return exist.
+    </p>
+
+    <p style="text-align: left;">
+      <strong>Important Reminder:</strong> QUAZENTHOR (QWBQ) is a demonstration token on the BNB Smart Chain — not an investment, not a financial product, not a security, and contains no profit, income, or speculative mechanisms of any kind. The name and symbol are used solely for project identification and have no relation or affiliation with any existing entity.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">6. Smart Contract Functions Summary</h2>
+
+    <p style="text-align: left;">
+      The smart contract implements only standard BEP-20 functions:
+      transfer, transferFrom, approve, allowance, balanceOf, totalSupply, name, symbol, decimals.
+      No custom functions, no administrative controls, and no privileged roles exist.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">7. Risk Disclosure</h2>
+
+    <p style="text-align: left;">
+      Interacting with blockchain tokens involves inherent risks, including smart contract risk, network congestion, and user error. The project assumes no responsibility for user actions.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">8. No Roadmap</h2>
+
+    <p style="text-align: left;">
+      The project has no roadmap, milestones, or future development plans. The project is complete at deployment.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">9. No Utility</h2>
+
+    <p style="text-align: left;">
+      The token has no utility, use-case, or functional purpose beyond being a live BEP-20 reference contract.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">10. Legal Disclaimer</h2>
+
+    <p style="text-align: left;">
+      This token is not a security, financial instrument, or investment product. Nothing constitutes financial or legal advice.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">11. Website Security – SSL Certificate Verification</h2>
+
+    <p style="text-align: left;">
+      The official website (quazenthor.com) uses a valid SSL certificate to ensure secure and encrypted connections. Below is the verification details from SSL Shopper (checked January 31, 2026):
+    </p>
+
+    <p style="text-align: left;">
+      quazenthor.com resolves to 78.47.123.194
+    </p>
+
+    <p style="text-align: left;">
+      The certificate should be trusted by all major web browsers (all the correct intermediate certificates are installed).
+    </p>
+
+    <p style="text-align: left;">
+      The certificate will expire in 364 days.
+    </p>
+
+    <p style="text-align: left;">
+      The hostname (quazenthor.com) is correctly listed in the certificate.
+    </p>
+
+    <p style="text-align: left;">
+      <strong>Server Details:</strong><br>
+      Common name: quazenthor.com<br>
+      SANs: quazenthor.com, www.quazenthor.com<br>
+      Valid from January 31, 2026 to January 31, 2027<br>
+      Serial Number: 668ab2e067bd7b8b129757692ec967e9<br>
+      Signature Algorithm: sha256WithRSAEncryption<br>
+      Issuer: Certum DV TLS G2 R39 CA
+    </p>
+
+    <p style="text-align: left;">
+      This SSL certificate ensures the website is secure, accessible, and compliant with standard web security practices.
+    </p>
+  </section>
+
+  <hr>
+
+  <!-- ===================================================== -->
+  <section style="text-align: left;">
+    <h2 class="gold-subtitle" style="color: red;">12. Official Verification Channels – Always Check These</h2>
+
+    <p style="text-align: left;">
+      Verify everything directly:
+    </p>
+
+  <section>
+<h3 class="gold-subtitle">10. Official Verification Channels – Always Check These</h3>
+<ul>
+  <li>🌐 Website: <a href="https://quazenthor.com">https://quazenthor.com</a></li>
+  <li>📧 Official: <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a></li>
+<p>
+    These are the only official channels and resources for QUAZENTHOR. Beware of fakes or impersonators.
+</p>
+
+<p>
+    All official channels, social profiles and resources are listed on the 
+    <a href="links.html">Network Links & Team</a> page.
+</p>
+
+
+  <li>🔍 BscScan Contract: <a href="https://bscscan.com/address/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code">Verified on 2026-01-31</a></li>
+  <li>Ownership Verification: <a href="https://bscscan.com/verifySig/15181">Signature #15181 (Verified)</a></li>
+</ul>
+</section>
+
+  <p><a href="index.html">⬅ Back to Home</a></p>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>© 2026 QUAZENTHOR • Secure & Transparent • No Financial Claims</p>
+  </div>
+</footer>
+
+</body>
+</html>
