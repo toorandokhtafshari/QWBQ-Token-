@@ -282,30 +282,71 @@ EDUCATIONAL PROJECT ONLY • STRICTLY NON-FINANCIAL • NO TOKEN SALE • NO FUN
   height: auto;
   animation: spin-float 12s linear infinite;
 }
+<style>
+/* ===== Animated BNB Symbol (No Image, No Placeholder) ===== */
+
+.bnb-orbit {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: floatBNB 3.5s ease-in-out infinite;
+}
+
+.bnb-core {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #f3ba2f, #b8860b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #111;
+    font-size: 14px;
+    letter-spacing: 1px;
+    box-shadow: 0 0 18px rgba(243,186,47,0.55);
+    animation: rotateBNB 6s linear infinite;
+}
+
+@keyframes rotateBNB {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@keyframes floatBNB {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
 </style>
 
 <section style="text-align:center; margin: 30px 0 50px; position: relative;">
     <h2 class="gold-subtitle">Official Documents – Download</h2>
 
     <div style="display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 40px; margin: 25px 0;">
-        <!-- عکس چپ -->
-        <img src="bnb3.png" alt="BNB Smart Chain Network Symbol" class="pulsing-bnb">
 
-        <!-- دکمه‌ها وسط -->
+        <!-- BNB Left -->
+        <div class="bnb-orbit" aria-label="BNB Smart Chain Symbol (Animated)">
+            <div class="bnb-core">BNB</div>
+        </div>
+
+        <!-- Buttons Center (UNCHANGED) -->
         <div style="display: flex; flex-direction: column; align-items: center; gap: 18px;">
             <a href="whitepaper.pdf" class="download-btn" download>Whitepaper (PDF)</a>
             <a href="bscscan-official-token-information.pdf" class="download-btn" download>Official Token Information (PDF)</a>
             <a href="https://quazenthor.com/logo.svg" class="download-btn" target="_blank">Logo (SVG)</a>
         </div>
 
-        <!-- عکس راست -->
-        <img src="bnb3.png" alt="BNB Smart Chain Network Symbol" class="pulsing-bnb">
+        <!-- BNB Right -->
+        <div class="bnb-orbit" aria-label="BNB Smart Chain Symbol (Animated)">
+            <div class="bnb-core">BNB</div>
+        </div>
+
     </div>
 </section>
 
-<p style="text-align:center; margin:30px 0;">
-
-</main>
 <!-- Quick Facts -->
 <section>
     <h2 class="gold-subtitle">Quick Token Facts</h2>
@@ -418,4 +459,5 @@ setTimeout(function() {
 </script>
 
 </body>
+
 </html>
