@@ -47,6 +47,9 @@ Role: Website Maintenance & Security Monitoring
 Bio:
 mekrodeo is responsible for website maintenance, accessibility checks, and monitoring for broken links or outdated references. This role ensures that the official website remains reachable, safe to visit, and technically consistent with published disclosures. There is no involvement in token issuance, financial activity, or contract control.
 
+
+****
+Professional verification for the founder and team members is provided through publicly accessible platforms such as GitHub, Bitcointalk, Medium, and X (Twitter). Due to regional restrictions, LinkedIn profiles may not be publicly accessible. These platforms are used as equivalent professional references for transparency and accountability purposes.
 ----------------------------------------
 
 FINAL DECLARATION
@@ -54,6 +57,8 @@ FINAL DECLARATION
 All team roles are operational, technical, or informational only.
 No individual listed above provides financial services, investment advice, or economic guarantees.
 This disclosure is provided solely for transparency, accountability, and blockchain explorer verification.
+
+
 
 ========================================
 END OF DISCLOSURE
