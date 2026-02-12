@@ -1,66 +1,149 @@
-========================================
-BSCScan Transparency & Team Disclosure
-========================================
+# QWBQ (Quazenthor)
 
-IMPORTANT COMPLIANCE NOTES (READ CAREFULLY)
+Official Technical Reference Repository
 
-• This project is strictly non-financial, non-investment, and educational.
-• No profit, yield, dividends, rewards, appreciation, or economic return is promised or implied.
-• No token sale, ICO, presale, fundraising, or public offering has ever occurred.
-• The smart contract is publicly verified on BscScan and follows the BEP-20 standard.
-• The token supply is fixed and immutable; no minting or burning mechanisms exist.
-• All information provided on this website is factual, original, and not a misrepresentation of any public entity or other project.
-• This page is published specifically to support blockchain explorer (BscScan) review and public transparency.
-• No team member controls user funds, token economics, or financial activity.
+---
 
-----------------------------------------
-TEAM ROLES & BIOS (PUBLIC DISCLOSURE)
-----------------------------------------
+## Project Overview
 
-1) Name: btmbani
-Role: Project Coordinator & Documentation Supervisor
+QWBQ (Quazenthor) is a fixed-supply BEP-20 token deployed on BNB Smart Chain mainnet as a public educational blockchain reference.
 
-Bio:
-btmbani is responsible for coordinating the overall project structure and supervising documentation consistency across the official website and public resources. This role focuses on ensuring alignment between on-chain data, written disclosures, and transparency standards. No financial, token-management, or fundraising responsibilities are held.
+The project exists to provide a minimal, immutable, and transparent example of a standard BEP-20 implementation operating in a real mainnet environment.
 
-----------------------------------------
+This repository serves as the official public reference hub for project documentation, transparency disclosures, and technical verification resources.
 
-2) Name: sostbt
-Role: Community & Public Communication Support
+---
 
-Bio:
-sostbt assists with community-facing communication and helps maintain clear, factual, and non-promotional explanations of the project’s educational purpose. Responsibilities include moderation of public discussions and ensuring that all external communication remains transparent and free of financial claims.
+## Core Properties
 
-----------------------------------------
+• Network: BNB Smart Chain (Mainnet)  
+• Token Standard: BEP-20  
+• Token Symbol: QWBQ  
+• Total Supply: 5,000,000,000,000 QWBQ (Fixed)  
+• Minting: Not available  
+• Burning: Not available  
+• Upgradeability: Not implemented  
+• Taxation: None  
 
-3) Name: amobanimo
-Role: Smart Contract Review & Technical Reference Contributor
+The contract is immutable and follows a minimal reference structure.
 
-Bio:
-amobanimo contributes by reviewing the publicly verified smart contract and supporting technical reference materials. This role focuses on confirming BEP-20 standard compliance, contract simplicity, and technical clarity for educational and transparency purposes only. No control over contract behavior, ownership, or token supply exists.
+---
 
-----------------------------------------
+## Smart Contract Information
 
-4) Name: mekrodeo
-Role: Website Maintenance & Security Monitoring
+Contract Address:  
+0x013f5f2F7F5b027012415A783ac2ed69EF936aE8
 
-Bio:
-mekrodeo is responsible for website maintenance, accessibility checks, and monitoring for broken links or outdated references. This role ensures that the official website remains reachable, safe to visit, and technically consistent with published disclosures. There is no involvement in token issuance, financial activity, or contract control.
+BscScan Verification Date: 2026-01-31  
+Ownership Verification: Signature #15181 (Verified)
 
+Official Website:  
+https://quazenthor.com
 
-****
-Professional verification for the founder and team members is provided through publicly accessible platforms such as GitHub, Bitcointalk, Medium, and X (Twitter). Due to regional restrictions, LinkedIn profiles may not be publicly accessible. These platforms are used as equivalent professional references for transparency and accountability purposes.
-----------------------------------------
+Project Email:  
+admin@quazenthor.com
 
-FINAL DECLARATION
+---
 
-All team roles are operational, technical, or informational only.
-No individual listed above provides financial services, investment advice, or economic guarantees.
-This disclosure is provided solely for transparency, accountability, and blockchain explorer verification.
+## Educational Purpose
 
+QWBQ functions as a live on-chain educational reference for:
 
+• Studying BEP-20 token mechanics  
+• Observing Transfer and Approval events  
+• Understanding allowance behavior  
+• Monitoring holder distribution  
+• Analyzing real gas usage on mainnet  
+• Verifying fixed supply structure  
 
-========================================
-END OF DISCLOSURE
-========================================
-# QWBQ-Token-
+The project is designed strictly for technical and educational interaction.
+
+It is not designed for trading, speculation, or financial activity.
+
+Educational blockchain reference project • Non-financial • No token sale • No fundraising • No investment claims
+
+---
+
+## Distribution Model
+
+Tokens are distributed manually upon request for educational interaction.
+
+There has been:
+
+• No ICO  
+• No presale  
+• No public sale  
+• No liquidity pool  
+• No exchange listing  
+
+All distribution activity is visible on-chain.
+
+---
+
+## Contributors
+
+The project was initiated and coordinated by the Founder.
+
+Independent contributors support documentation, technical review, public communication, and website maintenance.
+
+### Team Members
+
+**btmbani**  
+Project Coordination & Documentation  
+
+**sostbt**  
+Community Communication Support  
+
+**amobanimo**  
+Smart Contract Review & Technical Reference  
+
+**mekrodeo**  
+Website Maintenance & Technical Monitoring  
+
+All roles are operational and informational only.
+
+No contributor controls token supply mechanics, minting capability, financial services, or investment activity.
+
+---
+
+## Official Project Links
+
+X (Twitter):  
+https://x.com/quazenthorQWBQ  
+
+Telegram:  
+https://t.me/Quazenthor  
+
+Medium:  
+https://medium.com/@quazenthor  
+
+GitHub:  
+https://github.com/toorandokhtafshari/QWBQ-Token-  
+
+Bitcointalk:  
+https://bitcointalk.org/index.php?topic=5573196  
+
+Facebook:  
+https://www.facebook.com/quazenthor  
+
+Instagram:  
+https://www.instagram.com/quazenthor/  
+
+Logo:  
+https://quazenthor.com/logo.svg  
+
+---
+
+## Transparency Statement
+
+All information presented across official channels is factual and aligned with publicly verifiable on-chain data.
+
+The project operates as a technical blockchain reference implementation deployed on BNB Smart Chain mainnet.
+
+No financial services are provided.
+No investment guarantees exist.
+No economic return is promised or implied.
+
+---
+
+End of Document
