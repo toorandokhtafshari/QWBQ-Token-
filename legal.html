@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Legal Disclaimer & Full Project Clarification – QUAZENTHOR</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Extensive legal disclaimer, strong non-investment/non-financial statements, risk disclosure, independence declaration, and transparency clarification for QUAZENTHOR Token (QWBQ). Explicitly structured to meet BscScan compliance, non-misleading requirements, and reviewer expectations.">
-<link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8" />
+<title>Legal Notice – QUAZENTHOR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<meta name="description"
+content="Legal notice for QUAZENTHOR (QWBQ) – educational BEP-20 reference token on BNB Smart Chain. Emphasizes non-financial nature, risks, and educational purpose." />
+
+<link rel="stylesheet" href="styles.css" />
 
 <style>
   html { scroll-behavior: smooth; transition: all 0.3s ease-in-out; }
   body { transition: opacity 0.5s ease; }
+
   .gold-title, .gold-subtitle {
     color: red !important;
     text-align: center;
@@ -30,451 +34,295 @@
   .gold-subtitle {
     animation: floatUpDown 4s infinite ease-in-out;
   }
+
+  .compliance-banner {
+    background: #0f1c2e;
+    color: #f1c40f;
+    padding: 14px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.05rem;
+  }
+
+  @keyframes marquee {
+    0%   { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  .marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 20px 0;
+    background: #bbdefb;
+    padding: 12px 0;
+  }
+  .marquee-text {
+    display: inline-block;
+    animation: marquee 18s linear infinite;
+    padding-left: 85%;
+  }
+
+  .section-nav {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(135,206,235,0.25);
+  }
+  .section-nav details { position: relative; }
+  .section-nav summary {
+    background: #87CEEB;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .section-nav summary:hover { background: #5F9EA0; }
+  .section-nav .panel {
+    position: absolute;
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    z-index: 1;
+    min-width: 200px;
+  }
+  .section-nav .panel a {
+    display: block;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #333;
+  }
+  .section-nav .panel a:hover {
+    background: #87CEEB;
+    color: #fff;
+  }
+
+  /* Dual-container for side-by-side animated boxes */
+  .dual-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+    justify-content: center;
+  }
+  .animated-box {
+    flex: 1;
+    min-width: 320px;
+    max-width: 480px;
+    padding: 20px;
+    border: 2px solid #87CEEB;
+    border-radius: 12px;
+    background: rgba(135, 206, 235, 0.08);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+    animation: pulseGlow 4s infinite ease-in-out;
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 6px 15px rgba(135,206,235,0.2); border-color: #87CEEB; }
+    50%      { box-shadow: 0 10px 25px rgba(135,206,235,0.4); border-color: #5F9EA0; }
+  }
+  .animated-box h2 {
+    margin-top: 0;
+    font-size: 1.4rem;
+  }
+
+  @media (max-width: 768px) {
+    .dual-container { flex-direction: column; }
+  }
 </style>
 </head>
 
 <body>
 
+<div class="compliance-banner">
+  Educational blockchain reference project • Non-financial • No token sale • No fundraising • No investment claims
+</div>
+
 <header class="site-header">
-  <div class="wrap">
-    <h1>Legal Disclaimer & Full Project Transparency Statement</h1>
-    <p class="muted">Non-Financial • Strictly Educational • Transparency-Only Blockchain Demonstration</p>
+  <div class="wrap" style="text-align: center;">
+    <h1 class="gold-title">Legal Notice</h1>
+    <p class="muted">Transparency-Focused BEP-20 Token on BNB Smart Chain. Last updated: February 2026.</p>
   </div>
 </header>
 
-<!-- ===== SECTION-BASED DROPDOWN NAVIGATION ===== -->
+<div class="marquee-container">
+  <div class="marquee-text">
+    QUAZENTHOR: Educational BEP-20 Reference Token on BNB Smart Chain Mainnet – Live Environment for Studying Standard Token Mechanics, Transfers, Approvals and Immutable Behavior
+  </div>
+</div>
+
 <nav class="section-nav">
-<!-- CORE -->
-<details>
-<summary>Core</summary>
-<div class="panel">
-<a href="index.html">Home</a>
-<a href="about.html">About</a>
-</div>
+  <details><summary>Core</summary><div class="panel"><a href="index.html">Home</a><a href="about.html">About</a></div></details>
+  <details><summary>Token</summary><div class="panel"><a href="tokenomics.html">Tokenomics</a><a href="holders.html">Holders</a><a href="lifecycle.html">Lifecycle</a></div></details>
+  <details><summary>Team & Identity</summary><div class="panel"><a href="team.html">Contributors</a><a href="owner.html">Owner</a><a href="founder-declaration.html">Founder Declaration</a><a href="identity.html">Identity</a><a href="links.html">Network Links</a></div></details>
+  <details><summary>Verification</summary><div class="panel"><a href="ownership-verification.html">Ownership Verification</a><a href="verification.html">Verification</a><a href="bscscan-clarification.html">BscScan Clarification</a><a href="bscscan-official-token-information.html">Official Token Info</a></div></details>
+  <details><summary>Compliance</summary><div class="panel"><a href="explorer-compliance.html">Explorer Compliance</a><a href="website-domain-clarification.html">Domain Clarification</a><a href="official-email-statement.html">Official Email</a><a href="social-proof.html">Social Proof</a></div></details>
+  <details>
+  <summary>Community</summary>
+  <div class="panel">
+    <a href="news.html">News & Updates</a>
+    <a href="blog.html">Blog</a>
+    <a href="community.html">Community</a>
+    <a href="social.html">Social & Links</a>
+    <a href="contact.html">Contact</a>
+    <a href="FAQ.html">FAQ</a>
+  </div>
 </details>
-
-<!-- TOKEN -->
-<details>
-<summary>Token</summary>
-<div class="panel">
-<a href="tokenomics.html">Tokenomics</a>
-<a href="holders.html">Holders</a>
-<a href="lifecycle.html">Lifecycle</a>
-</div>
-</details>
-
-<!-- TEAM & IDENTITY -->
-<details>
-<summary>Team & Identity</summary>
-<div class="panel">
-<a href="team.html">Team</a>
-<a href="owner.html">Owner</a>
-<a href="founder-declaration.html">Founder Declaration</a>
-<a href="identity.html">Identity</a>
-<a href="links.html">Network Links & Team</a>
-</div>
-</details>
-
-<!-- VERIFICATION -->
-<details>
-<summary>Verification</summary>
-<div class="panel">
-<a href="ownership-verification.html">Ownership Verification</a>
-<a href="verification.html">Verification</a>
-<a href="bscscan-clarification.html">BscScan Clarification</a>
-<a href="bscscan-official-token-information.html">Official Token Info</a>
-</div>
-</details>
-
-<!-- COMPLIANCE -->
-<details>
-<summary>Compliance</summary>
-<div class="panel">
-<a href="explorer-compliance.html">Explorer Compliance</a>
-<a href="website-domain-clarification.html">Domain Clarification</a>
-<a href="official-email-statement.html">Official Email</a>
-<a href="social-proof.html">Social Proof</a>
-</div>
-</details>
-
-<!-- COMMUNITY -->
-<details>
-<summary>Community</summary>
-<div class="panel">
-<a href="news.html">News & Updates</a>
-<a href="blog.html">Blog</a>
-<a href="community.html">Community</a>
-<a href="social.html">Social & Links</a>
-<a href="contact.html">Contact</a>
-</div>
-</details>
-
-<!-- SECURITY -->
-<details>
-<summary>Security</summary>
-<div class="panel">
-<a href="security.html">Security</a>
-<a href="audit.html">Audit</a>
-</div>
-</details>
-
-<!-- DOCUMENTS -->
-<details>
-<summary>Documents</summary>
-<div class="panel">
-<a href="whitepaper.html">Whitepaper</a>
-<a href="footer.html">Footer Info</a>
-<a href="changelog.html">Changelog</a>
-</div>
-</details>
-
-<!-- SCOPE -->
-<details>
-<summary>Scope</summary>
-<div class="panel">
-<a href="scope-declaration.html">Scope Declaration</a>
-</div>
-</details>
-
-<!-- SITE GUIDE -->
-<details>
-<summary>Site Guide</summary>
-<div class="panel">
-<a href="guide.html">How to Use This Website</a>
-<a href="guide.html#sections">Sections Overview</a>
-</div>
-</details>
-
-<!-- LEGAL -->
-<details>
-<summary>Legal</summary>
-<div class="panel">
-<a href="legal.html">Legal Notice</a>
-<a href="privacy.html">Privacy</a>
-<a href="terms.html">Terms</a>
-<a href="license.html">License</a>
-</div>
-</details>
+  <details><summary>Security</summary><div class="panel"><a href="security.html">Security</a><a href="audit.html">Audit</a></div></details>
+  <details><summary>Documents</summary><div class="panel"><a href="whitepaper.html">Whitepaper</a><a href="footer.html">Footer Info</a><a href="changelog.html">Changelog</a></div></details>
+  <details><summary>Scope</summary><div class="panel"><a href="scope-declaration.html">Scope Declaration</a></div></details>
+  <details><summary>Site Guide</summary><div class="panel"><a href="guide.html">How to Use This Website</a><a href="guide.html#sections">Sections Overview</a></div></details>
+  <details><summary>Legal</summary><div class="panel"><a href="legal.html">Legal Notice</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="license.html">License</a></div></details>
 </nav>
+
+<div class="bnb-network" style="text-align:center; margin:20px 0;">
+  <p>Deployed on BNB Smart Chain Mainnet (BEP-20 Network)</p>
+</div>
 
 <main class="wrap">
 
-<!-- ================================================= -->
 <section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">1. Project Nature & Clear Identity – Repeated for Clarity</h2>
+<h2 class="gold-subtitle" style="color: red;">1. Project Purpose</h2>
 
 <p style="text-align: left;">
-QUAZENTHOR Token (symbol: QWBQ) is a **fixed-supply, standard BEP-20 token** deployed on the BNB Smart Chain (BSC). Contract address: <a href="https://bscscan.com/address/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8" target="_blank">0x013f5f2F7F5b027012415A783ac2ed69EF936aE8</a> — source code **fully verified** on BscScan since January 31, 2026.
+QUAZENTHOR (QWBQ) is a fixed-supply BEP-20 token deployed on BNB Smart Chain mainnet as a public educational reference implementation. It enables real interaction with standard BEP-20 functions in a live blockchain environment.
 </p>
 
 <p style="text-align: left;">
-The project exists **solely** as an **educational and transparency-focused blockchain demonstration**. It is designed to show how a simple, immutable, minimal smart contract can operate predictably on a public network without hidden mechanics, taxes, minting, burning, or financial incentives.
+The token is intended for studying immutable contract behavior, gas consumption, event logging, and holder distribution changes. Contract address: <a href="https://bscscan.com/address/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8" target="_blank">0x013f5f2F7F5b027012415A783ac2ed69EF936aE8</a> – verified on BscScan since January 31, 2026.
 </p>
 
 <p style="text-align: left;">
-QUAZENTHOR is **explicitly NOT**:
-</p>
-
-<ul style="text-align: left;">
-  <li>A commercial product, business, or service</li>
-  <li>A financial instrument, investment opportunity, or security</li>
-  <li>A fundraising mechanism, profit-sharing scheme, or yield generator</li>
-  <li>A utility token with real-world use cases beyond demonstration</li>
-</ul>
-
-<p style="text-align: left;">
-**No** financial purpose, profit expectation, or commercial intent exists. This is repeated across the site to prevent any misinterpretation during BscScan review or by users.
-</p>
-
-<p style="text-align: left;">
-The token name and symbol are used solely for project identification and do not represent or affiliate with any existing entity.
-</p>
-
-<p style="text-align: left;">
-<strong>Rationale for Existence:</strong> The token exists as a permanent public on-chain reference used by learners and developers to study immutable BEP-20 contract behavior in a live network environment.
-</p>
-
-<p style="text-align: left;">
-This website serves as the official and actively maintained information source for the QUAZENTHOR project. Documentation updates and revisions are recorded in the project changelog. Last updated: February 01, 2026.
+The name and symbol are used solely for identification.
 </p>
 </section>
 
 <hr>
 
-<!-- ================================================= -->
 <section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">2. Strong & Repeated Non-Investment / Non-Financial Statement</h2>
+<h2 class="gold-subtitle" style="color: red;">2. Non-Financial Nature</h2>
 
 <p style="text-align: left;">
-QUAZENTHOR Token (QWBQ) is **strictly non-financial** and **does not constitute** under any jurisdiction:
-</p>
-
-<ul style="text-align: left;">
-  <li>A security, share, equity, or ownership interest</li>
-  <li>An investment contract or opportunity</li>
-  <li>A derivative, commodity, financial instrument, or store of value</li>
-  <li>A speculative asset or profit-generating token</li>
-  <li>Any regulated financial product</li>
-</ul>
-
-<p style="text-align: left;">
-**No** profits, yields, returns, appreciation, dividends, revenue share, or financial benefits are promised, implied, encouraged, or expected in any way — on this website, in documentation, social channels, or elsewhere.
+QUAZENTHOR is an educational reference token with no financial purpose or implications. It does not represent a security, investment vehicle, or profit-generating asset.
 </p>
 
 <p style="text-align: left;">
-The project has **never** and will **never** involve token sales, ICOs, presales, airdrops, fundraising, or any economic activity. All tokens remain with the deployer wallet or are publicly traceable on-chain with no commercial distribution.
-</p>
-
-<p style="text-align: left;">
-This token is not a security, financial instrument, or investment product. Nothing constitutes financial or legal advice.
-</p>
-
-<p style="text-align: left;">
-Official Website: <a href="https://quazenthor.com" target="_blank">https://quazenthor.com</a><br>
-Official Email: <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>
-</p>
-<p>
-    These are the only official channels and resources for QUAZENTHOR. Beware of fakes or impersonators.
-</p>
-
-<p>
-    All official channels, social profiles and resources are listed on the 
-    <a href="links.html">Network Links & Team</a> page.
-</p>
-
-</section>
-
-<hr>
-
-<!-- ================================================= -->
-<section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">3. Ownership Verification – BscScan Verified Signature</h2>
-
-<p style="text-align: left;">
-For maximum transparency, the contract ownership of the QUAZENTHOR token has been publicly verified through a signed message on BscScan.
-</p>
-
-<ul style="text-align: left;">
-  <li><strong>Verified Signature ID:</strong> #15181</li>
-  <li><strong>Deployer / Owner Address:</strong> 0x0daeb75bf06b879164d0753fa9d695763fcd1f49</li>
-  <li><strong>Signed Message:</strong> "I hereby confirm that I am the owner of this wallet address and the deployer/owner of the QUAZENTHOR token. This signed message is submitted for BscScan token verification and project authentication. Official project email: admin@quazenthor.com"</li>
-  <li><strong>Signature Hash:</strong> 0xc52899c3077993d5d0677cef78af43d8039649484462b215a7ae14f48f9bc0fc472238011562e82a21742148b754c76888b36e8aff0947096521d2d33732859d1c</li>
-  <li><strong>View on BscScan:</strong> <a href="https://bscscan.com/verifySig/15181" target="_blank">https://bscscan.com/verifySig/15181</a></li>
-  <li><strong>Status:</strong> Verified</li>
-</ul>
-
-<p style="text-align: left;">
-This verification confirms full ownership, deployment authority, and accountability of the QUAZENTHOR token by the project owner. All verification data is permanently recorded and immutable on-chain.
+Tokens are distributed manually for educational testing upon request. All movements are visible on-chain.
 </p>
 </section>
 
 <hr>
 
-<!-- ================================================= -->
 <section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">4. Risk Disclosure – Comprehensive & Repeated</h2>
+<h2 class="gold-subtitle" style="color: red;">3. User Agreement</h2>
 
 <p style="text-align: left;">
-Interacting with blockchain tokens involves inherent risks, including smart contract risk, network congestion, and user error. The project assumes no responsibility for user actions.
+By accessing this website or interacting with the token, users acknowledge the educational nature of the project and agree to these terms.
 </p>
 
 <p style="text-align: left;">
-Blockchain technology, including the BNB Smart Chain and BEP-20 tokens, carries **inherent risks** including (but not limited to):
-</p>
-
-<ul style="text-align: left;">
-  <li>Loss of funds due to user error (e.g., wrong addresses, lost keys)</li>
-  <li>Smart contract vulnerabilities (though none exist in this minimal contract)</li>
-  <li>Network congestion, gas fees, or blockchain forks</li>
-  <li>Regulatory changes or legal restrictions in your jurisdiction</li>
-  <li>Scams, phishing, or third-party exploits</li>
-</ul>
-
-<p style="text-align: left;">
-Users accept **all risks** and **waive any claims** against the project for losses.
+Users must comply with applicable laws in their jurisdiction regarding blockchain technology.
 </p>
 </section>
 
 <hr>
 
-<div class="marquee-container">
-  <div class="marquee-text">
-    QUAZENTHOR: A Transparent Educational Demonstration of an Immutable BEP-20 Token on BNB Smart Chain – Serving as a Permanent Public On-Chain Reference for Learners and Developers to Study Contract Behavior in a Live Network Environment
+<section style="text-align: left;">
+<h2 class="gold-subtitle" style="color: red;">4. Risk Disclosure</h2>
+
+<p style="text-align: left;">
+Blockchain interactions involve risks, including but not limited to:
+</p>
+
+<ul style="text-align: left;">
+  <li>User error (e.g., incorrect addresses)</li>
+  <li>Network issues or gas fees</li>
+  <li>Regulatory changes</li>
+  <li>Third-party risks</li>
+</ul>
+
+<p style="text-align: left;">
+Users accept all risks associated with their actions.
+</p>
+</section>
+
+<hr>
+
+<section style="text-align: left;">
+<h2 class="gold-subtitle" style="color: red;">5. Independence & Non-Affiliation</h2>
+
+<p style="text-align: left;">
+QUAZENTHOR is independent and has no affiliation with Binance, BNB Chain, BscScan, or any other entity.
+</p>
+
+<p style="text-align: left;">
+All content is original and provided for educational reference.
+</p>
+</section>
+
+<hr>
+
+<section style="text-align: left;">
+<h2 class="gold-subtitle" style="color: red;">6. Educational Role</h2>
+
+<p style="text-align: left;">
+The token serves as a reference for observing BEP-20 mechanics on mainnet, including transfers, approvals, and events.
+</p>
+</section>
+
+<hr>
+
+<div class="dual-container">
+
+  <div class="animated-box">
+    <h2 class="gold-subtitle" style="color: #006400;">7. Information Purpose Only</h2>
+    <p style="text-align: left;">
+      All content is provided for informational and educational purposes. It does not constitute legal, financial, tax, or professional advice.
+    </p>
+    <p style="text-align: left;">
+      Users should consult their own advisors for any decisions.
+    </p>
   </div>
+
+  <div class="animated-box">
+    <h2 class="gold-subtitle" style="color: #006400;">8. User Responsibility</h2>
+    <p style="text-align: left;">
+      Any interaction with the token or contract is at the user's sole risk and discretion.
+    </p>
+    <p style="text-align: left;">
+      Users acknowledge blockchain risks such as irreversible transactions and private key management.
+    </p>
+  </div>
+
 </div>
 
-<style>
-@keyframes marquee {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 20px 0;
-  background: #bbdefb;
-  padding: 12px 0;
-}
-.marquee-text {
-  display: inline-block;
-  animation: marquee 18s linear infinite;
-  padding-left: 85%;
-}
-</style>
+<div class="dual-container">
 
-<!-- ================================================= -->
-<section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">5. Independence & Non-Affiliation Declaration</h2>
-
-<p style="text-align: left;">
-QUAZENTHOR is **fully independent** and has **no affiliation, partnership, endorsement, sponsorship, or connection** with:
-</p>
-
-<ul style="text-align: left;">
-  <li>Binance, BNB Chain, or any exchange/platform</li>
-  <li>BscScan or any blockchain explorer</li>
-  <li>Any government, regulator, or financial institution</li>
-  <li>Any other token, project, or public entity</li>
-</ul>
-
-<p style="text-align: left;">
-All content is **100% original** — no copied claims, no misrepresentation of third parties. The token name and symbol are used solely for project identification and do not represent or affiliate with any existing entity.
-</p>
-</section>
-
-<hr>
-
-<!-- ================================================= -->
-<section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">6. No Utility or Use Case – Explicit Statement</h2>
-
-<p style="text-align: left;">
-The token has no utility, use-case, or functional purpose beyond being a live BEP-20 reference contract.
-</p>
-
-<p style="text-align: left;">
-QUAZENTHOR has **no utility, use case, or functionality** beyond serving as a **public blockchain demonstration**. It does **not** grant access to services, products, voting rights, or any benefits.
-</p>
-
-<p style="text-align: left;">
-The project has no roadmap, milestones, or future development plans. The project is complete at deployment.
-</p>
-</section>
-
-<hr>
-
-<!-- ================================================= -->
-<section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">7. Information & Educational Purpose Only – No Advice</h2>
-
-<p style="text-align: left;">
-All content on this website (and related channels) is provided **solely** for **informational, educational, and transparency purposes**.
-</p>
-
-<p style="text-align: left;">
-Nothing constitutes **legal, financial, tax, investment, or professional advice**. Users must consult their own advisors for any decisions.
-</p>
-</section>
-
-<hr>
-
-<!-- ================================================= -->
-<section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">8. User Responsibility & Risk Acceptance</h2>
-
-<p style="text-align: left;">
-Any interaction with QUAZENTHOR Token, smart contract, or website is **voluntary** and undertaken at the user's **sole risk and discretion**.
-</p>
-
-<p style="text-align: left;">
-Users acknowledge and accept all blockchain risks, including (but not limited to):
-</p>
-
-<ul style="text-align: left;">
-  <li>Irreversible transactions</li>
-  <li>Private key loss = permanent asset loss</li>
-  <li>Smart contract code executes automatically — no reversals</li>
-  <li>Network, gas, or third-party risks</li>
-  <li>Scams, phishing, or fake sites</li>
-</ul>
-
-<p style="text-align: left;">
-The project disclaims all liability for any loss, damage, or consequence.
-</p>
-</section>
-
-<hr>
-
-<div class="marquee-container">
-  <div class="marquee-text">
-    QUAZENTHOR: A Transparent Educational Demonstration of an Immutable BEP-20 Token on BNB Smart Chain – Serving as a Permanent Public On-Chain Reference for Learners and Developers to Study Contract Behavior in a Live Network Environment
+  <div class="animated-box">
+    <h2 class="gold-subtitle" style="color: #006400;">9. Limitation of Liability</h2>
+    <p style="text-align: left;">
+      To the fullest extent permitted by law, the project and its contributors shall not be liable for any damages arising from use of the token, website, or materials.
+    </p>
+    <p style="text-align: left;">
+      No warranties are provided.
+    </p>
   </div>
+
+  <div class="animated-box">
+    <h2 class="gold-subtitle" style="color: #006400;">10. Official Resources</h2>
+    <p style="text-align: left;">
+      Official sources:
+    </p>
+    <ul style="text-align: left;">
+      <li>🌐 Website: <a href="https://quazenthor.com" target="_blank">quazenthor.com</a></li>
+      <li>📧 Contact: <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a></li>
+      <li>🔍 BscScan: <a href="https://bscscan.com/address/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code" target="_blank">Contract & Verification</a></li>
+      <li>Ownership Verification: <a href="https://bscscan.com/verifySig/15181" target="_blank">Signature #15181</a></li>
+    </ul>
+  </div>
+
 </div>
-
-<style>
-@keyframes marquee {
-  0%   { transform: translateX(100%); }
-  100% { transform: translateX(-100%); }
-}
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 20px 0;
-  background: #bbdefb;
-  padding: 12px 0;
-}
-.marquee-text {
-  display: inline-block;
-  animation: marquee 18s linear infinite;
-  padding-left: 85%;
-}
-</style>
-
-<!-- ================================================= -->
-<section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">9. Limitation of Liability – Maximum Legal Protection</h2>
-
-<p style="text-align: left;">
-To the fullest extent permitted by law, the project owner (toora dokht), contributors, and affiliates shall **not** be liable for any direct, indirect, incidental, consequential, or punitive damages arising from use of the token, website, or materials.
-</p>
-
-<p style="text-align: left;">
-No warranties or guarantees of any kind are provided.
-</p>
-</section>
-
-<hr>
-
-<!-- ================================================= -->
-<section style="text-align: left;">
-<h2 class="gold-subtitle" style="color: red;">10. Explorer Compliance & Official Channels</h2>
-
-<p style="text-align: left;">
-This disclaimer supports BscScan/explorer transparency by confirming non-financial nature, immutability, and clear accountability.
-</p>
-
-<p style="text-align: left;">
-Official channels (always verify directly from these sources only):
-</p>
-<ul style="text-align: left;">
-  <li>🌐 Website: <a href="https://quazenthor.com" target="_blank">https://quazenthor.com</a> – Official and actively maintained project source (last updates visible in changelog)</li>
-  <li>📧 Contact: <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a> – All official communication via @quazenthor.com domain only</li>
-<p>
-    These are the only official channels and resources for QUAZENTHOR. Beware of fakes or impersonators.
-</p>
-
-<p>
-    All official channels, social profiles and resources are listed on the 
-    <a href="links.html">Network Links & Team</a> page.
-</p>
-
-  <li>🔍 BscScan Contract: <a href="https://bscscan.com/address/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8" target="_blank">0x013f5f2F7F5b027012415A783ac2ed69EF936aE8</a> (Verified on 2026-01-31)</li>
-  <li>Ownership Verification: <a href="https://bscscan.com/verifySig/15181" target="_blank">Signature #15181 (Verified)</a> – Confirms deployer/owner authority</li>
-</ul>
-<p style="text-align: left;">
-This documentation is provided for transparency and review purposes.
-</p>
-</section>
 
 <p style="text-align:center; margin:40px 0;">
   <a class="nav-btn highlight-btn" href="index.html">⬅ Back to Home</a>
@@ -484,7 +332,7 @@ This documentation is provided for transparency and review purposes.
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>© 2026 QUAZENTHOR • Strictly Educational & Transparency Project • No Financial Claims • No Investment • Full Disclaimer & User Responsibility</p>
+    <p>© 2026 QUAZENTHOR – Educational Blockchain Reference Project • Non-Financial • No Token Sale • No Fundraising • No Investment Claims • Public Transparency</p>
   </div>
 </footer>
 
