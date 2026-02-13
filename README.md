@@ -6,11 +6,11 @@ Official Technical Reference Repository
 
 ## Project Overview
 
-QWBQ (Quazenthor) is a fixed-supply BEP-20 token deployed on BNB Smart Chain mainnet as a public educational blockchain reference.
-
-The project exists to provide a minimal, immutable, and transparent example of a standard BEP-20 implementation operating in a real mainnet environment.
+**Quazenthor (QWBQ)** is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet as a public technical reference implementation. It enables real blockchain interaction with standard BEP-20 functions including transfers, approvals, allowance validation, and event observation. Educational distribution is performed manually and is fully transparent on-chain. The contract is immutable and contains no minting, burning, taxation, or upgradeability mechanisms.
 
 This repository serves as the official public reference hub for project documentation, transparency disclosures, and technical verification resources.
+
+**Sector:** Education / Technical Reference
 
 ---
 
@@ -25,7 +25,123 @@ This repository serves as the official public reference hub for project document
 • Upgradeability: Not implemented  
 • Taxation: None  
 
-The contract is immutable and follows a minimal reference structure.
+The contract is immutable and follows a minimal reference structure. Deployed on BNB Smart Chain mainnet.
+
+---
+
+## Why This Token Exists
+
+QWBQ was created to provide a minimal and transparent BEP-20 reference contract deployed on BNB Smart Chain mainnet for real educational interaction.
+
+The purpose of creating this token is to allow practical observation of how a fixed-supply BEP-20 contract behaves in a live blockchain environment.
+
+It exists as a technical reference implementation — not as a financial or speculative product.
+
+---
+
+## Who Benefits From It
+
+QWBQ is intended for:
+
+* Students learning smart contract fundamentals  
+* Developers studying BEP-20 token mechanics  
+* Blockchain researchers analyzing on-chain behavior  
+* Technical reviewers examining immutable contract design  
+
+It is not designed for traders or speculative investors.
+
+---
+
+## How It Is Used
+
+Users interact with QWBQ directly on mainnet by:
+
+* Sending token transfers between wallets  
+* Testing approval and allowance mechanisms  
+* Monitoring Transfer and Approval event logs  
+* Observing holder distribution changes  
+* Verifying the permanently fixed total supply  
+
+---
+
+## For What Purpose It Is Used
+
+QWBQ is used to demonstrate:
+
+* Real gas consumption  
+* Real transaction confirmation  
+* Immutable ledger recording  
+* Standard BEP-20 event emission  
+* Fixed supply contract behavior  
+
+---
+
+## Exact Educational Role
+
+The educational role of QWBQ is to serve as a live reference model of a minimal BEP-20 contract on mainnet.
+
+Unlike simulated environments, QWBQ allows learners to observe:
+
+* How supply remains constant  
+* How allowances are granted and reduced  
+* How events are emitted and recorded  
+* How holder distribution evolves  
+* How gas behaves in real network conditions  
+
+QWBQ functions as a live on-chain educational reference for:
+
+• Studying BEP-20 token mechanics  
+• Observing Transfer and Approval events  
+• Understanding allowance behavior  
+• Monitoring holder distribution  
+• Analyzing real gas usage on mainnet  
+• Verifying fixed supply structure  
+
+The project is designed strictly for technical and educational interaction.
+
+Educational blockchain reference project • Non-financial • No token sale • No fundraising • No investment claims
+
+---
+
+## How Tokens Reach Users
+
+QWBQ tokens are distributed manually upon request for educational interaction.
+
+There is:
+
+* No ICO  
+* No presale  
+* No public sale  
+* No liquidity pool  
+* No exchange listing  
+
+Distribution is gradual and visible on-chain. Tokens are distributed manually by the founder to independent wallets for educational, technical, and testing purposes.
+
+Recipients can:
+
+* Perform transfers  
+* Test Approval mechanisms  
+* Analyze Event Logs  
+* Observe holder distribution trends  
+
+This distribution model is intentionally limited to maintain the token's role as a technical reference, not a financial or investment tool.
+
+---
+
+## Supply Structure Clarification
+
+Total supply is permanently fixed.
+
+No minting exists.  
+No burning exists.  
+No taxation exists.  
+No upgradeability exists.  
+
+A significant portion of the QWBQ supply is held by the deployer address. Educational distribution is ongoing gradually, and all changes are transparently visible on-chain.
+
+No minting or supply increase is possible, ensuring the total supply remains fixed forever.
+
+This structure maintains the stability of the reference contract while preventing misinterpretations of inactivity.
 
 ---
 
@@ -43,48 +159,16 @@ https://quazenthor.com
 Project Email:  
 admin@quazenthor.com
 
----
-
-## Educational Purpose
-
-QWBQ functions as a live on-chain educational reference for:
-
-• Studying BEP-20 token mechanics  
-• Observing Transfer and Approval events  
-• Understanding allowance behavior  
-• Monitoring holder distribution  
-• Analyzing real gas usage on mainnet  
-• Verifying fixed supply structure  
-
-The project is designed strictly for technical and educational interaction.
-
-It is not designed for trading, speculation, or financial activity.
-
-Educational blockchain reference project • Non-financial • No token sale • No fundraising • No investment claims
-
----
-
-## Distribution Model
-
-Tokens are distributed manually upon request for educational interaction.
-
-There has been:
-
-• No ICO  
-• No presale  
-• No public sale  
-• No liquidity pool  
-• No exchange listing  
-
-All distribution activity is visible on-chain.
+Source Code:  
+QWBQ.sol (Available in this repository)
 
 ---
 
 ## Contributors
 
-The project was initiated and coordinated by the Founder.
+The project is initiated and coordinated by the Founder.
 
-Independent contributors support documentation, technical review, public communication, and website maintenance.
+Independent contributors assist in documentation, technical review, public communication, and website maintenance.
 
 ### Team Members
 
@@ -100,9 +184,7 @@ Smart Contract Review & Technical Reference
 **mekrodeo**  
 Website Maintenance & Technical Monitoring  
 
-All roles are operational and informational only.
-
-No contributor controls token supply mechanics, minting capability, financial services, or investment activity.
+All roles are operational and informational only. Contract ownership remains under the deployer address to preserve reference stability. No contributor controls token supply mechanics, minting capability, financial services, or investment activity.
 
 ---
 
@@ -140,8 +222,8 @@ All information presented across official channels is factual and aligned with p
 
 The project operates as a technical blockchain reference implementation deployed on BNB Smart Chain mainnet.
 
-No financial services are provided.
-No investment guarantees exist.
+No financial services are provided.  
+No investment guarantees exist.  
 No economic return is promised or implied.
 
 ---
