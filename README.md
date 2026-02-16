@@ -2,6 +2,12 @@
 
 Official Technical Reference Repository
 
+Project Owner / Founder Bio
+toora dokht is the founder, owner, and primary coordinator of the Quazenthor (QWBQ) project. With a strong background in blockchain development and smart contract deployment, she initiated this educational reference token to provide a transparent, immutable BEP-20 implementation on BNB Smart Chain mainnet. Her focus is on fostering real-world blockchain education through manual distribution for technical interactions, ensuring no financial or speculative elements. As the deployer, she maintains contract stability while overseeing gradual on-chain distribution for learners, developers, and researchers. She coordinates independent contributors for documentation and technical reviews, preserving the project's non-financial educational scope.
+
+X (Twitter Owner): https://x.com/sos_tbt
+Facebook (Owner): https://www.facebook.com/QWBQToken
+GitHub (Owner Repo): https://github.com/hokar1404/QWBQ-Token
 ---
 
 ## Project Overview
