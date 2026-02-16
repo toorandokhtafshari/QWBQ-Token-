@@ -214,8 +214,6 @@ https://bitcointalk.org/index.php?topic=5573196
 Facebook:  
 https://www.facebook.com/quazenthor  
 
-Instagram:  
-https://www.instagram.com/quazenthor/  
 
 Logo:  
 https://quazenthor.com/logo.svg  
