@@ -231,5 +231,13 @@ No investment guarantees exist.
 No economic return is promised or implied.
 
 ---
-
+https://quazenthor.com/whitepaper.pdf
+https://quazenthor.com/token-info.pdf
+https://quazenthor.com/terms.pdf
+https://quazenthor.com/official-token-information.pdf
+https://quazenthor.com/clarification.pdf
+https://quazenthor.com/scope-declaration.pdf
+https://quazenthor.com/solidityscan-billing.pdf
+https://quazenthor.com/logo.svg
+---------
 End of Document
