@@ -294,6 +294,67 @@ Full details: View Full Roadmap at https://quazenthor.com/roadmap
 
 Documentation & website update log – strictly for transparency and educational purposes
 
+### July 29, 2026 – DexScreener Pair Observation & Transparency Update
+
+- A third-party QWBQ/WBNB pair has been observed on PancakeSwap and is now visible on DexScreener: https://dexscreener.com/bsc/0xb2205edf9c51dd9479cb96d557611fa82e9f5dc3
+- Important clarification: This pair and any related activity were created independently by third parties and are **not** initiated, supported, or endorsed by the Quazenthor project.
+- The project remains strictly educational and non-financial. There is still no official liquidity pool, no exchange listing, no token sale, and no investment opportunity of any kind.
+- Contract status remains fully verified and immutable on BscScan (since January 31, 2026). All distributions continue to be manual and educational only.
+- This observation is shared solely for on-chain transparency, consistent with the project’s commitment to public visibility.
+
+**Purpose:** Maintain full transparency regarding any third-party activity visible on public explorers. All changes limited to documentation. No modifications to the smart contract or token logic.
+
+### July 21, 2026 – Wallet Integration Progress & Transparency Update
+
+- Submitted and actively following up on MetaMask contract-metadata PR #1845 (educational BEP-20 token metadata and logo).
+- Submitted PancakeSwap token-list PR #742 (noted as stale per maintainer policy; manual import via contract address remains available).
+- Received CoinGecko listing request confirmation (ID: CL2007260025) – currently under review.
+- Continued BscScan token page maintenance (logo and information already updated).
+- Updated this changelog to reflect ongoing wallet visibility and listing efforts for educational purposes.
+- Verified all official links, GitHub repositories, and on-chain references remain active.
+
+**Purpose:** Demonstrate continued transparency and progress on wallet integration / visibility improvements. All changes limited to documentation and presentation. No modifications to smart contract or token logic.
+
+### July 18, 2026 – Website update: Holders & Transfers statistics + Token listing progress
+
+- Updated on-chain statistics: Holders reached 12,164 (+0.123%) and Total Transfers reached 20,044.
+- Added dedicated section for token listing progress: MetaMask PR (#1845) and PancakeSwap PR (#742) are in Review Pending (RP) status. All automated checks passed.
+- Refreshed timestamps and maintained full educational transparency.
+- Continued commitment to clear documentation and on-chain verifiability.
+
+**Purpose:** Provide up-to-date information for visitors, BscScan reviewers, and community. All changes are documentation and presentation only.
+
+### July 05, 2026 – Trust Wallet PR preparation, Bitcointalk & Medium update, and transparency maintenance
+
+- Updated Bitcointalk thread with latest on-chain statistics (11,170+ holders and 15,751+ transactions).
+- Published new article on Medium highlighting the educational purpose of QWBQ.
+- Prepared updated info.json and assets for a new Trust Wallet Assets Pull Request.
+- Verified all official links, BscScan contract status, and ownership signature #15181.
+- Performed full site review for mobile/desktop responsiveness and crawlability.
+- Updated this changelog to demonstrate ongoing project maintenance and transparency.
+
+**Purpose:** Continue active maintenance, improve visibility on key platforms, and prepare for broader educational reach. All changes are limited to documentation, website content, and external platform updates. No modifications to the smart contract or token logic.
+
+### June 22, 2026 – Periodic Security Review & Maintenance Check
+
+- Conducted a full periodic security and integrity review of the website, documentation, and external links.
+- Verified SSL certificate status (still valid until January 31, 2027).
+- Checked all official links (BscScan contract, ownership signature #15181, social channels, GitHub repositories) — all active and correct.
+- Confirmed no unauthorized changes to the smart contract or website content.
+- Reviewed site structure, mobile/desktop responsiveness, and crawlability for transparency.
+- Updated this changelog with the latest maintenance record.
+
+**Purpose:** Demonstrate ongoing project maintenance and security diligence. All changes are limited to documentation and presentation. No modifications were made to the smart contract or token logic.
+
+### May 02, 2026 – Site maintenance, structure review and ongoing transparency update
+
+- Performed full site review and maintenance to ensure optimal structure and readability.
+- Updated changelog with today's entry to demonstrate active project maintenance.
+- Verified all links, sections, and educational content consistency across the website.
+- Continued commitment to transparency and providing a clean educational resource for the blockchain community.
+
+**Purpose:** Show ongoing activity and attention to the project website. All changes are documentation and presentation related.
+
 ### February 27, 2026 – Addition of download buttons for founder-declaration.pdf, roadmap.pdf and identity.pdf (request #1), navigation box centering fix for computer screens, and update log
 
 - Added three new download buttons in the Official Documents section for founder-declaration.pdf, roadmap.pdf and identity.pdf using the exact filenames and same download-btn style.  
