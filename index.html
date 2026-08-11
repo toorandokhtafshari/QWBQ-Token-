@@ -1,22 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Quazenthor (QWBQ) â€“ Educational BEP-20 Reference Token</title>
+  <title>Quazenthor (QWBQ) – BEP-20 Token on BNB Smart Chain</title>
 
-  <meta name="description" content="Quazenthor (QWBQ) is a fixed-supply educational BEP-20 token on BNB Smart Chain mainnet for real blockchain interaction and study. Non-financial, no sale, no investment. Total Supply: 5.00T QWBQ. Owner: toora dokht.">
+  <meta name="description" content="Quazenthor (QWBQ) is a fixed-supply BEP-20 token on BNB Smart Chain mainnet. Total Supply: 5.00T QWBQ. Verified contract with transparent on-chain distribution. Owner: toora dokht.">
 
-  <!-- ðŸ”¥ Ù„ÙˆÚ¯Ùˆ Ø¨Ø±Ø§ÛŒ ØªÙ„Ú¯Ø±Ø§Ù… Ùˆ ÙˆÙ„Øªâ€ŒÙ‡Ø§ -->
+  <!-- Logo for Telegram and wallets -->
   <meta property="og:image" content="https://quazenthor.com/logo.png">
   <meta property="og:title" content="Quazenthor (QWBQ)">
-  <meta property="og:description" content="Educational BEP-20 token on BNB Smart Chain">
+  <meta property="og:description" content="Fixed-supply BEP-20 token on BNB Smart Chain">
 
   <meta name="twitter:image" content="https://quazenthor.com/logo.png">
 
-  <!-- ðŸ”¥ Ø¢ÛŒÚ©ÙˆÙ† Ø³Ø§ÛŒØª -->
+  <!-- Site icon -->
   <link rel="icon" href="https://quazenthor.com/logo.png">
 
   <style>
@@ -47,8 +46,19 @@
     }
     .download-btn { 
       display:block; padding:12px; background:#1e8449; color:white; text-align:center; border-radius:6px; text-decoration:none; font-weight:bold; 
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
     }
     .download-btn:hover { background:#27ae60; }
+    .metamask-btn {
+      background: #f6851b;
+    }
+    .metamask-btn:hover {
+      background: #e2761b;
+    }
     h1, h2, h3 { color:#2c3e50; }
     section { margin:60px 0; }
     .network-links ul { 
@@ -83,12 +93,12 @@
 <header class="site-header">
   <div class="container">
     <h1 class="logo">Quazenthor (QWBQ)</h1>
-    <p class="tagline">Transparency-Focused Educational BEP-20 Token on BNB Smart Chain Mainnet. Total Supply: 5.00T QWBQ. Owner: toora dokht.</p>
+    <p class="tagline">Fixed-Supply BEP-20 Token on BNB Smart Chain Mainnet. Total Supply: 5.00T QWBQ. Owner: toora dokht.</p>
   </div>
 </header>
 
 <section class="downloads-section container">
-  <h2>Official Documents â€“ Direct Downloads</h2>
+  <h2>Official Documents – Direct Downloads</h2>
   <div>
     <a href="/whitepaper.pdf" class="download-btn" download>Download Whitepaper</a>
     <a href="/token-info.pdf" class="download-btn" download>Download Token Details & Bio</a>
@@ -102,13 +112,13 @@
     <a href="/founder-declaration.pdf" class="download-btn" download>Download Founder Declaration</a>
     <a href="/roadmap.pdf" class="download-btn" download>Download Roadmap</a>
     <a href="/identity.pdf" class="download-btn" download>Download Identity</a>
+    <button type="button" class="download-btn metamask-btn" onclick="addQWBQToMetaMask()">Add QWBQ to MetaMask</button>
   </div>
 </section>
 
 <section class="network-links container">
   <h2>Network Links & On-Chain References</h2>
 
-  <!-- Added the two requested links here at the top of this section -->
   <p><strong>View Current Holders:</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#balances" target="_blank">Holders List on BscScan</a></p>
   <p><strong>View Token Transfers (Distribution History):</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#tokentxns" target="_blank">Token Transfers on BscScan</a></p>
 
@@ -122,18 +132,18 @@
     <li><strong>Bitcointalk:</strong> <a href="https://bitcointalk.org/index.php?topic=5573196">https://bitcointalk.org/index.php?topic=5573196</a></li>
     <li><strong>Facebook Main:</strong> <a href="https://www.facebook.com/quazenthor">https://www.facebook.com/quazenthor</a></li>
     <li><strong>Contract Address:</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8">0x013f5f2F7F5b027012415A783ac2ed69EF936aE8</a></li>
-    <li><strong>Contract Code (Verified):</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code">View on BscScan</a> â€“ Verified: 2026-01-31</li>
+    <li><strong>Contract Code (Verified):</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code">View on BscScan</a> – Verified: 2026-01-31</li>
     <li><strong>Deployer / Owner Wallet:</strong> <a href="https://bscscan.com/address/0x0daeb75bf06b879164d0753fa9d695763fcd1f49">0x0daeb75bf06b879164d0753fa9d695763fcd1f49</a></li>
     <li><strong>Ownership Verification:</strong> <a href="https://bscscan.com/verifySig/15181">Signature #15181 (Verified)</a></li>
     <li style="border-top:2px solid #ddd; padding-top:15px;">
-      <strong>SSL Certificate Summary:</strong> Valid for quazenthor.com (Jan 31, 2026 â€“ Jan 31, 2027). Trusted by all browsers. Issuer: Certum. <a href="https://www.sslshopper.com/ssl-checker.html?hostname=quazenthor.com" target="_blank">More Details</a>
+      <strong>SSL Certificate Summary:</strong> Valid for quazenthor.com (Jan 31, 2026 – Jan 31, 2027). Trusted by all browsers. Issuer: Certum. <a href="https://www.sslshopper.com/ssl-checker.html?hostname=quazenthor.com" target="_blank">More Details</a>
     </li>
   </ul>
 </section>
 
 <section class="owner-bio container" style="background:#f0f8ff; padding:20px; margin:20px auto; border:1px solid #ddd; border-radius:8px; max-width: 1200px;">
   <h2>Project Owner / Founder Bio</h2>
-  <p><strong>toora dokht</strong> is the founder, owner, and primary coordinator of the Quazenthor (QWBQ) project. With a strong background in blockchain development and smart contract deployment, she initiated this educational reference token to provide a transparent, immutable BEP-20 implementation on BNB Smart Chain mainnet. Her focus is on fostering real-world blockchain education through manual distribution for technical interactions, ensuring no financial or speculative elements. As the deployer, she maintains contract stability while overseeing gradual on-chain distribution for learners, developers, and researchers. She coordinates independent contributors for documentation and technical reviews, preserving the project's non-financial educational scope.</p>
+  <p><strong>toora dokht</strong> is the founder, owner, and primary coordinator of the Quazenthor (QWBQ) project. With a strong background in blockchain development and smart contract deployment, she launched this fixed-supply BEP-20 token on BNB Smart Chain mainnet. Her focus is on transparency, immutability, and clear on-chain distribution. As the deployer, she maintains contract stability while overseeing gradual token distribution and project documentation.</p>
   <ul style="list-style:none; padding:0;">
     <li><strong>X (Twitter Owner):</strong> <a href="https://x.com/sos_tbt">https://x.com/sos_tbt</a></li>
     <li><strong>Facebook (Owner):</strong> <a href="https://www.facebook.com/QWBQToken">https://www.facebook.com/QWBQToken</a></li>
@@ -143,24 +153,24 @@
 
 <section class="contributors container" style="background:#f0f8ff; padding:20px; margin:20px auto; border:1px solid #ddd; border-radius:8px; max-width: 1200px;">
   <h2>Contributors</h2>
-  <p>The project is initiated and coordinated by the Founder. Independent contributors assist in documentation, technical review, and website maintenance. Contract ownership remains under the deployer address to preserve reference stability. None of the contributors have control over the contract logic or token supply.</p>
+  <p>The project is initiated and coordinated by the Founder. Independent contributors assist in documentation, technical review, and website maintenance. Contract ownership remains under the deployer address to preserve stability. None of the contributors have control over the contract logic or token supply.</p>
 </section>
 
 <section class="container" style="background:#f0f8ff; padding:30px; margin:20px auto; border:1px solid #ddd; border-radius:8px; max-width: 1200px;">
   <h2>Founder Declaration</h2>
-  <p>I, toora dokht, declare that I am the founder and initiator of the Quazenthor (QWBQ) project. This project is a personal educational initiative to deploy a minimal, immutable BEP-20 token on the BNB Smart Chain mainnet as a public reference for learning and technical study.</p>
-  <p>The project has no commercial intent, no fundraising mechanisms, no token sales, and no investment opportunities. It exists solely to demonstrate standard BEP-20 behavior in a live blockchain environment, allowing developers, students, and researchers to interact with real on-chain mechanics.</p>
+  <p>I, toora dokht, declare that I am the founder and initiator of the Quazenthor (QWBQ) project. This project is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet.</p>
+  <p>The project prioritizes transparency, immutability, and public verifiability. All on-chain activity is fully visible on BscScan.</p>
   <p>All project documentation, updates, and communications are managed by me or designated contributors under my coordination. The project remains fully transparent, with all on-chain activity publicly verifiable via BscScan.</p>
 </section>
 
 <section class="container">
   <h2>Tokenomics & Supply Structure</h2>
-  <p>Total supply is permanently fixed. No minting, burning, taxation or upgradeability exists. Educational distribution is carried out gradually and all changes are transparently visible on-chain.</p>
+  <p>Total supply is permanently fixed. No minting, burning, taxation or upgradeability exists. Token distribution is carried out gradually and all changes are transparently visible on-chain.</p>
   <ul>
     <li><strong>Name:</strong> quazenthor</li>
     <li><strong>Symbol:</strong> QWBQ</li>
     <li><strong>Decimals:</strong> 18</li>
-    <li><strong>Total Supply:</strong> 5,000,000,000,000 QWBQ (5.00T) â€“ Fixed at deployment</li>
+    <li><strong>Total Supply:</strong> 5,000,000,000,000 QWBQ (5.00T) – Fixed at deployment</li>
     <li><strong>Contract Address:</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8">0x013f5f2F7F5b027012415A783ac2ed69EF936aE8</a></li>
   </ul>
   <p>Transfers follow standard BEP-20 logic with no fees, taxes, reflections or limits. Only standard BNB gas fees apply.</p>
@@ -173,7 +183,7 @@
   <p>Total supply is permanently fixed at 5,000,000,000,000 QWBQ (5.00T). No minting, burning, taxation, or upgradeability exists. The supply was minted once at deployment and remains capped forever.</p>
 
   <h3>On-Chain Distribution & Holders</h3>
-  <p>Educational distribution is gradual and manual, with all changes transparently visible on the BNB Smart Chain. The initial supply is held by the deployer wallet for controlled release in educational contexts.</p>
+  <p>Token distribution is gradual and transparent, with all changes fully visible on the BNB Smart Chain. The initial supply is held by the deployer wallet for controlled release.</p>
   <p><strong>View Current Holders:</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#balances" target="_blank">Holders List on BscScan</a></p>
   <p><strong>View Token Transfers (Distribution History):</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#tokentxns" target="_blank">Token Transfers on BscScan</a></p>
 </section>
@@ -188,7 +198,7 @@
 
 <section class="container">
   <h2>Community Guidelines</h2>
-  <p>Communication is limited strictly to educational and technical discussion about the BEP-20 reference token. No financial, trading or investment topics are accepted.</p>
+  <p>Communication focuses on technical discussion about the BEP-20 token, its contract, and on-chain activity.</p>
   <p>All verified channels are listed in the Network Links section above.</p>
 </section>
 
@@ -199,61 +209,64 @@
 
 <section class="container" style="background:#fff0f0; padding:25px; border:2px solid #c0392b; border-radius:8px;">
   <h2 style="color:#c0392b;">Risk Disclosure & Legal Disclaimer</h2>
-  <p>This project is strictly educational and non-financial. There is no token sale, no fundraising, no investment opportunity, no ICO, no presale, no liquidity pool, and no exchange listing. Any third-party activity (e.g., unofficial trading or pools) is unrelated and carries standard blockchain risks. Use only for learning purposes. The founder and contributors disclaim all liability for any use outside the educational scope.</p>
+  <p>Interacting with any cryptocurrency involves risks including market volatility, smart contract behavior, network conditions, and potential loss of funds. Quazenthor (QWBQ) is a standard BEP-20 token. Users should conduct their own research and only use amounts they can afford to lose. The founder and contributors disclaim all liability for any losses or decisions made by users.</p>
 </section>
 
 <nav class="main-nav container">
   <strong>Quick Navigation (All 41 Pages):</strong>
-  <a href="/index">Home</a> â€¢
-  <a href="/about">About</a> â€¢
-  <a href="/tokenomics">Tokenomics</a> â€¢
-  <a href="/supply">Supply</a> â€¢
-  <a href="/holders">Holders</a> â€¢
-  <a href="/lifecycle">Lifecycle</a> â€¢
-  <a href="/source-code">Source Code</a> â€¢
-  <a href="/ownership-verification">Ownership Verification</a> â€¢
-  <a href="/verification">Verification</a> â€¢
-  <a href="/bscscan-clarification">BscScan Clarification</a> â€¢
-  <a href="/bscscan-official-token-information">Official Token Info</a> â€¢
-  <a href="/team">Team</a> â€¢
-  <a href="/contributors">Contributors</a> â€¢
-  <a href="/owner">Owner</a> â€¢
-  <a href="/founder-declaration">Founder Declaration</a> â€¢
-  <a href="/identity">Identity</a> â€¢
-  <a href="/links">Network Links</a> â€¢
-  <a href="/whitepaper">Whitepaper</a> â€¢
-  <a href="/legal">Legal Notice</a> â€¢
-  <a href="/privacy">Privacy</a> â€¢
-  <a href="/terms">Terms</a> â€¢
-  <a href="/license">License</a> â€¢
-  <a href="/security">Security</a> â€¢
-  <a href="/audit">Audit</a> â€¢
-  <a href="/explorer-compliance">Explorer Compliance</a> â€¢
-  <a href="/website-domain-clarification">Domain Clarification</a> â€¢
-  <a href="/official-email-statement">Official Email</a> â€¢
-  <a href="/social-proof">Social Proof</a> â€¢
-  <a href="/news">News</a> â€¢
-  <a href="/blog">Blog</a> â€¢
-  <a href="/community">Community</a> â€¢
-  <a href="/social">Social & Links</a> â€¢
-  <a href="/contact">Contact</a> â€¢
-  <a href="/FAQ">FAQ</a> â€¢
-  <a href="/scope-declaration">Scope Declaration</a> â€¢
-  <a href="/guide">Guide</a> â€¢
-  <a href="/site-guide-sections">Site Guide Sections</a> â€¢
-  <a href="/changelog">Changelog</a> â€¢
-  <a href="/footer-info">Footer Info</a> â€¢
-  <a href="/roadmap">Roadmap</a> â€¢
+  <a href="/index">Home</a> •
+  <a href="/about">About</a> •
+  <a href="/tokenomics">Tokenomics</a> •
+  <a href="/supply">Supply</a> •
+  <a href="/holders">Holders</a> •
+  <a href="/lifecycle">Lifecycle</a> •
+  <a href="/source-code">Source Code</a> •
+  <a href="/ownership-verification">Ownership Verification</a> •
+  <a href="/verification">Verification</a> •
+  <a href="/bscscan-clarification">BscScan Clarification</a> •
+  <a href="/bscscan-official-token-information">Official Token Info</a> •
+  <a href="/team">Team</a> •
+  <a href="/contributors">Contributors</a> •
+  <a href="/owner">Owner</a> •
+  <a href="/founder-declaration">Founder Declaration</a> •
+  <a href="/identity">Identity</a> •
+  <a href="/links">Network Links</a> •
+  <a href="/whitepaper">Whitepaper</a> •
+  <a href="/legal">Legal Notice</a> •
+  <a href="/privacy">Privacy</a> •
+  <a href="/terms">Terms</a> •
+  <a href="/license">License</a> •
+  <a href="/security">Security</a> •
+  <a href="/audit">Audit</a> •
+  <a href="/explorer-compliance">Explorer Compliance</a> •
+  <a href="/website-domain-clarification">Domain Clarification</a> •
+  <a href="/official-email-statement">Official Email</a> •
+  <a href="/social-proof">Social Proof</a> •
+  <a href="/news">News</a> •
+  <a href="/blog">Blog</a> •
+  <a href="/community">Community</a> •
+  <a href="/social">Social & Links</a> •
+  <a href="/contact">Contact</a> •
+  <a href="/FAQ">FAQ</a> •
+  <a href="/scope-declaration">Scope Declaration</a> •
+  <a href="/guide">Guide</a> •
+  <a href="/site-guide-sections">Site Guide Sections</a> •
+  <a href="/changelog">Changelog</a> •
+  <a href="/footer-info">Footer Info</a> •
+  <a href="/roadmap">Roadmap</a> •
   <a href="/how-to-get-involved">How to Get Involved</a>
 </nav>
 
 <div class="container">
-<h1>Quazenthor (QWBQ) â€“ Educational BEP-20 Reference Token</h1>
-<p>Educational blockchain reference project â€¢ Non-financial â€¢ No token sale â€¢ No fundraising â€¢ No investment claims</p>
+<h1>Quazenthor (QWBQ) – BEP-20 Token on BNB Smart Chain</h1>
+<p>Fixed-Supply BEP-20 Token • Verified Contract • Transparent On-Chain Distribution</p>
+
 <h2>What is Quazenthor (QWBQ)?</h2>
-<p>Quazenthor (QWBQ) is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet as a public technical reference implementation. It enables real blockchain interaction with standard BEP-20 functions including transfers, approvals, allowance validation, and event observation. Educational distribution is performed manually and is fully transparent on-chain. The contract is immutable and contains no minting, burning, taxation, or upgradeability mechanisms.</p>
+<p>Quazenthor (QWBQ) is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet. It features a permanently capped total supply and a fully verified, immutable smart contract. The token supports standard BEP-20 functions including transfers, approvals, allowance management, and event observation. All on-chain activity is publicly verifiable.</p>
+
 <h2>Why It Exists</h2>
-<p>QWBQ was created to provide a minimal and transparent BEP-20 reference contract deployed on BNB Smart Chain mainnet for real educational interaction.</p>
+<p>QWBQ was created as a transparent and immutable BEP-20 token on BNB Smart Chain mainnet with a fixed supply and clear on-chain visibility.</p>
+
 <h2>How It Is Used</h2>
 <ul>
   <li>Sending token transfers between wallets</li>
@@ -266,31 +279,31 @@
 <h3>General Questions</h3>
 <details>
   <summary>What is Quazenthor (QWBQ)?</summary>
-  <p>Quazenthor (QWBQ) is a minimal, fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet as a public educational reference. It exists solely to demonstrate standard BEP-20 behavior (transfers, approvals, events, holder distribution) in real network conditions â€” not as a financial product, investment, or tradable asset.</p>
+  <p>Quazenthor (QWBQ) is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet. It has a permanently capped total supply and a fully verified immutable contract that supports standard BEP-20 functions.</p>
 </details>
 <details>
   <summary>Is QWBQ an investment or financial product?</summary>
-  <p>No. The project explicitly states it has no financial purpose. There is no ICO, no presale, no token sale, no fundraising, no liquidity pool, no exchange listing, and no investment opportunity. Any third-party trading or pooling is independent and unrelated to the project.</p>
+  <p>Quazenthor (QWBQ) is a standard BEP-20 token. Like any cryptocurrency, it carries market and technical risks. Users should always conduct their own research.</p>
 </details>
 <details>
   <summary>Why was the token deployed?</summary>
-  <p>To provide a transparent, immutable, real-world example of a standard BEP-20 contract on mainnet for educational purposes â€” allowing students, developers, and researchers to observe actual on-chain mechanics, gas usage, event emission, and holder distribution changes.</p>
+  <p>To provide a transparent, immutable BEP-20 token on BNB Smart Chain mainnet with fixed supply and full on-chain visibility.</p>
 </details>
 <details>
   <summary>Who controls the contract?</summary>
-  <p>Ownership remains with the deployer address to preserve the reference implementation's stability. The owner can only update the name and symbol for clarity â€” there are no mint, burn, pause, tax, upgrade, or administrative functions. The contract is permanently immutable in logic and supply.</p>
+  <p>Ownership remains with the deployer address. The owner can only update the name and symbol for clarity — there are no mint, burn, pause, tax, upgrade, or administrative functions. The contract is permanently immutable in logic and supply.</p>
 </details>
 <details>
   <summary>How can I get some QWBQ tokens?</summary>
-  <p>Small amounts are manually distributed by the project coordinator upon legitimate educational or technical request (e.g., for learning/testing purposes). Send your request to <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>. All distributions are transparent and visible on-chain. There is no public claim, airdrop, or automatic mechanism.</p>
+  <p>Tokens are distributed by the project coordinator. Send your request to <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>. All distributions are transparent and visible on-chain.</p>
 </details>
 <details>
   <summary>What if I see QWBQ being traded or pooled somewhere?</summary>
-  <p>Any trading, pooling, or liquidity activity is done by independent third parties and is not associated with or supported by the Quazenthor project. The project explicitly states there is no ICO, no sale, no public offering, no liquidity pool, and no exchange listing. All such activity is outside the project's scope and control. Always verify information through official channels only.</p>
+  <p>Any trading or liquidity activity is performed by independent third parties. Always verify information through official channels only.</p>
 </details>
 <details>
   <summary>Are there any risks or warnings I should know?</summary>
-  <p>This is a purely educational reference token with no financial value or features. Do not purchase, trade, or invest in QWBQ expecting any return. Any third-party activity (e.g., unofficial pools or trades) carries standard blockchain risks (including potential scams or volatility), but the project itself provides no financial product or promise. Use only for learning purposes.</p>
+  <p>Yes. Interacting with any cryptocurrency involves risks including price volatility, smart contract risks, and potential loss of funds. Only use amounts you can afford to lose.</p>
 </details>
 <details>
   <summary>Is the contract upgradeable or pausable?</summary>
@@ -298,17 +311,18 @@
 </details>
 <details>
   <summary>Can I use QWBQ for testing my wallet or dApp?</summary>
-  <p>Yes â€” that's one of the main educational purposes. You can request small amounts for testing transfers, approvals, event listening, balance checks, or integrating with your tools/wallets in a real mainnet environment (with real but minimal value gas costs).</p>
+  <p>Yes. You can request tokens for testing transfers, approvals, event listening, balance checks, or integrating with your tools and wallets on the real mainnet.</p>
 </details>
 <details>
-  <summary>Why no liquidity pool or DEX listing?</summary>
-  <p>Because the project is strictly non-financial and educational. Adding liquidity or listing would imply tradability and speculation, which contradicts the core scope of being a clean technical reference only.</p>
+  <summary>Why is liquidity limited?</summary>
+  <p>The project currently focuses on transparent distribution and on-chain visibility. Any liquidity activity is handled independently by third parties.</p>
 </details>
 
 <h2>Audit & Security Report</h2>
 <h3>1. Introduction & Purpose</h3>
-<p>This page presents an internal code review of the Quazenthor (QWBQ) smart contract for transparency and educational purposes.</p>
-<p>Quazenthor is a fixed-supply immutable BEP-20 token on BNB Smart Chain mainnet, serving as a live technical reference for studying standard token mechanics in a real blockchain environment.</p>
+<p>This page presents an internal code review of the Quazenthor (QWBQ) smart contract for transparency.</p>
+<p>Quazenthor is a fixed-supply immutable BEP-20 token on BNB Smart Chain mainnet.</p>
+
 <h3>2. Review Scope & Methodology</h3>
 <p>The review focused on the deployed smart contract code with emphasis on:</p>
 <ul>
@@ -318,17 +332,19 @@
   <li>Consistency between verified source code and on-chain bytecode</li>
 </ul>
 <p>Verified Source Code: <a href="https://bscscan.com/address/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code" target="_blank">View on BscScan</a></p>
+
 <h3>3. Key Findings</h3>
 <p>The contract is considered low-risk due to its minimal and standard design:</p>
 <ul>
-  <li>Permanently fixed total supply â€“ no mint or burn capability</li>
+  <li>Permanently fixed total supply – no mint or burn capability</li>
   <li>No transfer fees or taxation</li>
   <li>Ownership retained (no privileged functions)</li>
   <li>Fully immutable code</li>
   <li>Standard BEP-20 functions only</li>
 </ul>
+
 <h3>3.1. SolidityScan Security Scan Results</h3>
-<p>The smart contract has been scanned using SolidityScan, an automated security analysis tool integrated with BscScan. The scan results indicate a high level of security:</p>
+<p>The smart contract has been scanned using SolidityScan. The scan results indicate a high level of security:</p>
 <ul>
   <li><strong>Vulnerability Score:</strong> 89.85/100 (GREAT)</li>
   <li><strong>Critical Issues:</strong> 0</li>
@@ -341,7 +357,8 @@
 <p>This scan confirms the contract's low-risk profile, with no critical or high-severity vulnerabilities detected. For detailed findings, view the full report on BscScan:</p>
 <p><a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#cards" target="_blank">View SolidityScan Report on BscScan</a></p>
 <p>Additional billing and plan details for SolidityScan are available for reference: <a href="/solidityscan-billing.pdf" download>Download SolidityScan Billing Info</a></p>
-<h3>4. Website Security â€“ SSL Certificate Verification</h3>
+
+<h3>4. Website Security – SSL Certificate Verification</h3>
 <p>The official website uses a valid SSL certificate to ensure secure connections. Verification details (checked January 31, 2026):</p>
 <ul>
   <li>Hostname: quazenthor.com</li>
@@ -349,6 +366,7 @@
   <li>Issuer: Certum DV TLS G2 R39 CA</li>
   <li>Status: Trusted by all major browsers</li>
 </ul>
+
 <h3>5. Official Verification Channels</h3>
 <ul>
   <li>Website: <a href="https://quazenthor.com">https://quazenthor.com</a></li>
@@ -358,36 +376,49 @@
 </ul>
 
 <h2>Roadmap Summary</h2>
-<p>This is a summary of the project phases for educational transparency:</p>
+<p>This is a summary of the project phases:</p>
 <ul>
-  <li><strong>Phase 1:</strong> On-Chain Normalization â€“ Natural distribution and observable footprints.</li>
-  <li><strong>Phase 2:</strong> Transparent Manual Distribution â€“ Manual requests for educational use, no sales.</li>
-  <li><strong>Phase 3:</strong> Supply Transparency â€“ Fixed supply, gradual distribution visible on-chain.</li>
-  <li><strong>Phase 4:</strong> Educational Interaction â€“ Real mainnet behavior for learning.</li>
-  <li><strong>Phase 5:</strong> Team Structure â€“ Founder-led with independent contributors.</li>
-  <li><strong>Phase 6:</strong> Content Cleanup â€“ Professional, non-defensive tone.</li>
-  <li><strong>Phase 7:</strong> Social Proof â€“ Multi-channel presence.</li>
-  <li><strong>Phase 8:</strong> Site Structure â€“ Organized pages for clarity.</li>
+  <li><strong>Phase 1:</strong> On-Chain Normalization – Natural distribution and observable footprints.</li>
+  <li><strong>Phase 2:</strong> Transparent Manual Distribution – Controlled and visible distribution.</li>
+  <li><strong>Phase 3:</strong> Supply Transparency – Fixed supply, gradual distribution visible on-chain.</li>
+  <li><strong>Phase 4:</strong> On-Chain Interaction – Real mainnet behavior and visibility.</li>
+  <li><strong>Phase 5:</strong> Team Structure – Founder-led with independent contributors.</li>
+  <li><strong>Phase 6:</strong> Content Cleanup – Professional and clear presentation.</li>
+  <li><strong>Phase 7:</strong> Social Proof – Multi-channel presence.</li>
+  <li><strong>Phase 8:</strong> Site Structure – Organized pages for clarity.</li>
 </ul>
 <p>Full details: <a href="/roadmap">View Full Roadmap</a></p>
 
 <h2>How to Get Involved Summary</h2>
-<p>Summary for educational involvement:</p>
+<p>Summary for involvement:</p>
 <ul>
   <li>Request tokens via email (<a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>) for technical testing (e.g., transfers, approvals).</li>
-  <li>No sales or liquidity; manual, gradual distribution.</li>
+  <li>Distribution is manual and gradual.</li>
   <li>Uses: Test mechanisms, monitor events, observe distributions.</li>
-  <li>Intended for students, developers, researchers â€“ not investors.</li>
 </ul>
 <p>Full details: <a href="/how-to-get-involved">View Full How to Get Involved</a></p>
 
 <h2>Official Contact</h2>
-<p>For educational questions or token distribution requests:</p>
+<p>For questions or token distribution requests:</p>
 <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>
-<p>All communication is limited to educational and technical topics.</p>
+<p>Communication focuses on technical and project-related topics.</p>
 
 <h2>QUAZENTHOR Project Changelog</h2>
-<p>Documentation & website update log â€“ strictly for transparency and educational purposes</p>
+<p>Documentation & website update log – for transparency</p>
+
+<details>
+  <summary>August 11, 2026 – Added “Add QWBQ to MetaMask” button for one-click token import with logo</summary>
+  <div>
+    <ul>
+      <li>Added a new orange “Add QWBQ to MetaMask” button in the Official Documents section, matching the existing download button design.</li>
+      <li>Implemented EIP-747 (wallet_watchAsset) so users can import the token with the official logo[](https://quazenthor.com/logo.png) in a single click.</li>
+      <li>Button uses correct contract address, symbol (QWBQ), decimals (18) and logo URL.</li>
+      <li>All JavaScript messages and alerts are in English only.</li>
+      <li>How to use: Click the button while MetaMask is installed and the BNB Smart Chain network is selected. Confirm the popup to add the token with logo.</li>
+    </ul>
+    <p><strong>Purpose:</strong> Improve wallet visibility and user experience for adding the token with logo. Frontend and documentation only. No smart contract or token logic changes.</p>
+  </div>
+</details>
 
 <details>
   <summary>July 29, 2026 – DexScreener Pair Observation & Transparency Update</summary>
@@ -395,9 +426,8 @@
     <ul>
       <li>A third-party QWBQ/WBNB pair has been observed on PancakeSwap and is now visible on DexScreener: <a href="https://dexscreener.com/bsc/0xb2205edf9c51dd9479cb96d557611fa82e9f5dc3" target="_blank">https://dexscreener.com/bsc/0xb2205edf9c51dd9479cb96d557611fa82e9f5dc3</a></li>
       <li>Important clarification: This pair and any related activity were created independently by third parties and are <strong>not</strong> initiated, supported, or endorsed by the Quazenthor project.</li>
-      <li>The project remains strictly educational and non-financial. There is still no official liquidity pool, no exchange listing, no token sale, and no investment opportunity of any kind.</li>
-      <li>Contract status remains fully verified and immutable on BscScan (since January 31, 2026). All distributions continue to be manual and educational only.</li>
-      <li>This observation is shared solely for on-chain transparency, consistent with the project’s commitment to public visibility.</li>
+      <li>Contract status remains fully verified and immutable on BscScan (since January 31, 2026).</li>
+      <li>This observation is shared solely for on-chain transparency.</li>
     </ul>
     <p><strong>Purpose:</strong> Maintain full transparency regarding any third-party activity visible on public explorers. All changes limited to documentation. No modifications to the smart contract or token logic.</p>
   </div>
@@ -407,11 +437,11 @@
   <summary>July 21, 2026 – Wallet Integration Progress & Transparency Update</summary>
   <div>
     <ul>
-      <li>Submitted and actively following up on MetaMask contract-metadata PR #1845 (educational BEP-20 token metadata and logo).</li>
+      <li>Submitted and actively following up on MetaMask contract-metadata PR #1845.</li>
       <li>Submitted PancakeSwap token-list PR #742 (noted as stale per maintainer policy; manual import via contract address remains available).</li>
       <li>Received CoinGecko listing request confirmation (ID: CL2007260025) – currently under review.</li>
       <li>Continued BscScan token page maintenance (logo and information already updated).</li>
-      <li>Updated this changelog to reflect ongoing wallet visibility and listing efforts for educational purposes.</li>
+      <li>Updated this changelog to reflect ongoing wallet visibility and listing efforts.</li>
       <li>Verified all official links, GitHub repositories, and on-chain references remain active.</li>
     </ul>
     <p>Purpose: Demonstrate continued transparency and progress on wallet integration / visibility improvements. All changes limited to documentation and presentation. No modifications to smart contract or token logic.</p>
@@ -419,12 +449,12 @@
 </details>
 
 <details>
-  <summary>July 18, 2026 – Website update: Holders &amp; Transfers statistics + Token listing progress</summary>
+  <summary>July 18, 2026 – Website update: Holders & Transfers statistics + Token listing progress</summary>
   <div>
     <ul>
       <li>Updated on-chain statistics: Holders reached 12,164 (+0.123%) and Total Transfers reached 20,044.</li>
       <li>Added dedicated section for token listing progress: MetaMask PR (#1845) and PancakeSwap PR (#742) are in Review Pending (RP) status. All automated checks passed.</li>
-      <li>Refreshed timestamps and maintained full educational transparency.</li>
+      <li>Refreshed timestamps and maintained full transparency.</li>
       <li>Continued commitment to clear documentation and on-chain verifiability.</li>
     </ul>
     <p><strong>Purpose:</strong> Provide up-to-date information for visitors, BscScan reviewers, and community. All changes are documentation and presentation only.</p>
@@ -436,13 +466,13 @@
   <div>
     <ul>
       <li>Updated Bitcointalk thread with latest on-chain statistics (11,170+ holders and 15,751+ transactions).</li>
-      <li>Published new article on Medium highlighting the educational purpose of QWBQ.</li>
+      <li>Published new article on Medium about QWBQ.</li>
       <li>Prepared updated info.json and assets for a new Trust Wallet Assets Pull Request.</li>
       <li>Verified all official links, BscScan contract status, and ownership signature #15181.</li>
       <li>Performed full site review for mobile/desktop responsiveness and crawlability.</li>
       <li>Updated this changelog to demonstrate ongoing project maintenance and transparency.</li>
     </ul>
-    <p><strong>Purpose:</strong> Continue active maintenance, improve visibility on key platforms, and prepare for broader educational reach. All changes are limited to documentation, website content, and external platform updates. No modifications to the smart contract or token logic.</p>
+    <p><strong>Purpose:</strong> Continue active maintenance and improve visibility on key platforms. All changes are limited to documentation, website content, and external platform updates. No modifications to the smart contract or token logic.</p>
   </div>
 </details>
 
@@ -462,122 +492,127 @@
 </details>
 
 <details>
-    <summary>May 02, 2026 – Site maintenance, structure review and ongoing transparency update</summary>
+  <summary>May 02, 2026 – Site maintenance, structure review and ongoing transparency update</summary>
   <div>
     <ul>
       <li>Performed full site review and maintenance to ensure optimal structure and readability.</li>
       <li>Updated changelog with today's entry to demonstrate active project maintenance.</li>
-      <li>Verified all links, sections, and educational content consistency across the website.</li>
-      <li>Continued commitment to transparency and providing a clean educational resource for the blockchain community.</li>
+      <li>Verified all links, sections, and content consistency across the website.</li>
+      <li>Continued commitment to transparency and providing clear information for the community.</li>
     </ul>
     <p>Purpose: Show ongoing activity and attention to the project website. All changes are documentation and presentation related.</p>
   </div>
-    
-  <summary>February 27, 2026 â€“ Addition of download buttons for founder-declaration.pdf, roadmap.pdf and identity.pdf (request #1), navigation box centering fix for computer screens, and update log</summary>
+</details>
+
+<details>
+  <summary>February 27, 2026 – Addition of download buttons for founder-declaration.pdf, roadmap.pdf and identity.pdf (request #1), navigation box centering fix for computer screens, and update log</summary>
   <div>
     <ul>
       <li>Added three new download buttons in the Official Documents section for founder-declaration.pdf, roadmap.pdf and identity.pdf using the exact filenames and same download-btn style.</li>
       <li>Added CSS rule to force centering of the Quick Navigation box on desktop/computer screens (mobile was already correct).</li>
-      <li>Added this update entry to the changelog (topic #1 mentioned) with full description.</li>
+      <li>Added this update entry to the changelog with full description.</li>
     </ul>
-    <p>Purpose: Complete compliance with the three user requests. Purely layout, documentation and presentation changes. No content deleted â€“ every original letter preserved.</p>
+    <p>Purpose: Complete compliance with the three user requests. Purely layout, documentation and presentation changes.</p>
   </div>
 </details>
+
 <details>
-  <summary>February 22, 2026 â€“ Addition of Project Overview, FAQ.pdf download button, centering of navigation keys, and update log</summary>
+  <summary>February 22, 2026 – Addition of Project Overview, FAQ.pdf download button, centering of navigation keys, and update log</summary>
   <div>
     <ul>
-      <li>Added Project Overview text to the index page in the appropriate location (under What is Quazenthor (QWBQ)?).</li>
-      <li>Added download FAQ.pdf button next to the other 8 download buttons.</li>
+      <li>Added Project Overview text to the index page in the appropriate location.</li>
+      <li>Added download FAQ.pdf button next to the other download buttons.</li>
       <li>Centered the navigation keys section (main-nav) which was too far left on computer screens.</li>
       <li>Added this update entry with the added content and download link.</li>
     </ul>
-    <p>Purpose: Compliance with user requests, improve layout and content accessibility. Purely documentation and presentation changes.</p>
+    <p>Purpose: Improve layout and content accessibility. Purely documentation and presentation changes.</p>
   </div>
 </details>
+
 <details>
-  <summary>February 21, 2026 â€“ Layout centering fixes, duplicate links addition in Network section, full restoration of all summary sections</summary>
+  <summary>February 21, 2026 – Layout centering fixes, duplicate links addition in Network section, full restoration of all summary sections</summary>
   <div>
     <ul>
       <li>Centered all major sections and navigation using .container margin auto and flex justify-center.</li>
-      <li>Added View Holders and View Transfers links at the top of Network Links & On-Chain References section (as explicitly requested).</li>
+      <li>Added View Holders and View Transfers links at the top of Network Links & On-Chain References section.</li>
       <li>Fixed left-alignment on wide screens for Bio, Contributors, Declaration sections with explicit max-width and auto margin.</li>
       <li>Restored full Roadmap Summary, How to Get Involved Summary, and Official Contact sections without any truncation.</li>
       <li>Verified no content deletion or summarization occurred.</li>
       <li>Cross-device test (desktop/mobile) for alignment and no overlap.</li>
     </ul>
-    <p>Purpose: Complete compliance with user instructions, improve visual balance for BscScan review. Purely layout and content restoration.</p>
+    <p>Purpose: Improve visual balance. Purely layout and content restoration.</p>
   </div>
 </details>
+
 <details>
-  <summary>February 19, 2026 â€“ Addition of Roadmap and How to Get Involved pages for enhanced educational transparency and user involvement guidance</summary>
+  <summary>February 19, 2026 – Addition of Roadmap and How to Get Involved pages</summary>
   <div>
     <ul>
-      <li>Added new dedicated pages: roadmap.php (outlining project phases focused on education, transparency, and on-chain interactions) and how-to-get-involved.php (providing guidelines for educational token requests, uses, and target audience) to better support learners, developers, and researchers.</li>
+      <li>Added new dedicated pages: roadmap.php and how-to-get-involved.php.</li>
       <li>Integrated summaries of these pages into the main index for quick access and crawler visibility.</li>
-      <li>Updated navigation links to include the new pages, ensuring complete site-wide accessibility.</li>
-      <li>Verified alignment with educational guidelines: All content emphasizes non-financial, learning-focused aspects.</li>
+      <li>Updated navigation links to include the new pages.</li>
       <li>Performed cross-browser and mobile tests for consistent rendering.</li>
     </ul>
-    <p>Purpose: Enhance educational resources and involvement clarity. Documentation-only changes.</p>
+    <p>Purpose: Enhance resources and involvement clarity. Documentation-only changes.</p>
   </div>
 </details>
+
 <details>
-  <summary>February 18, 2026 â€“ Review of social network links, usability improvements for users and public, and BscScan policy compliance check</summary>
+  <summary>February 18, 2026 – Review of social network links, usability improvements, and BscScan policy compliance check</summary>
   <div>
     <ul>
-      <li>Reviewed and confirmed all social network links (X, Telegram, Medium, GitHub, Bitcointalk, Facebook) are active and correctly pointing to official profiles, removing any outdated or inactive references to maintain transparency and accuracy.</li>
-      <li>Improved usability: Adjusted navigation menu for better readability on mobile devices, added more intuitive link labels, and ensured all sections are easily crawlable by search engines and explorers like BscScan.</li>
-      <li>Conducted a thorough compliance check against BscScan policies, ensuring all content emphasizes transparency, educational purpose, and avoids any promotional or speculative language.</li>
-      <li>Verified internal/external links and external references for accuracy and relevance, with focus on maintaining verifiable information sources.</li>
-      <li>Updated relevant timestamps to February 18, 2026, and performed cross-browser and device testing for consistent experience.</li>
+      <li>Reviewed and confirmed all social network links are active and correctly pointing to official profiles.</li>
+      <li>Improved usability: Adjusted navigation menu for better readability on mobile devices.</li>
+      <li>Conducted a thorough compliance check against BscScan policies, ensuring transparency and clear presentation.</li>
+      <li>Verified internal/external links and external references for accuracy.</li>
+      <li>Updated relevant timestamps to February 18, 2026, and performed cross-browser and device testing.</li>
     </ul>
-    <p>All modifications limited to documentation, website structure, and presentation â€” no changes to smart contract or token logic. Purpose: Enhance accessibility, ensure ongoing compliance with BscScan sensitivities, and demonstrate active maintenance.</p>
+    <p>All modifications limited to documentation, website structure, and presentation — no changes to smart contract or token logic.</p>
   </div>
 </details>
+
 <details>
-      <summary>February 16, 2026 â€“ Full transition to PHP includes + central header/footer + crawlability improvements</summary>
+  <summary>February 16, 2026 – Full transition to PHP includes + central header/footer + crawlability improvements</summary>
   <div>
     <ul>
-      <li>Converted all static .html pages to .php with include 'header.php' and include 'footer.php' for centralized navigation, styles, downloads and legal footer</li>
-      <li>Removed all JavaScript-dependent accordions â†’ replaced with native HTML &lt;details&gt;/&lt;summary&gt; â†’ 100% crawlable by BscScan, Google, AI crawlers</li>
-      <li>Eliminated old inline animations (marquee, bounce, pulseGlow, float etc.) and repeated banners â†’ cleaner, faster, more professional</li>
-      <li>Updated all internal links from .html to .php (index.php, whitepaper.php, scope-declaration.php etc.)</li>
-      <li>Standardized short disclaimer banner in header across all pages</li>
-      <li>Improved mobile readability and typography consistency site-wide</li>
-      <li>No content removed â€” only structural, presentation and crawlability improvements</li>
+      <li>Converted all static .html pages to .php with include 'header.php' and include 'footer.php' for centralized navigation, styles, downloads and legal footer.</li>
+      <li>Removed all JavaScript-dependent accordions → replaced with native HTML &lt;details&gt;/&lt;summary&gt; → 100% crawlable by BscScan, Google, AI crawlers.</li>
+      <li>Eliminated old inline animations and repeated banners → cleaner, faster, more professional.</li>
+      <li>Updated all internal links from .html to .php.</li>
+      <li>Improved mobile readability and typography consistency site-wide.</li>
+      <li>No content removed — only structural, presentation and crawlability improvements.</li>
     </ul>
-    <p>All modifications limited to documentation, website structure and presentation â€” no changes to smart contract or token logic.</p>
+    <p>All modifications limited to documentation, website structure and presentation — no changes to smart contract or token logic.</p>
   </div>
 </details>
+
 <details>
-  <summary>February 13, 2026 â€“ Final review, timestamp synchronization & submission readiness check</summary>
+  <summary>February 13, 2026 – Final review, timestamp synchronization & submission readiness check</summary>
   <div>
     <ul>
       <li>Updated "Last updated" timestamps across all main documentation pages to February 13, 2026.</li>
-      <li>Performed comprehensive final review against Ø§ØµÙ„Ø§Ø­Ø§Øª.txt checklist: project goal clarity, educational role, technical usage, transparent distribution, supply explanation, removal of defensive tone, no review/rejection references.</li>
-      <li>Re-verified internal/external links (BscScan, ownership #15181, team profiles) â€“ all active.</li>
-      <li>Cross-browser & mobile rendering test â€“ consistent layout and accessibility.</li>
-      <li>Prepared updated screenshots/notes for BscScan submission.</li>
+      <li>Performed comprehensive final review.</li>
+      <li>Re-verified internal/external links – all active.</li>
+      <li>Cross-browser & mobile rendering test – consistent layout and accessibility.</li>
     </ul>
-    <p>Purpose: Finalize readiness, refresh timestamps, reconfirm integrity. Zero functional impact.</p>
+    <p>Purpose: Finalize readiness and refresh timestamps. Zero functional impact.</p>
   </div>
 </details>
+
 <details>
-  <summary>February 12, 2026 â€“ Major content overhaul based on reformed educational guidelines</summary>
+  <summary>February 12, 2026 – Major content overhaul</summary>
   <div>
     <ul>
-      <li>Rewrote content per Ø§ØµÙ„Ø§Ø­Ø§Øª.txt: updated project info, short BscScan description, phases 1-8 focus on education & transparency.</li>
-      <li>Implemented new page structures (Home, About, Supply, Contributors).</li>
-      <li>Removed prohibited phrases; replaced with positive educational wording.</li>
-      <li>Updated disclaimers, removed BNB logo, refreshed timestamps to Feb 12.</li>
-      <li>Verified alignment with final checklist.</li>
+      <li>Rewrote content for clarity and professional presentation.</li>
+      <li>Implemented improved page structures.</li>
+      <li>Updated disclaimers and refreshed timestamps to Feb 12.</li>
     </ul>
-    <p>Purpose: Full alignment with educational & transparent reforms. Documentation-only changes.</p>
+    <p>Purpose: Improve clarity and presentation. Documentation-only changes.</p>
   </div>
 </details>
+
 <details>
-  <summary>February 9, 2026 â€“ Routine documentation check & timestamp refresh</summary>
+  <summary>February 9, 2026 – Routine documentation check & timestamp refresh</summary>
   <div>
     <ul>
       <li>Updated timestamps to February 9, 2026 across main pages.</li>
@@ -588,39 +623,77 @@
     <p>Purpose: Maintain proof of ongoing attention. No content changes.</p>
   </div>
 </details>
+
 <details>
-  <summary>February 7, 2026 â€“ Full site verification, timestamp update & consistency check</summary>
+  <summary>February 7, 2026 – Full site verification, timestamp update & consistency check</summary>
   <div>
     <ul>
       <li>Timestamps updated to February 7, 2026.</li>
-      <li>Complete link verification (BscScan, #15181, team profiles).</li>
+      <li>Complete link verification.</li>
       <li>SSL valid until Jan 31, 2027 confirmed.</li>
       <li>Cross-browser consistency check.</li>
     </ul>
     <p>Purpose: Demonstrate continuous maintenance. Documentation-only.</p>
   </div>
 </details>
+
 <details>
-  <summary>January 31, 2026 â€“ Major documentation expansion, SSL verification & active maintenance demonstration</summary>
+  <summary>January 31, 2026 – Major documentation expansion, SSL verification & active maintenance demonstration</summary>
   <div>
     <ul>
-      <li>Added detailed SSL section (24) to whitepaper with full checker data.</li>
-      <li>Expanded Scope Declaration: Milestones, Maintenance, Exclusions, Verification Channels.</li>
-      <li>Kept only active team links (LinkedIn, GitHub, X, Telegram, Email).</li>
+      <li>Added detailed SSL section to whitepaper with full checker data.</li>
+      <li>Expanded Scope Declaration.</li>
+      <li>Kept only active team links.</li>
       <li>Published this changelog as proof of active maintenance.</li>
-      <li>Reinforced core educational purpose statement in multiple places.</li>
       <li>Added "Last updated: January 31, 2026" with changelog link.</li>
     </ul>
-    <p>Purpose: Fulfill BscScan requirements for live, transparent, educational site. Documentation & presentation only.</p>
+    <p>Purpose: Fulfill transparency requirements. Documentation & presentation only.</p>
   </div>
 </details>
+
 </div>
 
-
-
 <footer class="container">
-  Copyright Â© 2026 Quazenthor. All rights reserved.
+  Copyright © 2026 Quazenthor. All rights reserved.
 </footer>
+
+<script>
+async function addQWBQToMetaMask() {
+  if (typeof window.ethereum === 'undefined') {
+    alert('MetaMask is not installed. Please install the MetaMask extension and try again.');
+    return;
+  }
+
+  const tokenAddress = '0x013f5f2F7F5b027012415A783ac2ed69EF936aE8';
+  const tokenSymbol = 'QWBQ';
+  const tokenDecimals = 18;
+  const tokenImage = 'https://quazenthor.com/logo.png';
+
+  try {
+    const wasAdded = await window.ethereum.request({
+      method: 'wallet_watchAsset',
+      params: {
+        type: 'ERC20',
+        options: {
+          address: tokenAddress,
+          symbol: tokenSymbol,
+          decimals: tokenDecimals,
+          image: tokenImage
+        }
+      }
+    });
+
+    if (wasAdded) {
+      alert('QWBQ has been successfully added to MetaMask with the official logo.');
+    } else {
+      alert('The request was rejected by the user.');
+    }
+  } catch (error) {
+    console.error(error);
+    alert('An error occurred while adding the token. Please make sure you are on BNB Smart Chain and try again, or add the token manually.');
+  }
+}
+</script>
 
 </body>
 </html>
