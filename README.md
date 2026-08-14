@@ -1,14 +1,16 @@
 # QWBQ (Quazenthor)
 
-Official Technical Reference Repository
+**Official Technical Reference Repository**
+
+---
 
 ## Project Owner / Founder Bio
 
 **toora dokht** is the founder, owner, and primary coordinator of the Quazenthor (QWBQ) project. With a strong background in blockchain development and smart contract deployment, she launched this fixed-supply BEP-20 token on BNB Smart Chain mainnet. Her focus is on transparency, immutability, and clear on-chain distribution. As the deployer, she maintains contract stability while overseeing gradual token distribution and project documentation. She coordinates independent contributors for documentation and technical reviews.
 
-- X (Twitter Owner): https://x.com/sos_tbt  
-- Facebook (Owner): https://www.facebook.com/QWBQToken  
-- GitHub (Owner Repo): https://github.com/hokar1404/QWBQ-Token  
+- **X (Twitter Owner):** https://x.com/sos_tbt  
+- **Facebook (Owner):** https://www.facebook.com/QWBQToken  
+- **GitHub (Owner Repo):** https://github.com/hokar1404/QWBQ-Token  
 
 ---
 
@@ -18,7 +20,8 @@ Official Technical Reference Repository
 
 This repository serves as the official public reference hub for project documentation, transparency disclosures, and technical verification resources.
 
-**Fixed-Supply BEP-20 Token on BNB Smart Chain Mainnet. Total Supply: 5.00T QWBQ. Owner: toora dokht.**
+> **Fixed-Supply BEP-20 Token on BNB Smart Chain Mainnet**  
+> Total Supply: **5.00T QWBQ** · Owner: **toora dokht**
 
 The project prioritizes transparency, immutability, and public verifiability. All on-chain activity is fully visible on BscScan.
 
@@ -28,17 +31,19 @@ All project documentation, updates, and communications are managed by the founde
 
 ## Core Properties
 
-• Network: BNB Smart Chain (Mainnet)  
-• Token Standard: BEP-20  
-• Token Name: quazenthor  
-• Token Symbol: QWBQ  
-• Decimals: 18  
-• Total Supply: 5,000,000,000,000 QWBQ (5.00T) – Fixed at deployment  
-• Minting: Not available  
-• Burning: Not available  
-• Upgradeability: Not implemented  
-• Taxation: None  
-• Fees: No fees, taxes, reflections or limits. Only standard BNB gas fees apply.  
+| Property              | Value                                      |
+|-----------------------|--------------------------------------------|
+| **Network**           | BNB Smart Chain (Mainnet)                  |
+| **Token Standard**    | BEP-20                                     |
+| **Token Name**        | quazenthor                                 |
+| **Token Symbol**      | QWBQ                                       |
+| **Decimals**          | 18                                         |
+| **Total Supply**      | 5,000,000,000,000 QWBQ (5.00T) – Fixed     |
+| **Minting**           | Not available                              |
+| **Burning**           | Not available                              |
+| **Upgradeability**    | Not implemented                            |
+| **Taxation**          | None                                       |
+| **Fees**              | No fees, taxes, reflections or limits. Only standard BNB gas fees apply. |
 
 The contract is immutable and follows a minimal structure. Deployed on BNB Smart Chain mainnet.
 
@@ -56,10 +61,10 @@ The purpose is to allow practical observation of how a fixed-supply BEP-20 contr
 
 QWBQ is intended for:
 
-* Students learning smart contract fundamentals  
-* Developers studying BEP-20 token mechanics  
-* Blockchain researchers analyzing on-chain behavior  
-* Technical reviewers examining immutable contract design  
+- Students learning smart contract fundamentals  
+- Developers studying BEP-20 token mechanics  
+- Blockchain researchers analyzing on-chain behavior  
+- Technical reviewers examining immutable contract design  
 
 ---
 
@@ -67,11 +72,11 @@ QWBQ is intended for:
 
 Users interact with QWBQ directly on mainnet by:
 
-* Sending token transfers between wallets  
-* Testing approval and allowance mechanisms  
-* Monitoring Transfer and Approval event logs  
-* Observing holder distribution changes  
-* Verifying the permanently fixed total supply  
+- Sending token transfers between wallets  
+- Testing approval and allowance mechanisms  
+- Monitoring Transfer and Approval event logs  
+- Observing holder distribution changes  
+- Verifying the permanently fixed total supply  
 
 ---
 
@@ -79,11 +84,11 @@ Users interact with QWBQ directly on mainnet by:
 
 QWBQ is used to demonstrate:
 
-* Real gas consumption  
-* Real transaction confirmation  
-* Immutable ledger recording  
-* Standard BEP-20 event emission  
-* Fixed supply contract behavior  
+- Real gas consumption  
+- Real transaction confirmation  
+- Immutable ledger recording  
+- Standard BEP-20 event emission  
+- Fixed supply contract behavior  
 
 ---
 
@@ -93,11 +98,11 @@ Quazenthor serves as a live reference model of a minimal BEP-20 contract on main
 
 Unlike simulated environments, QWBQ allows observers to see:
 
-* How supply remains constant  
-* How allowances are granted and reduced  
-* How events are emitted and recorded  
-* How holder distribution evolves  
-* How gas behaves in real network conditions  
+- How supply remains constant  
+- How allowances are granted and reduced  
+- How events are emitted and recorded  
+- How holder distribution evolves  
+- How gas behaves in real network conditions  
 
 ---
 
@@ -107,24 +112,24 @@ QWBQ tokens are distributed manually upon request.
 
 There is currently:
 
-* No ICO  
-* No presale  
-* No public sale  
-* No official liquidity pool initiated by the project  
-* No exchange listing initiated by the project  
+- No ICO  
+- No presale  
+- No public sale  
+- No official liquidity pool initiated by the project  
+- No exchange listing initiated by the project  
 
 Distribution is gradual and visible on-chain. Tokens are distributed by the founder to independent wallets.
 
 Recipients can:
 
-* Perform transfers  
-* Test Approval mechanisms  
-* Analyze Event Logs  
-* Observe holder distribution trends  
+- Perform transfers  
+- Test Approval mechanisms  
+- Analyze Event Logs  
+- Observe holder distribution trends  
 
-For questions or token distribution requests: **admin@quazenthor.com**
+**For questions or token distribution requests:** admin@quazenthor.com
 
-Summary for involvement:
+**Summary for involvement:**
 
 - Request tokens via email (admin@quazenthor.com) for technical testing (e.g., transfers, approvals).
 - Distribution is manual and gradual.
@@ -136,17 +141,18 @@ Full details: https://quazenthor.com/how-to-get-involved
 
 ## Supply Structure Clarification
 
-Total supply is permanently fixed at 5,000,000,000,000 QWBQ (5.00T). No minting, burning, taxation, or upgradeability exists. The supply was minted once at deployment and remains capped forever.
+Total supply is permanently fixed at **5,000,000,000,000 QWBQ (5.00T)**.  
+No minting, burning, taxation, or upgradeability exists. The supply was minted once at deployment and remains capped forever.
 
-No minting exists.  
-No burning exists.  
-No taxation exists.  
-No upgradeability exists.  
+- No minting exists.  
+- No burning exists.  
+- No taxation exists.  
+- No upgradeability exists.  
 
 A significant portion of the QWBQ supply is held by the deployer address. Distribution is ongoing gradually, and all changes are transparently visible on-chain.
 
-View Current Holders: https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#balances  
-View Token Transfers (Distribution History): https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#tokentxns  
+- **View Current Holders:** https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#balances  
+- **View Token Transfers (Distribution History):** https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#tokentxns  
 
 Transfers follow standard BEP-20 logic with no fees, taxes, reflections or limits. Only standard BNB gas fees apply.
 
@@ -157,21 +163,17 @@ Transfers follow standard BEP-20 logic with no fees, taxes, reflections or limit
 **Contract Address:**  
 `0x013f5f2F7F5b027012415A783ac2ed69EF936aE8`
 
-BscScan Verification Date: 2026-01-31  
-Ownership Verification: Signature #15181 (Verified)
-
-Contract Code (Verified): https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code  
-
-Deployer / Owner Wallet: https://bscscan.com/address/0x0daeb75bf06b879164d0753fa9d695763fcd1f49  
-
-Ownership Verification: https://bscscan.com/verifySig/15181  
-
-SSL Certificate Summary: Valid for quazenthor.com (Jan 31, 2026 – Jan 31, 2027). Trusted by all browsers. Issuer: Certum.  
-More Details: https://www.sslshopper.com/ssl-checker.html?hostname=quazenthor.com
-
-Official Website: https://quazenthor.com  
-Project Email: admin@quazenthor.com  
-Source Code: QWBQ.sol (Available in this repository)
+| Item                        | Detail                                                                 |
+|-----------------------------|------------------------------------------------------------------------|
+| **BscScan Verification**    | 2026-01-31                                                             |
+| **Ownership Verification**  | Signature #15181 (Verified)                                            |
+| **Contract Code**           | [View on BscScan](https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code) |
+| **Deployer / Owner Wallet** | [0x0daeb75bf06b879164d0753fa9d695763fcd1f49](https://bscscan.com/address/0x0daeb75bf06b879164d0753fa9d695763fcd1f49) |
+| **Ownership Signature**     | [Signature #15181](https://bscscan.com/verifySig/15181)                 |
+| **SSL Certificate**         | Valid for quazenthor.com (Jan 31, 2026 – Jan 31, 2027) · Issuer: Certum · [More Details](https://www.sslshopper.com/ssl-checker.html?hostname=quazenthor.com) |
+| **Official Website**        | https://quazenthor.com                                                 |
+| **Project Email**           | admin@quazenthor.com                                                   |
+| **Source Code**             | QWBQ.sol (Available in this repository)                                |
 
 ---
 
@@ -183,17 +185,12 @@ Independent contributors assist in documentation, technical review, public commu
 
 ### Team Members
 
-**btmbani**  
-Project Coordination & Documentation  
-
-**sostbt**  
-Community Communication Support  
-
-**amobanimo**  
-Smart Contract Review & Technical Reference  
-
-**mekrodeo**  
-Website Maintenance & Technical Monitoring  
+| Member       | Role                                      |
+|--------------|-------------------------------------------|
+| **btmbani**  | Project Coordination & Documentation      |
+| **sostbt**   | Community Communication Support           |
+| **amobanimo**| Smart Contract Review & Technical Reference |
+| **mekrodeo** | Website Maintenance & Technical Monitoring |
 
 All roles are operational and informational only. Contract ownership remains under the deployer address to preserve stability. No contributor controls token supply mechanics or contract logic.
 
@@ -201,15 +198,15 @@ All roles are operational and informational only. Contract ownership remains und
 
 ## Official Project Links
 
-- Official Website: https://quazenthor.com  
-- Official Email: admin@quazenthor.com  
-- X (Twitter Main): https://x.com/quazenthorQWBQ  
-- Telegram: https://t.me/Quazenthor  
-- Medium: https://medium.com/@quazenthor  
-- GitHub Main: https://github.com/toorandokhtafshari/QWBQ-Token-  
-- Bitcointalk: https://bitcointalk.org/index.php?topic=5573196  
-- Facebook Main: https://www.facebook.com/quazenthor  
-- Logo: https://quazenthor.com/logo.svg  
+- **Official Website:** https://quazenthor.com  
+- **Official Email:** admin@quazenthor.com  
+- **X (Twitter Main):** https://x.com/quazenthorQWBQ  
+- **Telegram:** https://t.me/Quazenthor  
+- **Medium:** https://medium.com/@quazenthor  
+- **GitHub Main:** https://github.com/toorandokhtafshari/QWBQ-Token-  
+- **Bitcointalk:** https://bitcointalk.org/index.php?topic=5573196  
+- **Facebook Main:** https://www.facebook.com/quazenthor  
+- **Logo:** https://quazenthor.com/logo.svg  
 
 ---
 
@@ -223,39 +220,51 @@ The project operates as a transparent blockchain token deployed on BNB Smart Cha
 
 ## Official Documents – Direct Downloads
 
-- https://quazenthor.com/whitepaper.pdf  
-- https://quazenthor.com/token-info.pdf  
-- https://quazenthor.com/official-token-information.pdf  
-- https://quazenthor.com/clarification.pdf  
-- https://quazenthor.com/terms.pdf  
-- https://quazenthor.com/scope-declaration.pdf  
-- https://quazenthor.com/solidityscan-billing.pdf  
-- https://quazenthor.com/logo.svg  
-- https://quazenthor.com/FAQ.pdf  
-- https://quazenthor.com/founder-declaration.pdf  
-- https://quazenthor.com/roadmap.pdf  
-- https://quazenthor.com/identity.pdf  
+- [Whitepaper](https://quazenthor.com/whitepaper.pdf)  
+- [Token Details & Bio](https://quazenthor.com/token-info.pdf)  
+- [Official Token Information](https://quazenthor.com/official-token-information.pdf)  
+- [Clarification](https://quazenthor.com/clarification.pdf)  
+- [Terms](https://quazenthor.com/terms.pdf)  
+- [Scope Declaration](https://quazenthor.com/scope-declaration.pdf)  
+- [SolidityScan Billing Info](https://quazenthor.com/solidityscan-billing.pdf)  
+- [Token Logo (SVG)](https://quazenthor.com/logo.svg)  
+- [FAQ](https://quazenthor.com/FAQ.pdf)  
+- [Founder Declaration](https://quazenthor.com/founder-declaration.pdf)  
+- [Roadmap](https://quazenthor.com/roadmap.pdf)  
+- [Identity](https://quazenthor.com/identity.pdf)  
 
 ---
 
 ## Roadmap Summary
 
-- **Phase 1:** Contract Deployment – Minimal BEP-20 on mainnet.  
-- **Phase 2:** Transparent Manual Distribution – Controlled and visible distribution.  
-- **Phase 3:** Supply Transparency – Fixed supply, gradual distribution visible on-chain.  
-- **Phase 4:** On-Chain Interaction – Real mainnet behavior and visibility.  
-- **Phase 5:** Team Structure – Founder-led with independent contributors.  
-- **Phase 6:** Content Cleanup – Professional and clear presentation.  
-- **Phase 7:** Social Proof – Multi-channel presence.  
-- **Phase 8:** Site Structure – Organized pages for clarity.  
+| Phase     | Description                                              |
+|-----------|----------------------------------------------------------|
+| **Phase 1** | Contract Deployment – Minimal BEP-20 on mainnet.         |
+| **Phase 2** | Transparent Manual Distribution – Controlled and visible distribution. |
+| **Phase 3** | Supply Transparency – Fixed supply, gradual distribution visible on-chain. |
+| **Phase 4** | On-Chain Interaction – Real mainnet behavior and visibility. |
+| **Phase 5** | Team Structure – Founder-led with independent contributors. |
+| **Phase 6** | Content Cleanup – Professional and clear presentation.   |
+| **Phase 7** | Social Proof – Multi-channel presence.                   |
+| **Phase 8** | Site Structure – Organized pages for clarity.            |
 
-Full details: https://quazenthor.com/roadmap  
+Full details: https://quazenthor.com/roadmap
 
 ---
 
 ## Project Changelog
 
-Documentation & website update log – for transparency
+Documentation & website update log – for transparency (newest first)
+
+### August 14, 2026 – MetaMask Contract Metadata PR #1845 Merged
+
+- MetaMask contract-metadata **Pull Request #1845** has been successfully merged into the official MetaMask repository.
+- Quazenthor (QWBQ) is now registered in MetaMask token metadata for BNB Smart Chain (Chain ID 56).
+- Token name, symbol (QWBQ), decimals (18), contract address and official logo are available natively in MetaMask.
+- Users can now see the official logo when the token is added or appears in their wallet on BNB Smart Chain.
+- **PR link:** https://github.com/MetaMask/contract-metadata/pull/1845
+
+**Purpose:** Improve wallet visibility and native recognition of QWBQ in MetaMask. Documentation update only. No smart contract or token logic changes.
 
 ### July 29, 2026 – DexScreener Pair Observation & Transparency Update
 
@@ -321,4 +330,4 @@ Documentation & website update log – for transparency
 
 ---
 
-Copyright © 2026 Quazenthor. All rights reserved.
+**Copyright © 2026 Quazenthor. All rights reserved.**
