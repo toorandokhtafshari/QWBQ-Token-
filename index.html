@@ -1,219 +1,819 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Quazenthor (QWBQ) – BEP-20 Token on BNB Smart Chain</title>
-
   <meta name="description" content="Quazenthor (QWBQ) is a fixed-supply BEP-20 token on BNB Smart Chain mainnet. Total Supply: 5.00T QWBQ. Verified contract with transparent on-chain distribution. Owner: toora dokht.">
-
-  <!-- Logo for Telegram and wallets -->
   <meta property="og:image" content="https://quazenthor.com/logo.png">
   <meta property="og:title" content="Quazenthor (QWBQ)">
   <meta property="og:description" content="Fixed-supply BEP-20 token on BNB Smart Chain">
-
   <meta name="twitter:image" content="https://quazenthor.com/logo.png">
-
-  <!-- Site icon -->
   <link rel="icon" href="https://quazenthor.com/logo.png">
 
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6; color:#333; background:#fff; }
-    .container { max-width:1200px; margin:0 auto; padding:0 20px; box-sizing: border-box; }
-    header.site-header { background:#f8f9fa; padding:30px 0; text-align:center; border-bottom:2px solid #ddd; }
-    .logo { font-size:2.8rem; color:#2c3e50; margin:0; }
-    .tagline { font-size:1.1rem; color:#555; margin:10px 0 0; }
-    
-    .main-nav { 
-      background:#e3f2fd; 
-      padding:15px; 
-      margin:20px 0; 
-      text-align:center; 
-      font-size:0.95rem; 
-      display: flex; 
-      justify-content: center; 
-      flex-wrap: wrap; 
-      gap: 8px; 
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; width: 100%; overflow-x: hidden; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: #f0f9ff;
+      color: #0f172a;
+      line-height: 1.7;
+      min-height: 100vh;
+      overflow-x: hidden;
     }
-    .main-nav strong { display: block; margin-bottom: 8px; width: 100%; }
-    .main-nav a { color:#1976d2; text-decoration:none; margin:4px 8px; white-space: nowrap; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-    .downloads-section div { 
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-      gap:15px; 
+    /* ========== LANGUAGE SWITCHER – Professional 3-lang ========== */
+    .lang-switch {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 9999;
+      display: flex;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
     }
-    .download-btn { 
-      display:block; padding:12px; background:#1e8449; color:white; text-align:center; border-radius:6px; text-decoration:none; font-weight:bold; 
+    .lang-btn {
+      border: none;
+      background: transparent;
+      padding: 9px 16px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      color: #64748b;
+      transition: all 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+    .lang-btn.active {
+      background: #0ea5e9;
+      color: #ffffff;
+    }
+    .lang-btn:hover:not(.active) {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+    .lang-btn + .lang-btn {
+      border-left: 1px solid #e2e8f0;
+    }
+
+    /* ========== HEADER with spinning logo ========== */
+    header.site-header {
+      background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+      padding: 36px 0 28px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(14,165,233,0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .header-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .spinning-logo {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: contain;
+      background: #ffffff;
+      padding: 4px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      animation: spinLogo 8s linear infinite;
+    }
+    @keyframes spinLogo {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    .logo {
+      font-size: 3.1rem;
+      color: #ffffff;
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.15);
+      animation: pulseTitle 2.8s ease-in-out infinite;
+      display: inline-block;
+    }
+    @keyframes pulseTitle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+    }
+    .tagline {
+      font-size: 1.1rem;
+      color: #e0f2fe;
+      margin: 12px 0 0;
+      font-weight: 400;
+    }
+
+    /* ========== MARQUEE ========== */
+    .marquee-wrap {
+      background: #0c4a6e;
+      overflow: hidden;
+      white-space: nowrap;
+      padding: 11px 0;
+      border-bottom: 3px solid #38bdf8;
+    }
+    .marquee-track {
+      display: inline-block;
+      animation: marquee 22s linear infinite;
+      font-family: 'Comic Sans MS', 'Chalkboard SE', 'Marker Felt', cursive, sans-serif;
+      font-size: 1.2rem;
+      color: #fef08a;
+      letter-spacing: 1px;
+    }
+    .marquee-track span {
+      display: inline-block;
+      padding-right: 80px;
+    }
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ========== DOWNLOAD SECTION ========== */
+    .downloads-section { margin: 48px auto; }
+    .downloads-section h2 {
+      text-align: center;
+      color: #0c4a6e;
+      margin-bottom: 26px;
+      font-size: 1.85rem;
+    }
+    .download-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 14px;
+    }
+    .download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 15px 16px;
+      background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+      color: white;
+      text-align: center;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
       border: none;
       cursor: pointer;
-      font-size: 1rem;
       width: 100%;
-      box-sizing: border-box;
+      box-shadow: 0 4px 14px rgba(5,150,105,0.22);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
     }
-    .download-btn:hover { background:#27ae60; }
+    .download-btn:hover {
+      transform: translateY(-3px) scale(1.025);
+      box-shadow: 0 8px 22px rgba(5,150,105,0.32);
+    }
     .metamask-btn {
-      background: #f6851b;
+      background: linear-gradient(135deg, #f6851b 0%, #e2761b 100%) !important;
+      box-shadow: 0 4px 14px rgba(246,133,27,0.28) !important;
+      grid-column: 1 / -1;
+      max-width: 320px;
+      margin: 10px auto 0;
+      border-radius: 50px !important;
+      font-size: 1.02rem;
     }
     .metamask-btn:hover {
-      background: #e2761b;
+      background: linear-gradient(135deg, #e2761b 0%, #d96a0f 100%) !important;
     }
-    h1, h2, h3 { color:#2c3e50; }
-    section { margin:60px 0; }
-    .network-links ul { 
-      display: flex; 
-      flex-direction: column; 
-      gap: 10px; 
-      padding: 0; 
-      list-style: none; 
-      max-width: 100%; 
-    }
-    .network-links li { 
-      white-space: normal; 
-      word-break: break-all; 
-      overflow-wrap: break-word; 
-    }
-    .network-links li strong { display: inline-block; min-width: 180px; font-weight: bold; }
-    footer { text-align:center; padding:20px; border-top:1px solid #ddd; margin-top: 40px; }
 
-    details { margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; padding: 8px; }
-    summary { cursor: pointer; font-weight: bold; }
+    /* ========== NETWORK LINKS – Compact cards in grid ========== */
+    .network-links h2 {
+      color: #0c4a6e;
+      margin-bottom: 18px;
+      text-align: center;
+    }
+    .network-top-links {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 0.95rem;
+    }
+    .network-top-links a { margin: 0 8px; }
+    .net-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    .net-card {
+      background: white;
+      border: 1px solid #bae6fd;
+      border-radius: 14px;
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 2px 8px rgba(14,165,233,0.06);
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      min-height: 56px;
+    }
+    .net-card:hover {
+      transform: scale(1.04) translateZ(8px);
+      box-shadow: 0 8px 20px rgba(14,165,233,0.18);
+      border-color: #0ea5e9;
+    }
+    .net-icon {
+      font-size: 1.35rem;
+      min-width: 28px;
+      text-align: center;
+      line-height: 1;
+    }
+    .net-card-content {
+      flex: 1;
+      min-width: 0;
+    }
+    .net-card-content strong {
+      display: block;
+      font-size: 0.82rem;
+      color: #0c4a6e;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .net-card-content a {
+      font-size: 0.78rem;
+      color: #0284c7;
+      word-break: break-all;
+      text-decoration: none;
+    }
+    .net-card-content a:hover { text-decoration: underline; }
+    .net-card.full-width {
+      grid-column: 1 / -1;
+    }
 
+    /* ========== THREE BIO CARDS ========== */
+    .three-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 40px auto;
+    }
+    .bio-card {
+      background: white;
+      border: 2px solid #7dd3fc;
+      border-radius: 16px;
+      padding: 22px 18px;
+      box-shadow: 0 6px 18px rgba(14,165,233,0.1);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    .bio-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+    }
+    .bio-card:hover {
+      transform: scale(1.04) translateZ(10px);
+      box-shadow: 0 12px 28px rgba(14,165,233,0.2);
+      border-color: #0ea5e9;
+    }
+    .bio-card h2 {
+      color: #0ea5e9;
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+      border: none;
+      padding: 0;
+    }
+    .bio-card p, .bio-card li {
+      font-size: 0.92rem;
+      margin-bottom: 0.65rem;
+      color: #334155;
+    }
+    .bio-card ul { list-style: none; padding: 0; }
+    .bio-card a { color: #0284c7; word-break: break-all; font-size: 0.85rem; }
+
+    /* ========== FIVE INFO CARDS ========== */
+    .five-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin: 36px auto;
+    }
+    .info-card {
+      background: white;
+      border: 2px solid #a5f3fc;
+      border-radius: 16px;
+      padding: 20px 16px;
+      box-shadow: 0 4px 14px rgba(6,182,212,0.08);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative;
+    }
+    .info-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #06b6d4, #22d3ee);
+      border-radius: 16px 16px 0 0;
+    }
+    .info-card:hover {
+      transform: scale(1.035) translateZ(8px);
+      box-shadow: 0 10px 24px rgba(6,182,212,0.18);
+      border-color: #06b6d4;
+    }
+    .info-card h2 {
+      color: #0891b2;
+      font-size: 1.12rem;
+      margin-bottom: 10px;
+      border: none;
+      padding: 0;
+    }
+    .info-card p, .info-card li { font-size: 0.9rem; color: #334155; }
+    .info-card ul { padding-left: 1.2rem; }
+
+    /* ========== JADE HEADERS ========== */
+    .jade-header {
+      background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+      color: white !important;
+      padding: 14px 26px;
+      border-radius: 12px;
+      display: inline-block;
+      margin: 36px 0 18px;
+      font-size: 1.35rem !important;
+      border: none !important;
+      box-shadow: 0 5px 16px rgba(15,118,110,0.28);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .jade-header:hover {
+      transform: scale(1.05) translateZ(8px);
+      box-shadow: 0 9px 22px rgba(15,118,110,0.38);
+    }
+
+    /* ========== CENTERED SECTION HEADERS (What is / Why / How) ========== */
+    .section-header-wrap {
+      text-align: center;
+      margin: 42px 0 18px;
+    }
+    .section-header {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 12px;
+      color: white !important;
+      font-size: 1.3rem !important;
+      border: none !important;
+      box-shadow: 0 5px 16px rgba(0,0,0,0.15);
+      transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+      margin: 0;
+    }
+    .section-header:hover {
+      transform: scale(1.05) translateZ(8px);
+    }
+    .sh-blue {
+      background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
+    }
+    .sh-purple {
+      background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);
+    }
+    .sh-orange {
+      background: linear-gradient(135deg, #c2410c 0%, #f97316 100%);
+    }
+    .sh-main {
+      background: linear-gradient(135deg, #0e7490 0%, #06b6d4 100%);
+      font-size: 1.45rem !important;
+    }
+
+    /* ========== CHANGELOG HEADER ========== */
+    .changelog-header-wrap {
+      text-align: center;
+      margin: 48px 0 24px;
+    }
+    .changelog-header {
+      background: linear-gradient(135deg, #1e3a5f 0%, #0ea5e9 100%);
+      color: white;
+      padding: 16px 36px;
+      border-radius: 50px;
+      display: inline-block;
+      font-size: 1.4rem;
+      font-weight: 700;
+      box-shadow: 0 7px 22px rgba(14,165,233,0.32);
+      animation: pulseBtn 2.5s ease-in-out infinite;
+      border: none;
+    }
+    @keyframes pulseBtn {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    /* ========== GENERAL ========== */
+    h1, h2, h3 { color: #0c4a6e; }
+    section { margin: 42px 0; }
+    a { color: #0284c7; text-decoration: underline; transition: color 0.2s; }
+    a:hover { color: #0369a1; }
+    details {
+      margin: 10px 0;
+      border: 1px solid #bae6fd;
+      border-radius: 10px;
+      padding: 10px 14px;
+      background: white;
+    }
+    summary { cursor: pointer; font-weight: 600; color: #0369a1; }
+    .risk-box {
+      background: #fff0f0;
+      padding: 24px;
+      border: 2px solid #c0392b;
+      border-radius: 12px;
+    }
+    .risk-box h2 { color: #c0392b; }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: linear-gradient(135deg, #0c4a6e 0%, #0369a1 100%);
+      color: #e0f2fe;
+      text-align: center;
+      padding: 28px 20px;
+      margin-top: 56px;
+    }
+    footer p { margin: 5px 0; font-size: 0.93rem; }
+    footer a { color: #7dd3fc; }
+
+    /* ========== MAIN NAV ========== */
     .main-nav {
-      margin: 20px auto !important;
-      max-width: 1200px !important;
+      background: #e0f2fe;
+      padding: 16px;
+      margin: 28px auto;
+      text-align: center;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      border-radius: 12px;
+      max-width: 1200px;
+      border: 1px solid #bae6fd;
+    }
+    .main-nav strong {
+      display: block;
+      margin-bottom: 8px;
+      width: 100%;
+      color: #0c4a6e;
+    }
+    .main-nav a {
+      color: #0369a1;
+      text-decoration: none;
+      margin: 2px 5px;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+    .main-nav a:hover { color: #0ea5e9; text-decoration: underline; }
+
+    /* ========== LANGUAGE VISIBILITY ========== */
+    [data-lang] { display: none !important; }
+    body.lang-en [data-lang="en"] { display: block !important; }
+    body.lang-en [data-lang="en"].inline { display: inline !important; }
+    body.lang-de [data-lang="de"] { display: block !important; }
+    body.lang-de [data-lang="de"].inline { display: inline !important; }
+    body.lang-ar [data-lang="ar"] { display: block !important; }
+    body.lang-ar [data-lang="ar"].inline { display: inline !important; }
+
+    /* Arabic RTL */
+    body.lang-ar { direction: rtl; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; }
+    body.lang-ar .lang-switch { right: auto; left: 16px; }
+    body.lang-ar .net-card:hover { transform: scale(1.04) translateZ(8px); }
+    body.lang-ar .marquee-track { animation-direction: reverse; }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px) {
+      .three-cards { grid-template-columns: 1fr; }
+      .five-cards { grid-template-columns: 1fr 1fr; }
+      .net-grid { grid-template-columns: 1fr 1fr; }
+      .logo { font-size: 2.3rem; }
+      .spinning-logo { width: 52px; height: 52px; }
+    }
+    @media (max-width: 600px) {
+      .five-cards, .net-grid { grid-template-columns: 1fr; }
+      .logo { font-size: 1.9rem; }
+      .download-grid { grid-template-columns: 1fr; }
+      .metamask-btn { max-width: 100%; }
+      .lang-switch { top: 10px; right: 10px; }
+      body.lang-ar .lang-switch { left: 10px; }
+      .spinning-logo { width: 44px; height: 44px; }
     }
   </style>
 </head>
 
-<body>
+<body class="lang-en">
 
+<!-- LANGUAGE SWITCHER – Professional 3 languages -->
+<div class="lang-switch">
+  <button class="lang-btn active" onclick="setLang('en')" id="btn-en">EN</button>
+  <button class="lang-btn" onclick="setLang('de')" id="btn-de">DE</button>
+  <button class="lang-btn" onclick="setLang('ar')" id="btn-ar">عربي</button>
+</div>
 
 <header class="site-header">
   <div class="container">
-    <h1 class="logo">Quazenthor (QWBQ)</h1>
-    <p class="tagline">Fixed-Supply BEP-20 Token on BNB Smart Chain Mainnet. Total Supply: 5.00T QWBQ. Owner: toora dokht.</p>
+    <div class="header-title-row">
+      <img src="logo.png" alt="QWBQ Logo" class="spinning-logo" onerror="this.style.display='none'">
+      <h1 class="logo">Quazenthor (QWBQ)</h1>
+    </div>
+    <p class="tagline" data-lang="en">Fixed-Supply BEP-20 Token on BNB Smart Chain Mainnet. Total Supply: 5.00T QWBQ. Owner: toora dokht.</p>
+    <p class="tagline" data-lang="de">BEP-20 Token mit festem Angebot auf dem BNB Smart Chain Mainnet. Gesamtangebot: 5.00T QWBQ. Eigentümerin: toora dokht.</p>
+    <p class="tagline" data-lang="ar">رمز BEP-20 ثابت العرض على الشبكة الرئيسية لـ BNB Smart Chain. إجمالي العرض: 5.00T QWBQ. المالك: toora dokht.</p>
   </div>
 </header>
 
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <span>Quazenthor (QWBQ) – BEP-20 Token on BNB Smart Chain</span>
+    <span>Quazenthor (QWBQ) – BEP-20 Token on BNB Smart Chain</span>
+  </div>
+</div>
+
 <section class="downloads-section container">
-  <h2>Official Documents – Direct Downloads</h2>
-  <div>
-    <a href="/whitepaper.pdf" class="download-btn" download>Download Whitepaper</a>
-    <a href="/token-info.pdf" class="download-btn" download>Download Token Details & Bio</a>
-    <a href="/official-token-information.pdf" class="download-btn" download>Download Official Token Info</a>
-    <a href="/clarification.pdf" class="download-btn" download>Download Clarification</a>
-    <a href="/terms.pdf" class="download-btn" download>Download Terms</a>
-    <a href="/scope-declaration.pdf" class="download-btn" download>Download Scope Declaration</a>
-    <a href="/solidityscan-billing.pdf" class="download-btn" download>Download SolidityScan Billing Info</a>
-    <a href="/logo.svg" class="download-btn" download>Download Token Logo (SVG)</a>
-    <a href="/FAQ.pdf" class="download-btn" download>Download FAQ</a>
-    <a href="/founder-declaration.pdf" class="download-btn" download>Download Founder Declaration</a>
-    <a href="/roadmap.pdf" class="download-btn" download>Download Roadmap</a>
-    <a href="/identity.pdf" class="download-btn" download>Download Identity</a>
-    <button type="button" class="download-btn metamask-btn" onclick="addQWBQToMetaMask()">Add QWBQ to MetaMask</button>
+  <h2 data-lang="en">Official Documents – Direct Downloads</h2>
+  <h2 data-lang="de">Offizielle Dokumente – Direkte Downloads</h2>
+  <h2 data-lang="ar">المستندات الرسمية – تنزيلات مباشرة</h2>
+  <div class="download-grid">
+    <a href="/whitepaper.pdf" class="download-btn" download>📄 Download Whitepaper</a>
+    <a href="/token-info.pdf" class="download-btn" download>📋 Download Token Details & Bio</a>
+    <a href="/official-token-information.pdf" class="download-btn" download>📑 Download Official Token Info</a>
+    <a href="/clarification.pdf" class="download-btn" download>📝 Download Clarification</a>
+    <a href="/terms.pdf" class="download-btn" download>📜 Download Terms</a>
+    <a href="/scope-declaration.pdf" class="download-btn" download>📌 Download Scope Declaration</a>
+    <a href="/solidityscan-billing.pdf" class="download-btn" download>💳 Download SolidityScan Billing Info</a>
+    <a href="/logo.svg" class="download-btn" download>🎨 Download Token Logo (SVG)</a>
+    <a href="/FAQ.pdf" class="download-btn" download>❓ Download FAQ</a>
+    <a href="/founder-declaration.pdf" class="download-btn" download>✍️ Download Founder Declaration</a>
+    <a href="/roadmap.pdf" class="download-btn" download>🗺️ Download Roadmap</a>
+    <a href="/identity.pdf" class="download-btn" download>🪪 Download Identity</a>
+    <button type="button" class="download-btn metamask-btn" onclick="addQWBQToMetaMask()">🦊 Add QWBQ to MetaMask</button>
   </div>
 </section>
 
 <section class="network-links container">
-  <h2>Network Links & On-Chain References</h2>
+  <h2 data-lang="en">Network Links & On-Chain References</h2>
+  <h2 data-lang="de">Netzwerk-Links & On-Chain Referenzen</h2>
+  <h2 data-lang="ar">روابط الشبكة والمراجع على السلسلة</h2>
 
-  <p><strong>View Current Holders:</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#balances" target="_blank">Holders List on BscScan</a></p>
-  <p><strong>View Token Transfers (Distribution History):</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#tokentxns" target="_blank">Token Transfers on BscScan</a></p>
+  <div class="network-top-links">
+    <span data-lang="en"><strong>View Current Holders:</strong></span>
+    <span data-lang="de"><strong>Aktuelle Inhaber anzeigen:</strong></span>
+    <span data-lang="ar"><strong>عرض الحاملين الحاليين:</strong></span>
+    <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#balances" target="_blank">Holders List on BscScan</a>
+    &nbsp;|&nbsp;
+    <span data-lang="en"><strong>View Token Transfers:</strong></span>
+    <span data-lang="de"><strong>Token-Transfers anzeigen:</strong></span>
+    <span data-lang="ar"><strong>عرض تحويلات الرمز:</strong></span>
+    <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#tokentxns" target="_blank">Token Transfers on BscScan</a>
+  </div>
 
-  <ul>
-    <li><strong>Official Website:</strong> <a href="https://quazenthor.com">https://quazenthor.com</a></li>
-    <li><strong>Official Email:</strong> <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a></li>
-    <li><strong>X (Twitter Main):</strong> <a href="https://x.com/quazenthorQWBQ">https://x.com/quazenthorQWBQ</a></li>
-    <li><strong>Telegram:</strong> <a href="https://t.me/Quazenthor">https://t.me/Quazenthor</a></li>
-    <li><strong>Medium:</strong> <a href="https://medium.com/@quazenthor">https://medium.com/@quazenthor</a></li>
-    <li><strong>GitHub Main:</strong> <a href="https://github.com/toorandokhtafshari/QWBQ-Token-">https://github.com/toorandokhtafshari/QWBQ-Token-</a></li>
-    <li><strong>Bitcointalk:</strong> <a href="https://bitcointalk.org/index.php?topic=5573196">https://bitcointalk.org/index.php?topic=5573196</a></li>
-    <li><strong>Facebook Main:</strong> <a href="https://www.facebook.com/quazenthor">https://www.facebook.com/quazenthor</a></li>
-    <li><strong>Contract Address:</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8">0x013f5f2F7F5b027012415A783ac2ed69EF936aE8</a></li>
-    <li><strong>Contract Code (Verified):</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code">View on BscScan</a> – Verified: 2026-01-31</li>
-    <li><strong>Deployer / Owner Wallet:</strong> <a href="https://bscscan.com/address/0x0daeb75bf06b879164d0753fa9d695763fcd1f49">0x0daeb75bf06b879164d0753fa9d695763fcd1f49</a></li>
-    <li><strong>Ownership Verification:</strong> <a href="https://bscscan.com/verifySig/15181">Signature #15181 (Verified)</a></li>
-    <li style="border-top:2px solid #ddd; padding-top:15px;">
-      <strong>SSL Certificate Summary:</strong> Valid for quazenthor.com (Jan 31, 2026 – Jan 31, 2027). Trusted by all browsers. Issuer: Certum. <a href="https://www.sslshopper.com/ssl-checker.html?hostname=quazenthor.com" target="_blank">More Details</a>
-    </li>
-  </ul>
+  <div class="net-grid">
+    <div class="net-card">
+      <span class="net-icon">🌐</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Official Website</strong>
+        <strong data-lang="de">Offizielle Website</strong>
+        <strong data-lang="ar">الموقع الرسمي</strong>
+        <a href="https://quazenthor.com">quazenthor.com</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">📧</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Official Email</strong>
+        <strong data-lang="de">Offizielle E-Mail</strong>
+        <strong data-lang="ar">البريد الرسمي</strong>
+        <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">🐦</span>
+      <div class="net-card-content">
+        <strong data-lang="en">X (Twitter Main)</strong>
+        <strong data-lang="de">X (Twitter Haupt)</strong>
+        <strong data-lang="ar">إكس (تويتر الرئيسي)</strong>
+        <a href="https://x.com/quazenthorQWBQ">@quazenthorQWBQ</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">✈️</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Telegram</strong>
+        <strong data-lang="de">Telegram</strong>
+        <strong data-lang="ar">تيليجرام</strong>
+        <a href="https://t.me/Quazenthor">t.me/Quazenthor</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">📰</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Medium</strong>
+        <strong data-lang="de">Medium</strong>
+        <strong data-lang="ar">ميديوم</strong>
+        <a href="https://medium.com/@quazenthor">@quazenthor</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">🐙</span>
+      <div class="net-card-content">
+        <strong data-lang="en">GitHub Main</strong>
+        <strong data-lang="de">GitHub Haupt</strong>
+        <strong data-lang="ar">جيتهاب الرئيسي</strong>
+        <a href="https://github.com/toorandokhtafshari/QWBQ-Token-">QWBQ-Token-</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">💬</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Bitcointalk</strong>
+        <strong data-lang="de">Bitcointalk</strong>
+        <strong data-lang="ar">بيتكوين توك</strong>
+        <a href="https://bitcointalk.org/index.php?topic=5573196">Topic 5573196</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">📘</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Facebook Main</strong>
+        <strong data-lang="de">Facebook Haupt</strong>
+        <strong data-lang="ar">فيسبوك الرئيسي</strong>
+        <a href="https://www.facebook.com/quazenthor">/quazenthor</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">📜</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Contract Address</strong>
+        <strong data-lang="de">Vertragsadresse</strong>
+        <strong data-lang="ar">عنوان العقد</strong>
+        <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8">0x013f...6aE8</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">✅</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Contract Code (Verified)</strong>
+        <strong data-lang="de">Vertragscode (Verifiziert)</strong>
+        <strong data-lang="ar">كود العقد (تم التحقق)</strong>
+        <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code">BscScan Code</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">👛</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Deployer / Owner Wallet</strong>
+        <strong data-lang="de">Deployer / Eigentümer-Wallet</strong>
+        <strong data-lang="ar">محفظة الناشر / المالك</strong>
+        <a href="https://bscscan.com/address/0x0daeb75bf06b879164d0753fa9d695763fcd1f49">0x0dae...1f49</a>
+      </div>
+    </div>
+    <div class="net-card">
+      <span class="net-icon">🔏</span>
+      <div class="net-card-content">
+        <strong data-lang="en">Ownership Verification</strong>
+        <strong data-lang="de">Eigentumsverifizierung</strong>
+        <strong data-lang="ar">التحقق من الملكية</strong>
+        <a href="https://bscscan.com/verifySig/15181">Signature #15181</a>
+      </div>
+    </div>
+    <div class="net-card full-width">
+      <span class="net-icon">🔒</span>
+      <div class="net-card-content">
+        <strong data-lang="en">SSL Certificate Summary</strong>
+        <strong data-lang="de">SSL-Zertifikat Zusammenfassung</strong>
+        <strong data-lang="ar">ملخص شهادة SSL</strong>
+        <span style="font-size:0.8rem;color:#475569;">
+          Valid for quazenthor.com (Jan 31, 2026 – Jan 31, 2027). Issuer: Certum.
+          <a href="https://www.sslshopper.com/ssl-checker.html?hostname=quazenthor.com" target="_blank">More Details</a>
+        </span>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="owner-bio container" style="background:#f0f8ff; padding:20px; margin:20px auto; border:1px solid #ddd; border-radius:8px; max-width: 1200px;">
-  <h2>Project Owner / Founder Bio</h2>
-  <p><strong>toora dokht</strong> is the founder, owner, and primary coordinator of the Quazenthor (QWBQ) project. With a strong background in blockchain development and smart contract deployment, she launched this fixed-supply BEP-20 token on BNB Smart Chain mainnet. Her focus is on transparency, immutability, and clear on-chain distribution. As the deployer, she maintains contract stability while overseeing gradual token distribution and project documentation.</p>
-  <ul style="list-style:none; padding:0;">
-    <li><strong>X (Twitter Owner):</strong> <a href="https://x.com/sos_tbt">https://x.com/sos_tbt</a></li>
-    <li><strong>Facebook (Owner):</strong> <a href="https://www.facebook.com/QWBQToken">https://www.facebook.com/QWBQToken</a></li>
-    <li><strong>GitHub (Owner Repo):</strong> <a href="https://github.com/hokar1404/QWBQ-Token">https://github.com/hokar1404/QWBQ-Token</a></li>
-  </ul>
-</section>
+<!-- THREE BIO CARDS -->
+<div class="three-cards container">
+  <div class="bio-card">
+    <h2 data-lang="en">Project Owner / Founder Bio</h2>
+    <h2 data-lang="de">Projektinhaberin / Gründerin Bio</h2>
+    <h2 data-lang="ar">السيرة الذاتية للمالك / المؤسس</h2>
+    <p data-lang="en"><strong>toora dokht</strong> is the founder, owner, and primary coordinator of the Quazenthor (QWBQ) project. With a strong background in blockchain development and smart contract deployment, she launched this fixed-supply BEP-20 token on BNB Smart Chain mainnet. Her focus is on transparency, immutability, and clear on-chain distribution. As the deployer, she maintains contract stability while overseeing gradual token distribution and project documentation.</p>
+    <p data-lang="de"><strong>toora dokht</strong> ist die Gründerin, Eigentümerin und Hauptkoordinatorin des Quazenthor (QWBQ) Projekts. Mit einem starken Hintergrund in Blockchain-Entwicklung und Smart-Contract-Deployment hat sie diesen BEP-20 Token mit festem Angebot auf dem BNB Smart Chain Mainnet gestartet. Ihr Fokus liegt auf Transparenz, Unveränderlichkeit und klarer On-Chain-Verteilung.</p>
+    <p data-lang="ar"><strong>toora dokht</strong> هي المؤسسة والمالكة والمنسقة الرئيسية لمشروع Quazenthor (QWBQ). بخلفية قوية في تطوير البلوكشين ونشر العقود الذكية، أطلقت هذا الرمز BEP-20 ثابت العرض على الشبكة الرئيسية لـ BNB Smart Chain. تركز على الشفافية والثبات والتوزيع الواضح على السلسلة.</p>
+    <ul style="list-style:none; padding:0; margin-top:10px;">
+      <li><strong>X:</strong> <a href="https://x.com/sos_tbt">@sos_tbt</a></li>
+      <li><strong>Facebook:</strong> <a href="https://www.facebook.com/QWBQToken">QWBQToken</a></li>
+      <li><strong>GitHub:</strong> <a href="https://github.com/hokar1404/QWBQ-Token">hokar1404/QWBQ-Token</a></li>
+    </ul>
+  </div>
 
-<section class="contributors container" style="background:#f0f8ff; padding:20px; margin:20px auto; border:1px solid #ddd; border-radius:8px; max-width: 1200px;">
-  <h2>Contributors</h2>
-  <p>The project is initiated and coordinated by the Founder. Independent contributors assist in documentation, technical review, and website maintenance. Contract ownership remains under the deployer address to preserve stability. None of the contributors have control over the contract logic or token supply.</p>
-</section>
+  <div class="bio-card">
+    <h2 data-lang="en">Contributors</h2>
+    <h2 data-lang="de">Mitwirkende</h2>
+    <h2 data-lang="ar">المساهمون</h2>
+    <p data-lang="en">The project is initiated and coordinated by the Founder. Independent contributors assist in documentation, technical review, and website maintenance. Contract ownership remains under the deployer address to preserve stability. None of the contributors have control over the contract logic or token supply.</p>
+    <p data-lang="de">Das Projekt wird von der Gründerin initiiert und koordiniert. Unabhängige Mitwirkende unterstützen bei Dokumentation, technischer Überprüfung und Website-Wartung. Die Vertragseigentümerschaft verbleibt beim Deployer-Adresse, um Stabilität zu gewährleisten. Keiner der Mitwirkenden hat Kontrolle über die Vertragslogik oder das Token-Angebot.</p>
+    <p data-lang="ar">يتم بدء المشروع وتنسيقه من قبل المؤسس. يساعد المساهمون المستقلون في التوثيق والمراجعة الفنية وصيانة الموقع. تظل ملكية العقد تحت عنوان الناشر للحفاظ على الاستقرار. لا يتحكم أي من المساهمين في منطق العقد أو عرض الرمز.</p>
+  </div>
 
-<section class="container" style="background:#f0f8ff; padding:30px; margin:20px auto; border:1px solid #ddd; border-radius:8px; max-width: 1200px;">
-  <h2>Founder Declaration</h2>
-  <p>I, toora dokht, declare that I am the founder and initiator of the Quazenthor (QWBQ) project. This project is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet.</p>
-  <p>The project prioritizes transparency, immutability, and public verifiability. All on-chain activity is fully visible on BscScan.</p>
-  <p>All project documentation, updates, and communications are managed by me or designated contributors under my coordination. The project remains fully transparent, with all on-chain activity publicly verifiable via BscScan.</p>
-</section>
+  <div class="bio-card">
+    <h2 data-lang="en">Founder Declaration</h2>
+    <h2 data-lang="de">Gründererklärung</h2>
+    <h2 data-lang="ar">إعلان المؤسس</h2>
+    <p data-lang="en">I, toora dokht, declare that I am the founder and initiator of the Quazenthor (QWBQ) project. This project is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet.</p>
+    <p data-lang="de">Ich, toora dokht, erkläre, dass ich die Gründerin und Initiatorin des Quazenthor (QWBQ) Projekts bin. Dieses Projekt ist ein BEP-20 Token mit festem Angebot, der auf dem BNB Smart Chain Mainnet bereitgestellt wurde.</p>
+    <p data-lang="ar">أنا، toora dokht، أعلن أنني المؤسسة والمبادرة بمشروع Quazenthor (QWBQ). هذا المشروع هو رمز BEP-20 ثابت العرض تم نشره على الشبكة الرئيسية لـ BNB Smart Chain.</p>
+    <p data-lang="en">The project prioritizes transparency, immutability, and public verifiability. All on-chain activity is fully visible on BscScan.</p>
+    <p data-lang="de">Das Projekt priorisiert Transparenz, Unveränderlichkeit und öffentliche Überprüfbarkeit. Alle On-Chain-Aktivitäten sind vollständig auf BscScan sichtbar.</p>
+    <p data-lang="ar">يعطي المشروع الأولوية للشفافية والثبات والتحقق العام. جميع الأنشطة على السلسلة مرئية بالكامل على BscScan.</p>
+  </div>
+</div>
 
-<section class="container">
-  <h2>Tokenomics & Supply Structure</h2>
-  <p>Total supply is permanently fixed. No minting, burning, taxation or upgradeability exists. Token distribution is carried out gradually and all changes are transparently visible on-chain.</p>
-  <ul>
-    <li><strong>Name:</strong> quazenthor</li>
-    <li><strong>Symbol:</strong> QWBQ</li>
-    <li><strong>Decimals:</strong> 18</li>
-    <li><strong>Total Supply:</strong> 5,000,000,000,000 QWBQ (5.00T) – Fixed at deployment</li>
-    <li><strong>Contract Address:</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8">0x013f5f2F7F5b027012415A783ac2ed69EF936aE8</a></li>
-  </ul>
-  <p>Transfers follow standard BEP-20 logic with no fees, taxes, reflections or limits. Only standard BNB gas fees apply.</p>
-</section>
+<!-- FIVE INFO CARDS -->
+<div class="five-cards container">
+  <div class="info-card">
+    <h2 data-lang="en">Tokenomics & Supply Structure</h2>
+    <h2 data-lang="de">Tokenomics & Angebotsstruktur</h2>
+    <h2 data-lang="ar">الاقتصاد الرمزي وهيكل العرض</h2>
+    <p data-lang="en">Total supply is permanently fixed. No minting, burning, taxation or upgradeability exists. Token distribution is carried out gradually and all changes are transparently visible on-chain.</p>
+    <p data-lang="de">Das Gesamtangebot ist dauerhaft festgeschrieben. Es gibt kein Minting, Burning, Besteuerung oder Upgrade-Möglichkeit. Die Token-Verteilung erfolgt schrittweise und alle Änderungen sind transparent on-chain sichtbar.</p>
+    <p data-lang="ar">العرض الإجمالي ثابت بشكل دائم. لا يوجد سك أو حرق أو ضرائب أو قابلية للترقية. يتم توزيع الرموز تدريجياً وجميع التغييرات مرئية بشفافية على السلسلة.</p>
+    <ul>
+      <li><strong>Name:</strong> quazenthor</li>
+      <li><strong>Symbol:</strong> QWBQ</li>
+      <li><strong>Decimals:</strong> 18</li>
+      <li><strong>Total Supply:</strong> 5,000,000,000,000 QWBQ (5.00T)</li>
+      <li><strong>Contract:</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8">0x013f...6aE8</a></li>
+    </ul>
+    <p data-lang="en">Transfers follow standard BEP-20 logic with no fees, taxes, reflections or limits. Only standard BNB gas fees apply.</p>
+    <p data-lang="de">Transfers folgen der Standard-BEP-20-Logik ohne Gebühren, Steuern, Reflections oder Limits. Es gelten nur die üblichen BNB-Gasgebühren.</p>
+    <p data-lang="ar">تتبع التحويلات منطق BEP-20 القياسي بدون رسوم أو ضرائب أو انعكاسات أو حدود. تطبق فقط رسوم الغاز القياسية لـ BNB.</p>
+  </div>
 
-<section class="container">
-  <h2>Supply Structure & Transparency</h2>
+  <div class="info-card">
+    <h2 data-lang="en">Supply Structure & Transparency</h2>
+    <h2 data-lang="de">Angebotsstruktur & Transparenz</h2>
+    <h2 data-lang="ar">هيكل العرض والشفافية</h2>
+    <p data-lang="en">Total supply is permanently fixed at 5,000,000,000,000 QWBQ (5.00T). No minting, burning, taxation, or upgradeability exists. The supply was minted once at deployment and remains capped forever.</p>
+    <p data-lang="de">Das Gesamtangebot ist dauerhaft auf 5.000.000.000.000 QWBQ (5.00T) festgelegt. Es gibt kein Minting, Burning, Besteuerung oder Upgrade. Das Angebot wurde einmalig beim Deployment gemintet und bleibt für immer begrenzt.</p>
+    <p data-lang="ar">العرض الإجمالي ثابت بشكل دائم عند 5,000,000,000,000 QWBQ (5.00T). لا يوجد سك أو حرق أو ضرائب أو قابلية للترقية. تم سك العرض مرة واحدة عند النشر ويظل محدودًا إلى الأبد.</p>
+    <p data-lang="en">Token distribution is gradual and transparent. The initial supply is held by the deployer wallet for controlled release.</p>
+    <p data-lang="de">Die Token-Verteilung erfolgt schrittweise und transparent. Das Anfangsangebot wird in der Deployer-Wallet für die kontrollierte Freigabe gehalten.</p>
+    <p data-lang="ar">توزيع الرموز تدريجي وشفاف. يتم الاحتفاظ بالعرض الأولي في محفظة الناشر للإصدار المتحكم فيه.</p>
+  </div>
 
-  <h3>Total Supply Clarification</h3>
-  <p>Total supply is permanently fixed at 5,000,000,000,000 QWBQ (5.00T). No minting, burning, taxation, or upgradeability exists. The supply was minted once at deployment and remains capped forever.</p>
+  <div class="info-card">
+    <h2 data-lang="en">Explorer Transparency & Verification</h2>
+    <h2 data-lang="de">Explorer-Transparenz & Verifizierung</h2>
+    <h2 data-lang="ar">شفافية المستكشف والتحقق</h2>
+    <p data-lang="en">The contract is fully verified on BscScan (Verified: 2026-01-31). Ownership proven via Signature #15181.</p>
+    <p data-lang="de">Der Vertrag ist vollständig auf BscScan verifiziert (Verifiziert: 2026-01-31). Eigentum nachgewiesen über Signatur #15181.</p>
+    <p data-lang="ar">تم التحقق من العقد بالكامل على BscScan (تم التحقق: 2026-01-31). تم إثبات الملكية عبر التوقيع #15181.</p>
+    <p><a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code">BscScan Code</a> • <a href="https://bscscan.com/verifySig/15181">Signature #15181</a></p>
+    <p data-lang="en">The project is 100% original and has no affiliation with Binance, BscScan, or any other entity.</p>
+    <p data-lang="de">Das Projekt ist 100 % original und hat keine Verbindung zu Binance, BscScan oder anderen Entitäten.</p>
+    <p data-lang="ar">المشروع أصلي بنسبة 100% وليس له أي ارتباط مع Binance أو BscScan أو أي كيان آخر.</p>
+  </div>
 
-  <h3>On-Chain Distribution & Holders</h3>
-  <p>Token distribution is gradual and transparent, with all changes fully visible on the BNB Smart Chain. The initial supply is held by the deployer wallet for controlled release.</p>
-  <p><strong>View Current Holders:</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#balances" target="_blank">Holders List on BscScan</a></p>
-  <p><strong>View Token Transfers (Distribution History):</strong> <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#tokentxns" target="_blank">Token Transfers on BscScan</a></p>
-</section>
+  <div class="info-card">
+    <h2 data-lang="en">Community Guidelines</h2>
+    <h2 data-lang="de">Community-Richtlinien</h2>
+    <h2 data-lang="ar">إرشادات المجتمع</h2>
+    <p data-lang="en">Communication focuses on technical discussion about the BEP-20 token, its contract, and on-chain activity.</p>
+    <p data-lang="de">Die Kommunikation konzentriert sich auf technische Diskussionen über den BEP-20 Token, seinen Vertrag und On-Chain-Aktivitäten.</p>
+    <p data-lang="ar">تركز الاتصالات على المناقشة الفنية حول رمز BEP-20 وعقده والنشاط على السلسلة.</p>
+    <p data-lang="en">All verified channels are listed in the Network Links section above.</p>
+    <p data-lang="de">Alle verifizierten Kanäle sind im Abschnitt Netzwerk-Links oben aufgeführt.</p>
+    <p data-lang="ar">جميع القنوات المتحقق منها مدرجة في قسم روابط الشبكة أعلاه.</p>
+  </div>
 
-<section class="container">
-  <h2>Explorer Transparency & Verification</h2>
-  <p>The contract is fully verified on BscScan (Verified: 2026-01-31). Ownership proven via Signature #15181.</p>
-  <p>View Verified Source Code: <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code">BscScan Code</a></p>
-  <p>Ownership Verification: <a href="https://bscscan.com/verifySig/15181">Signature #15181</a></p>
-  <p>The project is 100% original and has no affiliation with Binance, BscScan, or any other entity.</p>
-</section>
+  <div class="info-card">
+    <h2 data-lang="en">Privacy Policy Summary</h2>
+    <h2 data-lang="de">Datenschutz-Zusammenfassung</h2>
+    <h2 data-lang="ar">ملخص سياسة الخصوصية</h2>
+    <p data-lang="en">This website collects no personal data, uses no cookies, no tracking, no analytics. It is fully static with no user accounts or forms.</p>
+    <p data-lang="de">Diese Website sammelt keine personenbezogenen Daten, verwendet keine Cookies, kein Tracking und keine Analytics. Sie ist vollständig statisch ohne Benutzerkonten oder Formulare.</p>
+    <p data-lang="ar">لا يجمع هذا الموقع أي بيانات شخصية، ولا يستخدم ملفات تعريف الارتباط أو التتبع أو التحليلات. إنه ثابت بالكامل بدون حسابات مستخدمين أو نماذج.</p>
+  </div>
+</div>
 
-<section class="container">
-  <h2>Community Guidelines</h2>
-  <p>Communication focuses on technical discussion about the BEP-20 token, its contract, and on-chain activity.</p>
-  <p>All verified channels are listed in the Network Links section above.</p>
-</section>
-
-<section class="container">
-  <h2>Privacy Policy Summary</h2>
-  <p>This website collects no personal data, uses no cookies, no tracking, no analytics. It is fully static with no user accounts or forms.</p>
-</section>
-
-<section class="container" style="background:#fff0f0; padding:25px; border:2px solid #c0392b; border-radius:8px;">
-  <h2 style="color:#c0392b;">Risk Disclosure & Legal Disclaimer</h2>
-  <p>Interacting with any cryptocurrency involves risks including market volatility, smart contract behavior, network conditions, and potential loss of funds. Quazenthor (QWBQ) is a standard BEP-20 token. Users should conduct their own research and only use amounts they can afford to lose. The founder and contributors disclaim all liability for any losses or decisions made by users.</p>
+<section class="container risk-box">
+  <h2 style="color:#c0392b;" data-lang="en">Risk Disclosure & Legal Disclaimer</h2>
+  <h2 style="color:#c0392b;" data-lang="de">Risikohinweis & Rechtlicher Haftungsausschluss</h2>
+  <h2 style="color:#c0392b;" data-lang="ar">الإفصاح عن المخاطر والإخلاء القانوني</h2>
+  <p data-lang="en">Interacting with any cryptocurrency involves risks including market volatility, smart contract behavior, network conditions, and potential loss of funds. Quazenthor (QWBQ) is a standard BEP-20 token. Users should conduct their own research and only use amounts they can afford to lose. The founder and contributors disclaim all liability for any losses or decisions made by users.</p>
+  <p data-lang="de">Der Umgang mit Kryptowährungen birgt Risiken einschließlich Marktschwankungen, Smart-Contract-Verhalten, Netzwerkbedingungen und möglichem Verlust von Mitteln. Quazenthor (QWBQ) ist ein Standard-BEP-20-Token. Nutzer sollten eigene Recherche betreiben und nur Beträge einsetzen, deren Verlust sie sich leisten können. Die Gründerin und Mitwirkenden lehnen jegliche Haftung für Verluste oder Entscheidungen der Nutzer ab.</p>
+  <p data-lang="ar">يتضمن التفاعل مع أي عملة مشفرة مخاطر بما في ذلك تقلبات السوق وسلوك العقود الذكية وظروف الشبكة واحتمال فقدان الأموال. Quazenthor (QWBQ) هو رمز BEP-20 قياسي. يجب على المستخدمين إجراء أبحاثهم الخاصة واستخدام المبالغ التي يمكنهم تحمل خسارتها فقط. يخلي المؤسس والمساهمون مسؤوليتهم عن أي خسائر أو قرارات يتخذها المستخدمون.</p>
 </section>
 
 <nav class="main-nav container">
-  <strong>Quick Navigation (All 41 Pages):</strong>
+  <strong data-lang="en">Quick Navigation (All 41 Pages):</strong>
+  <strong data-lang="de">Schnellnavigation (Alle 41 Seiten):</strong>
+  <strong data-lang="ar">التنقل السريع (جميع الصفحات الـ 41):</strong>
   <a href="/index">Home</a> •
   <a href="/about">About</a> •
   <a href="/tokenomics">Tokenomics</a> •
@@ -258,93 +858,179 @@
 </nav>
 
 <div class="container">
-<h1>Quazenthor (QWBQ) – BEP-20 Token on BNB Smart Chain</h1>
-<p>Fixed-Supply BEP-20 Token • Verified Contract • Transparent On-Chain Distribution</p>
 
-<h2>What is Quazenthor (QWBQ)?</h2>
-<p>Quazenthor (QWBQ) is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet. It features a permanently capped total supply and a fully verified, immutable smart contract. The token supports standard BEP-20 functions including transfers, approvals, allowance management, and event observation. All on-chain activity is publicly verifiable.</p>
+<!-- Main title section with animated headers -->
+<div class="section-header-wrap">
+  <h1 class="section-header sh-main" data-lang="en">Quazenthor (QWBQ) – BEP-20 Token on BNB Smart Chain</h1>
+  <h1 class="section-header sh-main" data-lang="de">Quazenthor (QWBQ) – BEP-20 Token auf BNB Smart Chain</h1>
+  <h1 class="section-header sh-main" data-lang="ar">Quazenthor (QWBQ) – رمز BEP-20 على BNB Smart Chain</h1>
+</div>
+<p style="text-align:center;" data-lang="en">Fixed-Supply BEP-20 Token • Verified Contract • Transparent On-Chain Distribution</p>
+<p style="text-align:center;" data-lang="de">BEP-20 Token mit festem Angebot • Verifizierter Vertrag • Transparente On-Chain-Verteilung</p>
+<p style="text-align:center;" data-lang="ar">رمز BEP-20 ثابت العرض • عقد متحقق • توزيع شفاف على السلسلة</p>
 
-<h2>Why It Exists</h2>
-<p>QWBQ was created as a transparent and immutable BEP-20 token on BNB Smart Chain mainnet with a fixed supply and clear on-chain visibility.</p>
+<div class="section-header-wrap">
+  <h2 class="section-header sh-blue" data-lang="en">What is Quazenthor (QWBQ)?</h2>
+  <h2 class="section-header sh-blue" data-lang="de">Was ist Quazenthor (QWBQ)?</h2>
+  <h2 class="section-header sh-blue" data-lang="ar">ما هو Quazenthor (QWBQ)؟</h2>
+</div>
+<p data-lang="en">Quazenthor (QWBQ) is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet. It features a permanently capped total supply and a fully verified, immutable smart contract. The token supports standard BEP-20 functions including transfers, approvals, allowance management, and event observation. All on-chain activity is publicly verifiable.</p>
+<p data-lang="de">Quazenthor (QWBQ) ist ein BEP-20 Token mit festem Angebot, der auf dem BNB Smart Chain Mainnet bereitgestellt wurde. Er verfügt über ein dauerhaft begrenztes Gesamtangebot und einen vollständig verifizierten, unveränderlichen Smart Contract. Der Token unterstützt Standard-BEP-20-Funktionen einschließlich Transfers, Genehmigungen, Allowance-Verwaltung und Event-Beobachtung. Alle On-Chain-Aktivitäten sind öffentlich überprüfbar.</p>
+<p data-lang="ar">Quazenthor (QWBQ) هو رمز BEP-20 ثابت العرض تم نشره على الشبكة الرئيسية لـ BNB Smart Chain. يتميز بعرض إجمالي محدود بشكل دائم وعقد ذكي متحقق وثابت بالكامل. يدعم الرمز وظائف BEP-20 القياسية بما في ذلك التحويلات والموافقات وإدارة البدلات ومراقبة الأحداث. جميع الأنشطة على السلسلة قابلة للتحقق العام.</p>
 
-<h2>How It Is Used</h2>
-<ul>
-  <li>Sending token transfers between wallets</li>
-  <li>Testing approval and allowance mechanisms</li>
+<div class="section-header-wrap">
+  <h2 class="section-header sh-purple" data-lang="en">Why It Exists</h2>
+  <h2 class="section-header sh-purple" data-lang="de">Warum es existiert</h2>
+  <h2 class="section-header sh-purple" data-lang="ar">لماذا يوجد</h2>
+</div>
+<p data-lang="en">QWBQ was created as a transparent and immutable BEP-20 token on BNB Smart Chain mainnet with a fixed supply and clear on-chain visibility. The project prioritizes simplicity, security, and full public verifiability of every transaction and holder balance.</p>
+<p data-lang="de">QWBQ wurde als transparenter und unveränderlicher BEP-20 Token auf dem BNB Smart Chain Mainnet mit festem Angebot und klarer On-Chain-Sichtbarkeit erstellt. Das Projekt priorisiert Einfachheit, Sicherheit und vollständige öffentliche Überprüfbarkeit jeder Transaktion und jedes Inhaber-Guthabens.</p>
+<p data-lang="ar">تم إنشاء QWBQ كرمز BEP-20 شفاف وثابت على الشبكة الرئيسية لـ BNB Smart Chain بعرض ثابت ورؤية واضحة على السلسلة. يعطي المشروع الأولوية للبساطة والأمان والتحقق العام الكامل لكل معاملة ورصيد حامل.</p>
+
+<div class="section-header-wrap">
+  <h2 class="section-header sh-orange" data-lang="en">How It Is Used</h2>
+  <h2 class="section-header sh-orange" data-lang="de">Wie es verwendet wird</h2>
+  <h2 class="section-header sh-orange" data-lang="ar">كيف يُستخدم</h2>
+</div>
+<ul data-lang="en">
+  <li>Standard BEP-20 transfers between wallets</li>
+  <li>Approvals and allowance management</li>
   <li>Monitoring Transfer and Approval event logs</li>
-  <li>Observing holder distribution changes</li>
-  <li>Verifying the permanently fixed total supply</li>
+  <li>Observing real-time holder distribution</li>
+  <li>Verifying the permanently fixed total supply on-chain</li>
+</ul>
+<ul data-lang="de">
+  <li>Standard-BEP-20-Transfers zwischen Wallets</li>
+  <li>Genehmigungen und Allowance-Verwaltung</li>
+  <li>Überwachung von Transfer- und Approval-Event-Logs</li>
+  <li>Beobachtung der Echtzeit-Inhaberverteilung</li>
+  <li>Überprüfung des dauerhaft festen Gesamtangebots on-chain</li>
+</ul>
+<ul data-lang="ar">
+  <li>تحويلات BEP-20 القياسية بين المحافظ</li>
+  <li>الموافقات وإدارة البدلات</li>
+  <li>مراقبة سجلات أحداث التحويل والموافقة</li>
+  <li>مراقبة توزيع الحاملين في الوقت الفعلي</li>
+  <li>التحقق من العرض الإجمالي الثابت بشكل دائم على السلسلة</li>
 </ul>
 
-<h3>General Questions</h3>
+<h3 data-lang="en">General Questions</h3>
+<h3 data-lang="de">Allgemeine Fragen</h3>
+<h3 data-lang="ar">أسئلة عامة</h3>
+
 <details>
-  <summary>What is Quazenthor (QWBQ)?</summary>
-  <p>Quazenthor (QWBQ) is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet. It has a permanently capped total supply and a fully verified immutable contract that supports standard BEP-20 functions.</p>
+  <summary data-lang="en">What is Quazenthor (QWBQ)?</summary>
+  <summary data-lang="de">Was ist Quazenthor (QWBQ)?</summary>
+  <summary data-lang="ar">ما هو Quazenthor (QWBQ)؟</summary>
+  <p data-lang="en">Quazenthor (QWBQ) is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet. It has a permanently capped total supply and a fully verified immutable contract that supports standard BEP-20 functions.</p>
+  <p data-lang="de">Quazenthor (QWBQ) ist ein BEP-20 Token mit festem Angebot auf dem BNB Smart Chain Mainnet. Er hat ein dauerhaft begrenztes Gesamtangebot und einen vollständig verifizierten unveränderlichen Vertrag.</p>
+  <p data-lang="ar">Quazenthor (QWBQ) هو رمز BEP-20 ثابت العرض تم نشره على الشبكة الرئيسية لـ BNB Smart Chain. له عرض إجمالي محدود بشكل دائم وعقد ثابت متحقق.</p>
 </details>
 <details>
-  <summary>Is QWBQ an investment or financial product?</summary>
-  <p>Quazenthor (QWBQ) is a standard BEP-20 token. Like any cryptocurrency, it carries market and technical risks. Users should always conduct their own research.</p>
+  <summary data-lang="en">Is QWBQ an investment or financial product?</summary>
+  <summary data-lang="de">Ist QWBQ eine Investition oder ein Finanzprodukt?</summary>
+  <summary data-lang="ar">هل QWBQ استثمار أو منتج مالي؟</summary>
+  <p data-lang="en">Quazenthor (QWBQ) is a standard BEP-20 token. Like any cryptocurrency, it carries market and technical risks. Users should always conduct their own research and only interact with amounts they can afford to lose.</p>
+  <p data-lang="de">Quazenthor (QWBQ) ist ein Standard-BEP-20-Token. Wie jede Kryptowährung birgt er Markt- und technische Risiken. Nutzer sollten stets eigene Recherche betreiben.</p>
+  <p data-lang="ar">Quazenthor (QWBQ) هو رمز BEP-20 قياسي. مثل أي عملة مشفرة، يحمل مخاطر سوقية وتقنية. يجب على المستخدمين دائمًا إجراء أبحاثهم الخاصة.</p>
 </details>
 <details>
-  <summary>Why was the token deployed?</summary>
-  <p>To provide a transparent, immutable BEP-20 token on BNB Smart Chain mainnet with fixed supply and full on-chain visibility.</p>
+  <summary data-lang="en">Why was the token deployed?</summary>
+  <summary data-lang="de">Warum wurde der Token bereitgestellt?</summary>
+  <summary data-lang="ar">لماذا تم نشر الرمز؟</summary>
+  <p data-lang="en">To provide a transparent, immutable BEP-20 token on BNB Smart Chain mainnet with a fixed supply and full on-chain visibility for all holders and transactions.</p>
+  <p data-lang="de">Um einen transparenten, unveränderlichen BEP-20 Token auf dem BNB Smart Chain Mainnet mit festem Angebot und voller On-Chain-Sichtbarkeit bereitzustellen.</p>
+  <p data-lang="ar">لتوفير رمز BEP-20 شفاف وثابت على الشبكة الرئيسية لـ BNB Smart Chain بعرض ثابت ورؤية كاملة على السلسلة.</p>
 </details>
 <details>
-  <summary>Who controls the contract?</summary>
-  <p>Ownership remains with the deployer address. The owner can only update the name and symbol for clarity — there are no mint, burn, pause, tax, upgrade, or administrative functions. The contract is permanently immutable in logic and supply.</p>
+  <summary data-lang="en">Who controls the contract?</summary>
+  <summary data-lang="de">Wer kontrolliert den Vertrag?</summary>
+  <summary data-lang="ar">من يتحكم في العقد؟</summary>
+  <p data-lang="en">Ownership remains with the deployer address. The owner can only update the name and symbol for clarity — there are no mint, burn, pause, tax, upgrade, or administrative functions. The contract is permanently immutable in logic and supply.</p>
+  <p data-lang="de">Das Eigentum verbleibt bei der Deployer-Adresse. Der Eigentümer kann nur Name und Symbol aktualisieren — es gibt keine Mint-, Burn-, Pause-, Steuer-, Upgrade- oder Verwaltungsfunktionen.</p>
+  <p data-lang="ar">تظل الملكية مع عنوان الناشر. يمكن للمالك فقط تحديث الاسم والرمز للوضوح — لا توجد وظائف سك أو حرق أو إيقاف أو ضرائب أو ترقية.</p>
 </details>
 <details>
-  <summary>How can I get some QWBQ tokens?</summary>
-  <p>Tokens are distributed by the project coordinator. Send your request to <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>. All distributions are transparent and visible on-chain.</p>
+  <summary data-lang="en">How can I get some QWBQ tokens?</summary>
+  <summary data-lang="de">Wie kann ich QWBQ Token erhalten?</summary>
+  <summary data-lang="ar">كيف يمكنني الحصول على بعض رموز QWBQ؟</summary>
+  <p data-lang="en">Tokens are distributed by the project coordinator. You can send a request to <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>. All distributions are transparent and fully visible on-chain.</p>
+  <p data-lang="de">Token werden vom Projektkoordinator verteilt. Anfragen an <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>. Alle Verteilungen sind transparent und on-chain sichtbar.</p>
+  <p data-lang="ar">يتم توزيع الرموز من قبل منسق المشروع. يمكنك إرسال طلب إلى <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>. جميع التوزيعات شفافة ومرئية بالكامل على السلسلة.</p>
 </details>
 <details>
-  <summary>What if I see QWBQ being traded or pooled somewhere?</summary>
-  <p>Any trading or liquidity activity is performed by independent third parties. Always verify information through official channels only.</p>
+  <summary data-lang="en">Is there a liquidity pool?</summary>
+  <summary data-lang="de">Gibt es einen Liquiditätspool?</summary>
+  <summary data-lang="ar">هل هناك مجمع سيولة؟</summary>
+  <p data-lang="en">A liquidity pool for QWBQ is available on PancakeSwap. Trading activity can be viewed on public trackers such as DexScreener and DexTools.</p>
+  <p data-lang="de">Ein Liquiditätspool für QWBQ ist auf PancakeSwap verfügbar. Handelsaktivitäten können auf öffentlichen Trackern wie DexScreener und DexTools eingesehen werden.</p>
+  <p data-lang="ar">يتوفر مجمع سيولة لـ QWBQ على PancakeSwap. يمكن عرض نشاط التداول على أدوات التتبع العامة مثل DexScreener و DexTools.</p>
 </details>
 <details>
-  <summary>Are there any risks or warnings I should know?</summary>
-  <p>Yes. Interacting with any cryptocurrency involves risks including price volatility, smart contract risks, and potential loss of funds. Only use amounts you can afford to lose.</p>
+  <summary data-lang="en">Are there any risks or warnings I should know?</summary>
+  <summary data-lang="de">Gibt es Risiken oder Warnungen, die ich kennen sollte?</summary>
+  <summary data-lang="ar">هل هناك أي مخاطر أو تحذيرات يجب أن أعرفها؟</summary>
+  <p data-lang="en">Yes. Interacting with any cryptocurrency involves risks including price volatility, smart contract risks, and potential loss of funds. Only use amounts you can afford to lose. Always do your own research.</p>
+  <p data-lang="de">Ja. Der Umgang mit Kryptowährungen birgt Risiken einschließlich Preisschwankungen, Smart-Contract-Risiken und möglichem Verlust von Mitteln. Verwenden Sie nur Beträge, deren Verlust Sie sich leisten können.</p>
+  <p data-lang="ar">نعم. يتضمن التفاعل مع أي عملة مشفرة مخاطر بما في ذلك تقلب الأسعار ومخاطر العقود الذكية واحتمال فقدان الأموال. استخدم فقط المبالغ التي يمكنك تحمل خسارتها.</p>
 </details>
 <details>
-  <summary>Is the contract upgradeable or pausable?</summary>
-  <p>No. The contract is fully immutable with no upgrade proxy, no pause function, no blacklisting, and no administrative overrides beyond a standard ownership rename capability (name/symbol only).</p>
+  <summary data-lang="en">Is the contract upgradeable or pausable?</summary>
+  <summary data-lang="de">Ist der Vertrag upgradefähig oder pausierbar?</summary>
+  <summary data-lang="ar">هل العقد قابل للترقية أو الإيقاف؟</summary>
+  <p data-lang="en">No. The contract is fully immutable with no upgrade proxy, no pause function, no blacklisting, and no administrative overrides beyond a standard ownership rename capability (name/symbol only).</p>
+  <p data-lang="de">Nein. Der Vertrag ist vollständig unveränderlich ohne Upgrade-Proxy, Pause-Funktion, Blacklisting oder administrative Overrides außer einer Standard-Eigentums-Umbenennungsfunktion (nur Name/Symbol).</p>
+  <p data-lang="ar">لا. العقد ثابت بالكامل بدون وكيل ترقية أو وظيفة إيقاف أو قائمة سوداء أو تجاوزات إدارية تتجاوز قدرة إعادة تسمية الملكية القياسية.</p>
 </details>
 <details>
-  <summary>Can I use QWBQ for testing my wallet or dApp?</summary>
-  <p>Yes. You can request tokens for testing transfers, approvals, event listening, balance checks, or integrating with your tools and wallets on the real mainnet.</p>
+  <summary data-lang="en">Can I add QWBQ to my wallet?</summary>
+  <summary data-lang="de">Kann ich QWBQ zu meiner Wallet hinzufügen?</summary>
+  <summary data-lang="ar">هل يمكنني إضافة QWBQ إلى محفظتي؟</summary>
+  <p data-lang="en">Yes. You can use the official “Add QWBQ to MetaMask” button on this website, or manually add the contract address on BNB Smart Chain. The official logo is already registered in MetaMask metadata.</p>
+  <p data-lang="de">Ja. Sie können den offiziellen „Add QWBQ to MetaMask“-Button auf dieser Website verwenden oder die Vertragsadresse manuell auf BNB Smart Chain hinzufügen. Das offizielle Logo ist bereits in den MetaMask-Metadaten registriert.</p>
+  <p data-lang="ar">نعم. يمكنك استخدام زر «إضافة QWBQ إلى MetaMask» الرسمي على هذا الموقع، أو إضافة عنوان العقد يدويًا على BNB Smart Chain.</p>
 </details>
 <details>
-  <summary>Why is liquidity limited?</summary>
-  <p>The project currently focuses on transparent distribution and on-chain visibility. Any liquidity activity is handled independently by third parties.</p>
+  <summary data-lang="en">Where can I track the token?</summary>
+  <summary data-lang="de">Wo kann ich den Token verfolgen?</summary>
+  <summary data-lang="ar">أين يمكنني تتبع الرمز؟</summary>
+  <p data-lang="en">You can track holders, transfers, and contract details on BscScan. Trading data is available on DexScreener and other public DEX trackers.</p>
+  <p data-lang="de">Sie können Inhaber, Transfers und Vertragsdetails auf BscScan verfolgen. Handelsdaten sind auf DexScreener und anderen öffentlichen DEX-Trackern verfügbar.</p>
+  <p data-lang="ar">يمكنك تتبع الحاملين والتحويلات وتفاصيل العقد على BscScan. تتوفر بيانات التداول على DexScreener وأدوات تتبع DEX العامة الأخرى.</p>
 </details>
 
-<h2>Audit & Security Report</h2>
-<h3>1. Introduction & Purpose</h3>
-<p>This page presents an internal code review of the Quazenthor (QWBQ) smart contract for transparency.</p>
-<p>Quazenthor is a fixed-supply immutable BEP-20 token on BNB Smart Chain mainnet.</p>
+<!-- JADE HEADERS -->
+<div class="section-header-wrap" style="text-align:left;">
+  <h2 class="jade-header" data-lang="en">Audit & Security Report</h2>
+  <h2 class="jade-header" data-lang="de">Audit- & Sicherheitsbericht</h2>
+  <h2 class="jade-header" data-lang="ar">تقرير التدقيق والأمان</h2>
+</div>
 
-<h3>2. Review Scope & Methodology</h3>
-<p>The review focused on the deployed smart contract code with emphasis on:</p>
-<ul>
-  <li>Standard BEP-20 implementation</li>
-  <li>Absence of custom logic, fees, taxes, minting or administrative functions</li>
-  <li>Immutability and simplicity of the contract</li>
-  <li>Consistency between verified source code and on-chain bytecode</li>
-</ul>
+<h3 data-lang="en">1. Introduction & Purpose</h3>
+<h3 data-lang="de">1. Einführung & Zweck</h3>
+<h3 data-lang="ar">1. المقدمة والغرض</h3>
+<p data-lang="en">This page presents an internal code review of the Quazenthor (QWBQ) smart contract for transparency. Quazenthor is a fixed-supply immutable BEP-20 token on BNB Smart Chain mainnet.</p>
+<p data-lang="de">Diese Seite präsentiert eine interne Code-Überprüfung des Quazenthor (QWBQ) Smart Contracts zur Transparenz. Quazenthor ist ein BEP-20 Token mit festem Angebot und unveränderlichem Vertrag auf dem BNB Smart Chain Mainnet.</p>
+<p data-lang="ar">تقدم هذه الصفحة مراجعة داخلية لكود عقد Quazenthor (QWBQ) الذكي من أجل الشفافية. Quazenthor هو رمز BEP-20 ثابت وثابت العرض على الشبكة الرئيسية لـ BNB Smart Chain.</p>
+
+<h3 data-lang="en">2. Review Scope & Methodology</h3>
+<h3 data-lang="de">2. Überprüfungsumfang & Methodik</h3>
+<h3 data-lang="ar">2. نطاق المراجعة والمنهجية</h3>
+<p data-lang="en">The review focused on the deployed smart contract code with emphasis on: Standard BEP-20 implementation; Absence of custom logic, fees, taxes, minting or administrative functions; Immutability and simplicity of the contract; Consistency between verified source code and on-chain bytecode.</p>
+<p data-lang="de">Die Überprüfung konzentrierte sich auf den bereitgestellten Smart-Contract-Code mit Schwerpunkt auf: Standard-BEP-20-Implementierung; Fehlen von benutzerdefinierter Logik, Gebühren, Steuern, Minting oder Verwaltungsfunktionen; Unveränderlichkeit und Einfachheit des Vertrags.</p>
+<p data-lang="ar">ركزت المراجعة على كود العقد الذكي المنشور مع التركيز على: تنفيذ BEP-20 القياسي؛ غياب المنطق المخصص والرسوم والضرائب والسك أو الوظائف الإدارية؛ ثبات العقد وبساطته.</p>
 <p>Verified Source Code: <a href="https://bscscan.com/address/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#code" target="_blank">View on BscScan</a></p>
 
-<h3>3. Key Findings</h3>
-<p>The contract is considered low-risk due to its minimal and standard design:</p>
-<ul>
-  <li>Permanently fixed total supply – no mint or burn capability</li>
-  <li>No transfer fees or taxation</li>
-  <li>Ownership retained (no privileged functions)</li>
-  <li>Fully immutable code</li>
-  <li>Standard BEP-20 functions only</li>
-</ul>
+<h3 data-lang="en">3. Key Findings</h3>
+<h3 data-lang="de">3. Wichtige Erkenntnisse</h3>
+<h3 data-lang="ar">3. النتائج الرئيسية</h3>
+<p data-lang="en">The contract is considered low-risk due to its minimal and standard design: Permanently fixed total supply – no mint or burn capability; No transfer fees or taxation; Ownership retained (no privileged functions); Fully immutable code; Standard BEP-20 functions only.</p>
+<p data-lang="de">Der Vertrag gilt aufgrund seines minimalen und standardmäßigen Designs als risikoarm: Dauerhaft festes Gesamtangebot – keine Mint- oder Burn-Fähigkeit; Keine Transfergebühren oder Besteuerung; Eigentum beibehalten; Vollständig unveränderlicher Code.</p>
+<p data-lang="ar">يُعتبر العقد منخفض المخاطر بسبب تصميمه البسيط والقياسي: عرض إجمالي ثابت بشكل دائم – لا قدرة على السك أو الحرق؛ لا رسوم تحويل أو ضرائب؛ الاحتفاظ بالملكية؛ كود ثابت بالكامل.</p>
 
-<h3>3.1. SolidityScan Security Scan Results</h3>
-<p>The smart contract has been scanned using SolidityScan. The scan results indicate a high level of security:</p>
+<h3 data-lang="en">3.1. SolidityScan Security Scan Results</h3>
+<h3 data-lang="de">3.1. SolidityScan Sicherheits-Scan Ergebnisse</h3>
+<h3 data-lang="ar">3.1. نتائج فحص أمان SolidityScan</h3>
 <ul>
   <li><strong>Vulnerability Score:</strong> 89.85/100 (GREAT)</li>
   <li><strong>Critical Issues:</strong> 0</li>
@@ -354,12 +1040,14 @@
   <li><strong>Informational Issues:</strong> 108</li>
   <li><strong>Gas Optimizations:</strong> 18</li>
 </ul>
-<p>This scan confirms the contract's low-risk profile, with no critical or high-severity vulnerabilities detected. For detailed findings, view the full report on BscScan:</p>
-<p><a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#cards" target="_blank">View SolidityScan Report on BscScan</a></p>
-<p>Additional billing and plan details for SolidityScan are available for reference: <a href="/solidityscan-billing.pdf" download>Download SolidityScan Billing Info</a></p>
+<p data-lang="en">This scan confirms the contract's low-risk profile, with no critical or high-severity vulnerabilities detected. <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#cards" target="_blank">View SolidityScan Report on BscScan</a></p>
+<p data-lang="de">Dieser Scan bestätigt das risikoarme Profil des Vertrags, ohne kritische oder hochschwere Schwachstellen. <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#cards" target="_blank">SolidityScan-Bericht auf BscScan anzeigen</a></p>
+<p data-lang="ar">يؤكد هذا الفحص الملف الشخصي منخفض المخاطر للعقد، مع عدم اكتشاف أي ثغرات حرجة أو عالية الخطورة. <a href="https://bscscan.com/token/0x013f5f2F7F5b027012415A783ac2ed69EF936aE8#cards" target="_blank">عرض تقرير SolidityScan على BscScan</a></p>
+<p><a href="/solidityscan-billing.pdf" download>Download SolidityScan Billing Info</a></p>
 
-<h3>4. Website Security – SSL Certificate Verification</h3>
-<p>The official website uses a valid SSL certificate to ensure secure connections. Verification details (checked January 31, 2026):</p>
+<h3 data-lang="en">4. Website Security – SSL Certificate Verification</h3>
+<h3 data-lang="de">4. Website-Sicherheit – SSL-Zertifikat Verifizierung</h3>
+<h3 data-lang="ar">4. أمان الموقع – التحقق من شهادة SSL</h3>
 <ul>
   <li>Hostname: quazenthor.com</li>
   <li>Valid From: January 31, 2026 to January 31, 2027</li>
@@ -367,7 +1055,9 @@
   <li>Status: Trusted by all major browsers</li>
 </ul>
 
-<h3>5. Official Verification Channels</h3>
+<h3 data-lang="en">5. Official Verification Channels</h3>
+<h3 data-lang="de">5. Offizielle Verifizierungskanäle</h3>
+<h3 data-lang="ar">5. قنوات التحقق الرسمية</h3>
 <ul>
   <li>Website: <a href="https://quazenthor.com">https://quazenthor.com</a></li>
   <li>Email: <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a></li>
@@ -375,9 +1065,12 @@
   <li>Ownership Verification: <a href="https://bscscan.com/verifySig/15181">Signature #15181 (Verified)</a></li>
 </ul>
 
-<h2>Roadmap Summary</h2>
-<p>This is a summary of the project phases:</p>
-<ul>
+<div class="section-header-wrap" style="text-align:left;">
+  <h2 class="jade-header" data-lang="en">Roadmap Summary</h2>
+  <h2 class="jade-header" data-lang="de">Roadmap-Zusammenfassung</h2>
+  <h2 class="jade-header" data-lang="ar">ملخص خارطة الطريق</h2>
+</div>
+<ul data-lang="en">
   <li><strong>Phase 1:</strong> On-Chain Normalization – Natural distribution and observable footprints.</li>
   <li><strong>Phase 2:</strong> Transparent Manual Distribution – Controlled and visible distribution.</li>
   <li><strong>Phase 3:</strong> Supply Transparency – Fixed supply, gradual distribution visible on-chain.</li>
@@ -387,31 +1080,133 @@
   <li><strong>Phase 7:</strong> Social Proof – Multi-channel presence.</li>
   <li><strong>Phase 8:</strong> Site Structure – Organized pages for clarity.</li>
 </ul>
-<p>Full details: <a href="/roadmap">View Full Roadmap</a></p>
-
-<h2>How to Get Involved Summary</h2>
-<p>Summary for involvement:</p>
-<ul>
-  <li>Request tokens via email (<a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>) for technical testing (e.g., transfers, approvals).</li>
-  <li>Distribution is manual and gradual.</li>
-  <li>Uses: Test mechanisms, monitor events, observe distributions.</li>
+<ul data-lang="de">
+  <li><strong>Phase 1:</strong> On-Chain-Normalisierung – Natürliche Verteilung und beobachtbare Spuren.</li>
+  <li><strong>Phase 2:</strong> Transparente manuelle Verteilung – Kontrollierte und sichtbare Verteilung.</li>
+  <li><strong>Phase 3:</strong> Angebotstransparenz – Festes Angebot, schrittweise Verteilung on-chain sichtbar.</li>
+  <li><strong>Phase 4:</strong> On-Chain-Interaktion – Echtes Mainnet-Verhalten und Sichtbarkeit.</li>
+  <li><strong>Phase 5:</strong> Teamstruktur – Gründergeführt mit unabhängigen Mitwirkenden.</li>
+  <li><strong>Phase 6:</strong> Inhaltsbereinigung – Professionelle und klare Präsentation.</li>
+  <li><strong>Phase 7:</strong> Social Proof – Multi-Channel-Präsenz.</li>
+  <li><strong>Phase 8:</strong> Site-Struktur – Organisierte Seiten für Klarheit.</li>
 </ul>
-<p>Full details: <a href="/how-to-get-involved">View Full How to Get Involved</a></p>
+<ul data-lang="ar">
+  <li><strong>المرحلة 1:</strong> التطبيع على السلسلة – التوزيع الطبيعي والآثار المرصودة.</li>
+  <li><strong>المرحلة 2:</strong> التوزيع اليدوي الشفاف – توزيع متحكم ومرئي.</li>
+  <li><strong>المرحلة 3:</strong> شفافية العرض – عرض ثابت، توزيع تدريجي مرئي على السلسلة.</li>
+  <li><strong>المرحلة 4:</strong> التفاعل على السلسلة – سلوك الشبكة الرئيسية الحقيقي والرؤية.</li>
+  <li><strong>المرحلة 5:</strong> هيكل الفريق – بقيادة المؤسس مع مساهمين مستقلين.</li>
+  <li><strong>المرحلة 6:</strong> تنظيف المحتوى – عرض احترافي وواضح.</li>
+  <li><strong>المرحلة 7:</strong> الدليل الاجتماعي – حضور متعدد القنوات.</li>
+  <li><strong>المرحلة 8:</strong> هيكل الموقع – صفحات منظمة للوضوح.</li>
+</ul>
+<p data-lang="en">Full details: <a href="/roadmap">View Full Roadmap</a></p>
+<p data-lang="de">Vollständige Details: <a href="/roadmap">Vollständige Roadmap anzeigen</a></p>
+<p data-lang="ar">التفاصيل الكاملة: <a href="/roadmap">عرض خارطة الطريق الكاملة</a></p>
 
-<h2>Official Contact</h2>
-<p>For questions or token distribution requests:</p>
+<div class="section-header-wrap" style="text-align:left;">
+  <h2 class="jade-header" data-lang="en">How to Get Involved Summary</h2>
+  <h2 class="jade-header" data-lang="de">Zusammenfassung: Wie man mitmacht</h2>
+  <h2 class="jade-header" data-lang="ar">ملخص كيفية المشاركة</h2>
+</div>
+<ul data-lang="en">
+  <li>Request tokens via email (<a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>).</li>
+  <li>Distribution is manual and gradual.</li>
+  <li>All distributions are fully visible on-chain.</li>
+</ul>
+<ul data-lang="de">
+  <li>Token per E-Mail anfordern (<a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>).</li>
+  <li>Die Verteilung ist manuell und schrittweise.</li>
+  <li>Alle Verteilungen sind vollständig on-chain sichtbar.</li>
+</ul>
+<ul data-lang="ar">
+  <li>طلب الرموز عبر البريد الإلكتروني (<a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>).</li>
+  <li>التوزيع يدوي وتدريجي.</li>
+  <li>جميع التوزيعات مرئية بالكامل على السلسلة.</li>
+</ul>
+<p data-lang="en">Full details: <a href="/how-to-get-involved">View Full How to Get Involved</a></p>
+<p data-lang="de">Vollständige Details: <a href="/how-to-get-involved">Vollständige Anleitung anzeigen</a></p>
+<p data-lang="ar">التفاصيل الكاملة: <a href="/how-to-get-involved">عرض كيفية المشاركة الكاملة</a></p>
+
+<div class="section-header-wrap" style="text-align:left;">
+  <h2 class="jade-header" data-lang="en">Official Contact</h2>
+  <h2 class="jade-header" data-lang="de">Offizieller Kontakt</h2>
+  <h2 class="jade-header" data-lang="ar">جهة الاتصال الرسمية</h2>
+</div>
+<p data-lang="en">For questions or token distribution requests:</p>
+<p data-lang="de">Für Fragen oder Token-Verteilungsanfragen:</p>
+<p data-lang="ar">للأسئلة أو طلبات توزيع الرموز:</p>
 <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a>
-<p>Communication focuses on technical and project-related topics.</p>
+<p data-lang="en">Communication focuses on technical and project-related topics.</p>
+<p data-lang="de">Die Kommunikation konzentriert sich auf technische und projektbezogene Themen.</p>
+<p data-lang="ar">تركز الاتصالات على المواضيع الفنية والمتعلقة بالمشروع.</p>
 
-<h2>QUAZENTHOR Project Changelog</h2>
-<p>Documentation & website update log – for transparency</p>
+<!-- CHANGELOG -->
+<div class="changelog-header-wrap">
+  <h2 class="changelog-header" data-lang="en">QUAZENTHOR Project Changelog</h2>
+  <h2 class="changelog-header" data-lang="de">QUAZENTHOR Projekt-Changelog</h2>
+  <h2 class="changelog-header" data-lang="ar">سجل تغييرات مشروع QUAZENTHOR</h2>
+</div>
+<p style="text-align:center;" data-lang="en">Documentation & website update log – for transparency</p>
+<p style="text-align:center;" data-lang="de">Dokumentations- & Website-Update-Log – für Transparenz</p>
+<p style="text-align:center;" data-lang="ar">سجل تحديثات التوثيق والموقع – من أجل الشفافية</p>
+
+<details open>
+  <summary>September 03, 2026 (Update 2) – Network cards redesign, language fix, German added, spinning logo, section headers animated</summary>
+  <div>
+    <ul>
+      <li>Network Links cards completely redesigned: compact, rounded, smaller height, arranged in a responsive 3-column grid (2 or 1 on smaller screens), with hover scale animation similar to jade headers.</li>
+      <li>Fixed language mixing bug: English/Arabic/German text no longer appears simultaneously in Network Links or elsewhere. Proper language isolation implemented.</li>
+      <li>German (DE) language fully added alongside English and Arabic. Professional 3-language switcher (EN | DE | عربي) with clean modern design.</li>
+      <li>Token logo (logo.png) placed to the left of the main site title with continuous left-to-right spinning animation.</li>
+      <li>Section headers “What is Quazenthor”, “Why It Exists”, “How It Is Used” and the main title now have centered animated colored headers (blue / purple / orange / cyan) distinct from download buttons.</li>
+      <li>Previous September 03 Update 1 changelog entry preserved unchanged.</li>
+      <li>No existing content removed. All previous information, links and documentation retained.</li>
+    </ul>
+    <p><strong>Purpose:</strong> Visual refinement, language correctness, and improved usability. Purely frontend and presentation changes. No smart contract or token logic modifications.</p>
+  </div>
+</details>
+
+<details>
+  <summary>September 03, 2026 – Major UI/UX redesign: animated title, three bio cards, five info cards, marquee, jade headers, network icons, bilingual EN/AR, professional download buttons, completed footer</summary>
+  <div>
+    <ul>
+      <li>Main title “Quazenthor (QWBQ)” now pulses (scale forward/back) continuously for visual emphasis.</li>
+      <li>Project Owner / Founder Bio, Contributors, and Founder Declaration converted into three side-by-side prominent cards with hover scale/forward animation.</li>
+      <li>Tokenomics & Supply Structure, Supply Structure & Transparency, Explorer Transparency & Verification, Community Guidelines, and Privacy Policy Summary placed into animated cards arranged in two horizontal rows; cards use rounded (oval-style) corners and distinct cyan accent colors.</li>
+      <li>Continuous left-to-right marquee for “Quazenthor (QWBQ) – BEP-20 Token on BNB Smart Chain” with cartoon-style font, seamless loop, and comfortable spacing; medium speed.</li>
+      <li>Headers Audit & Security Report, Roadmap Summary, How to Get Involved Summary, and Official Contact styled as jade-colored animated cards (forward/back only on hover).</li>
+      <li>QUAZENTHOR Project Changelog title centered and given a continuous pulse animation as a button-style element.</li>
+      <li>Network Links & On-Chain References redesigned with dedicated icons for each network/platform.</li>
+      <li>Language switcher (EN / عربي) added; full bilingual support for main sections with RTL layout for Arabic.</li>
+      <li>Header and download buttons completely redesigned for a modern professional look (gradients, hover effects, icons, rounded shapes).</li>
+      <li>Footer copyright expanded and completed with full legal text.</li>
+      <li>No existing content, links, or documentation removed. All previous information preserved.</li>
+    </ul>
+    <p><strong>Purpose:</strong> Major visual and usability improvement while preserving 100% of original content and on-chain transparency. Purely frontend, presentation and accessibility changes. No smart contract or token logic modifications.</p>
+  </div>
+</details>
+
+<details>
+  <summary>August 14, 2026 – MetaMask Contract Metadata PR #1845 Merged – QWBQ now appears with official logo in MetaMask</summary>
+  <div>
+    <ul>
+      <li>MetaMask contract-metadata Pull Request #1845 has been successfully merged into the official MetaMask repository.</li>
+      <li>Quazenthor (QWBQ) is now registered in MetaMask token metadata for BNB Smart Chain (Chain ID 56).</li>
+      <li>Token details (name, symbol QWBQ, decimals 18, contract address and official logo) are available natively in MetaMask.</li>
+      <li>Users can now see the official logo when the token is added or appears in their wallet on BNB Smart Chain.</li>
+      <li>PR link: <a href="https://github.com/MetaMask/contract-metadata/pull/1845" target="_blank">https://github.com/MetaMask/contract-metadata/pull/1845</a></li>
+    </ul>
+    <p><strong>Purpose:</strong> Improve wallet visibility and native recognition of QWBQ in MetaMask. Documentation update only. No smart contract or token logic changes.</p>
+  </div>
+</details>
 
 <details>
   <summary>August 11, 2026 – Added “Add QWBQ to MetaMask” button for one-click token import with logo</summary>
   <div>
     <ul>
       <li>Added a new orange “Add QWBQ to MetaMask” button in the Official Documents section, matching the existing download button design.</li>
-      <li>Implemented EIP-747 (wallet_watchAsset) so users can import the token with the official logo[](https://quazenthor.com/logo.png) in a single click.</li>
+      <li>Implemented EIP-747 (wallet_watchAsset) so users can import the token with the official logo in a single click.</li>
       <li>Button uses correct contract address, symbol (QWBQ), decimals (18) and logo URL.</li>
       <li>All JavaScript messages and alerts are in English only.</li>
       <li>How to use: Click the button while MetaMask is installed and the BNB Smart Chain network is selected. Confirm the popup to add the token with logo.</li>
@@ -424,12 +1219,11 @@
   <summary>July 29, 2026 – DexScreener Pair Observation & Transparency Update</summary>
   <div>
     <ul>
-      <li>A third-party QWBQ/WBNB pair has been observed on PancakeSwap and is now visible on DexScreener: <a href="https://dexscreener.com/bsc/0xb2205edf9c51dd9479cb96d557611fa82e9f5dc3" target="_blank">https://dexscreener.com/bsc/0xb2205edf9c51dd9479cb96d557611fa82e9f5dc3</a></li>
-      <li>Important clarification: This pair and any related activity were created independently by third parties and are <strong>not</strong> initiated, supported, or endorsed by the Quazenthor project.</li>
+      <li>A QWBQ/WBNB pair has been observed on PancakeSwap and is now visible on DexScreener: <a href="https://dexscreener.com/bsc/0xb2205edf9c51dd9479cb96d557611fa82e9f5dc3" target="_blank">https://dexscreener.com/bsc/0xb2205edf9c51dd9479cb96d557611fa82e9f5dc3</a></li>
       <li>Contract status remains fully verified and immutable on BscScan (since January 31, 2026).</li>
       <li>This observation is shared solely for on-chain transparency.</li>
     </ul>
-    <p><strong>Purpose:</strong> Maintain full transparency regarding any third-party activity visible on public explorers. All changes limited to documentation. No modifications to the smart contract or token logic.</p>
+    <p><strong>Purpose:</strong> Maintain full transparency regarding any trading activity visible on public explorers. All changes limited to documentation. No modifications to the smart contract or token logic.</p>
   </div>
 </details>
 
@@ -653,8 +1447,12 @@
 
 </div>
 
-<footer class="container">
-  Copyright © 2026 Quazenthor. All rights reserved.
+<footer>
+  <p><strong>Copyright © 2026 Quazenthor. All rights reserved.</strong></p>
+  <p>Quazenthor (QWBQ) is a fixed-supply BEP-20 token deployed on the BNB Smart Chain mainnet.</p>
+  <p>This website and all associated documentation are provided for informational and transparency purposes only.</p>
+  <p>No affiliation with Binance, BscScan, PancakeSwap, MetaMask or any third-party platform.</p>
+  <p>Contact: <a href="mailto:admin@quazenthor.com">admin@quazenthor.com</a> • Official site: <a href="https://quazenthor.com">https://quazenthor.com</a></p>
 </footer>
 
 <script>
@@ -663,13 +1461,23 @@ async function addQWBQToMetaMask() {
     alert('MetaMask is not installed. Please install the MetaMask extension and try again.');
     return;
   }
-
   const tokenAddress = '0x013f5f2F7F5b027012415A783ac2ed69EF936aE8';
   const tokenSymbol = 'QWBQ';
   const tokenDecimals = 18;
   const tokenImage = 'https://quazenthor.com/logo.png';
-
   try {
+    const chainId = await window.ethereum.request({ method: 'eth_chainId' });
+    if (chainId !== '0x38') {
+      try {
+        await window.ethereum.request({
+          method: 'wallet_switchEthereumChain',
+          params: [{ chainId: '0x38' }],
+        });
+      } catch (switchError) {
+        alert('Please switch to BNB Smart Chain (BSC) network in MetaMask and try again.');
+        return;
+      }
+    }
     const wasAdded = await window.ethereum.request({
       method: 'wallet_watchAsset',
       params: {
@@ -679,21 +1487,41 @@ async function addQWBQToMetaMask() {
           symbol: tokenSymbol,
           decimals: tokenDecimals,
           image: tokenImage
-        }
-      }
+        },
+      },
     });
-
     if (wasAdded) {
       alert('QWBQ has been successfully added to MetaMask with the official logo.');
     } else {
       alert('The request was rejected by the user.');
     }
   } catch (error) {
-    console.error(error);
-    alert('An error occurred while adding the token. Please make sure you are on BNB Smart Chain and try again, or add the token manually.');
+    console.error('MetaMask Error:', error);
+    if (error.code === 4001) {
+      alert('You rejected the request in MetaMask.');
+    } else if (error.message && (error.message.toLowerCase().includes('already') || error.message.toLowerCase().includes('token already') || error.code === -32602)) {
+      alert('This token is already added to your MetaMask wallet.');
+    } else {
+      alert('An error occurred while adding the token.\n\nPlease make sure you are on BNB Smart Chain and try again, or add the token manually.');
+    }
   }
 }
-</script>
 
+function setLang(lang) {
+  document.body.className = 'lang-' + lang;
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-de').classList.toggle('active', lang === 'de');
+  document.getElementById('btn-ar').classList.toggle('active', lang === 'ar');
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  try { localStorage.setItem('qwbq-lang', lang); } catch(e) {}
+}
+(function() {
+  try {
+    var saved = localStorage.getItem('qwbq-lang');
+    if (saved === 'de' || saved === 'ar' || saved === 'en') setLang(saved);
+  } catch(e) {}
+})();
+</script>
 </body>
 </html>
