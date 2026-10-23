@@ -1,0 +1,17 @@
+{
+  "name": "quazenthor",
+  "symbol": "QWBQ",
+  "contractAddress": "0x013f5f2F7F5b027012415A783ac2ed69EF936aE8",
+  "decimals": 18,
+  "logo": "erc20:0x013f5f2F7F5b027012415A783ac2ed69EF936aE8.svg",
+  "website": "https://quazenthor.com",
+  "description": "quazenthor (QWBQ) is a fixed-supply, immutable BEP-20 token on BNB Smart Chain created for educational and transparency purposes.",
+  "links": {
+    "x": "https://x.com/quazenthorQWBQ",
+    "telegram": "https://t.me/Quazenthor",
+    "facebook": "https://www.facebook.com/quazenthor",
+    "medium": "https://medium.com/@quazenthor",
+    "github": "https://github.com/toorandokhtafshari/QWBQ-Token-",
+    "bitcointalk": "https://bitcointalk.org/index.php?topic=5573196"
+  }
+}
